@@ -3,7 +3,7 @@ import { AppProvider, UserProvider, ServiceProvider } from "./contexts";
 import styled from "styled-components";
 
 function App() {
-  return <Wrapper>hello</Wrapper>;
+  return <Wrapper>hello world</Wrapper>;
 }
 
 const Wrapper = styled.main`
