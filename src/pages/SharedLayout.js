@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { Nav } from "../components";
+import { Outlet } from "react-router-dom";
+import styled from "styled-components";
 
 function SharedLayout() {
   return (
-    <div>SharedLayout</div>
-  )
+    <Wrapper>
+      <Nav />
+      <Outlet />
+    </Wrapper>
+  );
 }
 
-export default SharedLayout
+const Wrapper = styled.section``;
+export default SharedLayout;
