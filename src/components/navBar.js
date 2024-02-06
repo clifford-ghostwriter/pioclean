@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../assests/logo.png";
 import { FaBars } from "react-icons/fa";
+import { UseAppContext } from "../contexts/app.Context";
 
 const Nav = () => {
+  const { openSidebar } = UseAppContext();
   return (
     <Wrapper>
       <div className="nav__wrapper section-center">
@@ -16,7 +18,7 @@ const Nav = () => {
           {/* <div className="nav__text">
             <p>Pioclean</p>
           </div> */}
-          <button className="btn nav__btn">
+          <button className="btn nav__btn" onClick={openSidebar}>
             <FaBars />
           </button>
         </div>
@@ -28,13 +30,14 @@ const Nav = () => {
 const Wrapper = styled.nav`
   background-color: var(--clr--primary);
   /* border: 1px solid red; */
+  /* min-width: 400px; */
+  height: 10rem;
 
   .nav__wrapper {
     padding: var(--fs-300);
-
     align-items: center;
     min-width: min-content;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
   }
 
   .nav__center {
@@ -42,39 +45,32 @@ const Wrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* min-width: min-content; */
-    border: 1px solid pink;
-    width: 100%;
-    display: flex;
-    /* align-items: center; */
-    /* gap: 1rem; */
     flex-shrink: 0;
     align-content: stretch;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+  }
+
+  .nav__center > * {
+    flex-shrink: 0;
   }
 
   .nav__logo {
     display: flex;
+    gap: var(--fs-400);
   }
   .nav__logo > * {
-    /* border: 1px solid red; */
     flex-shrink: 0;
-    /* align-content: stretch; */
     height: 100%;
   }
 
   .nav__text {
-    /* border: 1px solid red; */
-    /* align-self: center; */
     text-transform: uppercase;
-    /* margin-top: 0.7rem; */
     padding-top: var(--fs-700);
     font-size: var(--fs-650);
   }
 
   .nav__btn {
     background-color: transparent;
-    /* height: max-content; */
     /* border: 1px solid red; */
     size: 4rem;
     height: 100%;

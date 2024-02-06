@@ -2,11 +2,15 @@ import React from "react";
 import { Nav } from "../components";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
+import SideBar from "../components/sideBar";
+import { UseAppContext } from "../contexts/app.Context";
 
 function SharedLayout() {
+  const { isSidebarOpen } = UseAppContext();
   return (
     <Wrapper>
       <Nav />
+      {isSidebarOpen && <SideBar />}
       <Outlet />
     </Wrapper>
   );
