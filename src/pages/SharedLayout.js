@@ -10,7 +10,8 @@ function SharedLayout() {
   return (
     <Wrapper>
       <Nav />
-      {isSidebarOpen && <SideBar />}
+      <SideBar />
+      {/* {isSidebarOpen && <SideBar />} */}
       <Outlet />
     </Wrapper>
   );

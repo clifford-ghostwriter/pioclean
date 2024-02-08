@@ -3,11 +3,16 @@
 :root {
 
   /* colors */
-  --clr--primary: #7790E9;
+  --clr--primary-one: #7790E9;
+  --clr--primary-two: #000000;
+  --clr--primary-three: #ff0000;
+  --clr--primary-four: #ffffff;
+  --clr--primary-four: #c83fc8;
+
   /* sizes */
-  --fs--small: 1.5rem;
 
 
+  --fs-300: 0.5rem;
   --fs-300: 0.8125rem;
   --fs-400: 0.875rem;
   --fs-500: 0.9375rem;
@@ -24,7 +29,7 @@
 
   --ff-primary: "Be Vietnam Pro", sans-serif;
 
-
+  --size--50: 0.75rem;
   --size--100: 1.5rem;
   --size--200: 2rem;
   --size--300: 2.5rem;
@@ -36,7 +41,10 @@
   --size--900: 5.5rem;
 
 
+
+
   font-family: var(--ff-primary);
+  --transition: all 0.3s linear;
 }
 
 
@@ -142,3 +150,6 @@ select {
   /* border: 1px solid red; */
 
 }
+
+
+/* utility classes */
