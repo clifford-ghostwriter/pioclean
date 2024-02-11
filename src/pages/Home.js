@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const Home = () => {
-  return <Wrapper></Wrapper>;
+  return (
+    <Wrapper>
+      <p>hello home</p>
+    </Wrapper>
+  );
 };
 
 const Wrapper = styled.section`
