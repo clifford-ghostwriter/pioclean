@@ -4,7 +4,13 @@ import styled from "styled-components";
 const Home = () => {
   return (
     <Wrapper>
-      <p>hello home</p>
+      <p>
+        hello home Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Ratione ab deleniti voluptatibus quas ex quos a iure iusto facilis
+        repellendus incidunt, nihil dignissimos animi itaque modi at blanditiis.
+        Odio, a?
+      </p>
+      <p>hello home Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </Wrapper>
   );
 };
@@ -14,6 +20,7 @@ const Wrapper = styled.section`
   /* border: 1px solid black; */
   /* min-width: max-content; */
   /* width: 700px; */
+  display: flex;
 
   div {
     /* background-color: black; */
@@ -34,16 +41,20 @@ const Wrapper = styled.section`
     /* background-color: red; */
   }
 
-  .flex > :last-child {
+  p:last-child {
+    /* min-width: 0; */
+    background-color: white;
   }
 
   p {
     border: 1px solid red;
-    width: 100%;
-    height: 200px;
+    /* min-width: 0px; */
+    /* height: 200px; */
     /* aspect-ratio: 1; */
     /* flex-grow: 1; */
     background-color: yellow;
+    word-wrap: break-word;
+    /* word-break: break-all; */
   }
 `;
 
