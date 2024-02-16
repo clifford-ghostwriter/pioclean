@@ -8,7 +8,7 @@
   --clr--primary-three: #ff0000;
   --clr--primary-four: #ffffff;
   --clr--primary-four: #c83fc8;
-
+  --clr--primary-five: #c9abab;
   /* sizes */
 
 
@@ -100,6 +100,7 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
+  max-height: 100%;
   display: block;
 }
 

@@ -9,6 +9,7 @@ import { FaTimes } from "react-icons/fa";
 
 const Nav = () => {
   const { openSidebar, isSidebarOpen, closeSidebar } = UseAppContext();
+  console.log(isSidebarOpen);
   return (
     <Wrapper>
       <div className="nav__wrapper section-center">
@@ -100,6 +101,7 @@ const Wrapper = styled.nav`
     height: 100%;
     font-size: var(--fs-700);
     color: var(--clr--primary-three);
+    /* color: red; */
     /* padding-right: 0; */
     /* margin-right: -1rem; */
     margin-top: -0.5rem;

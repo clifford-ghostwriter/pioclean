@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { links } from "../utils/link";
 import { UseAppContext } from "../contexts/app.Context";
-import { FaTimes } from "react-icons/fa";
+// import { FaTimes } from "react-icons/fa";
 
 const SideBar = () => {
   const { isSidebarOpen, closeSidebar } = UseAppContext();
@@ -22,7 +22,7 @@ const SideBar = () => {
             return (
               <li className="link" key={id}>
                 {icon}
-                <Link className="url" to={url}>
+                <Link className="url" to={url} onClick={closeSidebar}>
                   {text}
                 </Link>
               </li>
