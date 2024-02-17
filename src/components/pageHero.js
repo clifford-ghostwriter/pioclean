@@ -18,7 +18,7 @@ const PageHero = () => {
           <img src={polygon2} alt="polygon2" />
         </div>
       </div>
-      <p>hell world</p>
+      <p>hell world two</p>
     </Wrapper>
   );
 };
