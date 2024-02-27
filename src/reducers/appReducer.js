@@ -1,4 +1,4 @@
-import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from "../utils/actions";
+import { SIDEBAR_OPEN } from "../utils/actions";
 
 export const app_reducer = (state, action) => {
   if (action.type === SIDEBAR_OPEN) {
