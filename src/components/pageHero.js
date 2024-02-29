@@ -18,41 +18,53 @@ const PageHero = () => {
           <img src={polygon2} alt="polygon2" />
         </div>
       </div>
+
+      {/* <div className="grid">
+        <p>hekk</p>
+        <p>hello</p>
+        <p>hello</p>
+      </div> */}
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
   background-color: var(--clr--primary-five);
-  /* padding: 0; */
-  /* border: none; */
-  /* max-height: 5rem; */
 
   .hero__center {
+    /* border: 2px solid red; */
     display: flex;
-    /* border: 2px solid blue; */
-    /* max-height: 10rem; */
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    gap: 0;
+    height: 10rem;
   }
   .img__container {
-    display: flex;
-    flex-grow: 1;
-    flex-basis: 1;
-    /* border: 2px solid black; */
-  }
+    /* border: 3px solid yellow; */
 
-  .img__container > * {
-    flex-basis: 1;
-    align-items: stretch;
     flex: 1;
-    /* border: 2px solid red; */
-    /* width: 100%; */
-    height: 100%;
-    text-align: center;
+    max-height: 100%;
+    display: flex;
   }
 
-  .hero__center > *:nth-child(2) {
-    padding-left: 1.5rem;
+  .img__container img {
+    /* text-align: center; */
+    min-width: 100%;
+    min-height: 100%;
+    /* display: block; */
+    object-fit: fill;
+    align-items: stretch;
     /* border: 1px solid red; */
+  }
+
+  .img__container:nth-child(2) img {
+    object-fit: contain;
+    /* border: 1px solid red; */
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 
