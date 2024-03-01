@@ -18,16 +18,35 @@ export const links = [
     icon: <BiSolidNotepad />,
   },
   {
+    id: 4,
+    text: "services",
+    url: "/service",
+    icon: <RiLockPasswordFill />,
+  },
+  {
+    id: 4,
+    text: "price list",
+    url: "/pricelist",
+    icon: <RiLockPasswordFill />,
+  },
+  {
     id: 3,
-    text: "requests",
-    url: "/request",
+    text: "order online",
+    url: "/order",
     icon: <MdLocalLaundryService />,
   },
 
+  // {
+  //   id: 4,
+  //   text: "reset password",
+  //   url: "/passwordreset",
+  //   icon: <RiLockPasswordFill />,
+  // },
+
   {
     id: 4,
-    text: "reset password",
-    url: "/passwordreset",
+    text: "contact us",
+    url: "/contact",
     icon: <RiLockPasswordFill />,
   },
 ];

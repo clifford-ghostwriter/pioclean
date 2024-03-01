@@ -1,8 +1,21 @@
 import About from "./About";
 import Home from "./Home";
-import Request from "./Request";
+import OrderOnline from "./Request";
 import SharedLayout from "./SharedLayout";
 import Error from "./Error";
 import PasswordReset from "./passwordReset";
+import PriceList from "./PriceList";
+import Service from "./Service";
+import Contact from "./Contact";
 
-export { About, Home, Request, SharedLayout, Error, PasswordReset };
+export {
+  About,
+  Home,
+  OrderOnline,
+  SharedLayout,
+  Error,
+  PasswordReset,
+  PriceList,
+  Service,
+  Contact,
+};

@@ -5,10 +5,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
   About,
   Home,
-  Request,
+  OrderOnline,
   SharedLayout,
   Error,
   PasswordReset,
+  PriceList,
+  Contact,
+  Service,
 } from "./pages";
 
 function App() {
@@ -18,8 +21,11 @@ function App() {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/request" element={<Request />} />
+          <Route path="/order" element={<OrderOnline />} />
           <Route path="/passwordreset" element={<PasswordReset />} />
+          <Route path="/pricelist" element={<PriceList />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/service" element={<Service />} />
         </Route>
 
         <Route path="*" element={<Error />} />

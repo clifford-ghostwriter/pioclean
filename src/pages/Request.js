@@ -1,7 +1,7 @@
 import React from "react";
 
-const Request = () => {
+const OrderOnline = () => {
   return <div>Request</div>;
 };
 
-export default Request;
+export default OrderOnline;

@@ -60,6 +60,7 @@ const Wrapper = styled.section`
   .img__container:nth-child(2) img {
     object-fit: contain;
     /* border: 1px solid red; */
+    /* padding-left: 3rem; */
   }
 
   .grid {
