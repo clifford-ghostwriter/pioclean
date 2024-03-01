@@ -104,7 +104,7 @@ const Wrapper = styled.div`
     font-size: var(--fs-700);
     /* border: 1px solid red; */
   }
-  @media (width > 870px) {
+  @media (width > 1100px) {
     .side-bar__center {
       transform: translate(-100%);
     }
