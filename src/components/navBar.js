@@ -128,7 +128,7 @@ const Wrapper = styled.nav`
     letter-spacing: 0.1rem;
   }
 
-  @media (width > 870px) {
+  @media (width > 1100px) {
     .nav__btn {
       display: none;
     }
@@ -140,6 +140,7 @@ const Wrapper = styled.nav`
   @media (width < 1000px) {
     .side-bar__links {
       margin-left: 3rem;
+      /* border: 1px solid red; */
     }
   }
 `;

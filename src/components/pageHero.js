@@ -74,7 +74,7 @@ const Wrapper = styled.section`
   a {
     color: red;
     position: absolute;
-    left: 2rem;
+    left: 1.5rem;
     top: 5rem;
   }
 `;

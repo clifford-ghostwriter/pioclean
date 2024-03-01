@@ -5,6 +5,9 @@ import { MdLocalLaundryService } from "react-icons/md";
 import { MdOutlineLocalLaundryService } from "react-icons/md";
 import { MdOutlinePriceChange } from "react-icons/md";
 import { IoMdContacts } from "react-icons/io";
+import dirtyClothes from "../assests/dirtyclothes.png";
+import cleanClothes from "../assests/cleanclothes.png";
+import washingMachine from "../assests/washingmachine.png";
 export const links = [
   {
     id: 1,
@@ -50,5 +53,20 @@ export const links = [
     text: "contact us",
     url: "/contact",
     icon: <IoMdContacts />,
+  },
+];
+
+export const slides = [
+  {
+    text: "clean clothes",
+    Image: { cleanClothes },
+  },
+  {
+    text: "dirty clothes",
+    Image: { dirtyClothes },
+  },
+  {
+    text: "washing machine",
+    Image: { washingMachine },
   },
 ];
