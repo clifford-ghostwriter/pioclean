@@ -51,6 +51,7 @@ const Wrapper = styled.div`
     opacity: 0.7;
     transform: translate(-100%);
     transition: var(--transition);
+    z-index: 999;
   }
 
   .side-bar__links {

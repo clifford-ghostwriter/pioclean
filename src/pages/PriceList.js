@@ -1,7 +1,14 @@
 import React from "react";
+import styled from "styled-components";
+import { PageHero } from "../components";
 
 const PriceList = () => {
-  return <div>pricelist</div>;
+  return (
+    <Wrapper>
+      <PageHero path="/" text="Home" />
+      <div>pricelist</div>
+    </Wrapper>
+  );
 };
-
+const Wrapper = styled.section``;
 export default PriceList;

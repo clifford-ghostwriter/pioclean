@@ -5,7 +5,7 @@ import { PageHero } from "../components";
 const Home = () => {
   return (
     <Wrapper>
-      <PageHero />
+      <PageHero path="/about" text="About us" />
     </Wrapper>
   );
 };

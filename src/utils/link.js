@@ -1,8 +1,10 @@
 import { FaHome } from "react-icons/fa";
 import { BiSolidNotepad } from "react-icons/bi";
 import { MdLocalLaundryService } from "react-icons/md";
-import { RiLockPasswordFill } from "react-icons/ri";
-
+// import { RiLockPasswordFill } from "react-icons/ri";
+import { MdOutlineLocalLaundryService } from "react-icons/md";
+import { MdOutlinePriceChange } from "react-icons/md";
+import { IoMdContacts } from "react-icons/io";
 export const links = [
   {
     id: 1,
@@ -21,13 +23,13 @@ export const links = [
     id: 4,
     text: "services",
     url: "/service",
-    icon: <RiLockPasswordFill />,
+    icon: <MdOutlineLocalLaundryService />,
   },
   {
     id: 4,
     text: "price list",
     url: "/pricelist",
-    icon: <RiLockPasswordFill />,
+    icon: <MdOutlinePriceChange />,
   },
   {
     id: 3,
@@ -47,6 +49,6 @@ export const links = [
     id: 4,
     text: "contact us",
     url: "/contact",
-    icon: <RiLockPasswordFill />,
+    icon: <IoMdContacts />,
   },
 ];
