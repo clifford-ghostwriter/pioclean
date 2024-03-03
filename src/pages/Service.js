@@ -5,7 +5,7 @@ import { PageHero } from "../components";
 const Service = () => {
   return (
     <Wrapper>
-      <PageHero path="/" text="Home" />
+      <PageHero path="/" text="Back Home" />
       <div>services</div>
     </Wrapper>
   );

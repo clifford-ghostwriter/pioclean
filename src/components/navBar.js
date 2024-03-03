@@ -9,13 +9,15 @@ import { FaTimes } from "react-icons/fa";
 
 const Nav = () => {
   const { openSidebar, isSidebarOpen, closeSidebar } = UseAppContext();
-  console.log(isSidebarOpen);
+  // console.log(isSidebarOpen);
   return (
     <Wrapper>
       <div className="nav__wrapper section-center">
         <div className="nav__center">
           <div className="nav__logo">
-            <img src={logo} alt="logo" />
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
             <p className="nav__text">Pioclean</p>
           </div>
 

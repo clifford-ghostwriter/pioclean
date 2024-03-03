@@ -5,7 +5,7 @@ import styled from "styled-components";
 const About = () => {
   return (
     <Wrapper>
-      <PageHero path="/" text="Home" />
+      <PageHero path="/" text="Back Home" />
     </Wrapper>
   );
 };

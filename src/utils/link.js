@@ -8,6 +8,7 @@ import { IoMdContacts } from "react-icons/io";
 import dirtyClothes from "../assests/dirtyclothes.png";
 import cleanClothes from "../assests/cleanclothes.png";
 import washingMachine from "../assests/washingmachine.png";
+import { GiClothes } from "react-icons/gi";
 export const links = [
   {
     id: 1,
@@ -38,7 +39,8 @@ export const links = [
     id: 3,
     text: "order online",
     url: "/order",
-    icon: <MdLocalLaundryService />,
+    // icon: <MdLocalLaundryService />,
+    icon: <GiClothes />,
   },
 
   // {
@@ -59,14 +61,14 @@ export const links = [
 export const slides = [
   {
     text: "clean clothes",
-    Image: { cleanClothes },
+    image: cleanClothes,
   },
   {
     text: "dirty clothes",
-    Image: { dirtyClothes },
+    image: dirtyClothes,
   },
   {
     text: "washing machine",
-    Image: { washingMachine },
+    image: washingMachine,
   },
 ];

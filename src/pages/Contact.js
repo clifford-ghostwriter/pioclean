@@ -5,7 +5,7 @@ import { PageHero } from "../components";
 const Contact = () => {
   return (
     <Wrapper>
-      <PageHero path="/" text="Home" />
+      <PageHero path="/" text="Back Home" />
       <div>Contact</div>
     </Wrapper>
   );
