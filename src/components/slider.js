@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { slides } from "../utils/link";
 import styled from "styled-components";
 import Slide from "./slide";
@@ -7,6 +7,26 @@ import { FaChevronRight } from "react-icons/fa";
 
 function Slider() {
   const [index, setIndex] = useState(0);
+  // eslint-disable-next-line
+  const [slidesData, setSlides] = useState(slides);
+
+  useEffect(() => {
+    const lastIndex = slidesData.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
+    }
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, slidesData]);
+
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 3000);
+
+    return () => clearInterval(slider);
+  }, [index]);
 
   const setIndexBtn = function (index) {
     setIndex(index);
