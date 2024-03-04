@@ -8,6 +8,10 @@ import { FaChevronRight } from "react-icons/fa";
 function Slider() {
   const [index, setIndex] = useState(0);
 
+  const setIndexBtn = function (index) {
+    setIndex(index);
+  };
+
   const increment = function () {
     setIndex((initialvalue) => {
       let newvalue;
@@ -73,6 +77,18 @@ function Slider() {
         <p>
           you wear..... <br /> we wash.
         </p>
+      </div>
+
+      <div className="small__btn-container">
+        {slides.map((_, index) => {
+          return (
+            <button
+              className="small-btn"
+              onClick={() => {
+                setIndexBtn(index);
+              }}></button>
+          );
+        })}
       </div>
     </Wrapper>
   );
@@ -140,6 +156,24 @@ const Wrapper = styled.div`
   }
   .hello {
     display: none;
+  }
+
+  .small__btn-container {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.2rem;
+  }
+  .small-btn {
+    color: black;
+    width: 1rem;
+    aspect-ratio: 1;
+    border-radius: 500vw;
+    background-color: transparent;
+    border: 1px solid white;
+    box-shadow: 2px 2px 3px black;
   }
 `;
 export default Slider;
