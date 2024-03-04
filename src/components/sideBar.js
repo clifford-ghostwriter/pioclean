@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { links } from "../utils/link";
 import { UseAppContext } from "../contexts/app.Context";
-// import { FaTimes } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 
 const SideBar = () => {
   const { isSidebarOpen, closeSidebar } = UseAppContext();
@@ -13,9 +13,9 @@ const SideBar = () => {
         className={
           isSidebarOpen ? "side-bar__center show-sidebar" : "side-bar__center"
         }>
-        {/* <button className="side-bar__close-btn btn" onClick={closeSidebar}>
+        <button className="side-bar__close-btn btn" onClick={closeSidebar}>
           <FaTimes />
-        </button> */}
+        </button>
         <ul className="side-bar__links">
           {links.map((link) => {
             const { id, text, url, icon } = link;
@@ -39,19 +39,22 @@ const Wrapper = styled.div`
   justify-content: center;
   align-content: center;
   position: relative;
+  /* padding-top: 2rem; */
 
   .side-bar__center {
     /* display: none; */
     position: fixed;
-    top: 10rem;
+    top: 0;
     left: 0;
     background-color: var(--clr--primary-two);
-    height: calc(100vh - 10rem);
-    width: 100vw;
+    /* height: calc(100vh - 10rem); */
+    height: 100%;
+    width: 100%;
     opacity: 0.7;
     transform: translate(-100%);
     transition: var(--transition);
     z-index: 999;
+    padding-top: 1rem;
   }
 
   .side-bar__links {

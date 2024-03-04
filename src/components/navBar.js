@@ -27,9 +27,11 @@ const Nav = () => {
           <button
             className="btn nav__btn"
             onClick={() => {
-              isSidebarOpen ? closeSidebar() : openSidebar();
+              // isSidebarOpen ? closeSidebar() : openSidebar();
+              openSidebar();
             }}>
-            {isSidebarOpen ? <FaTimes /> : <FaBars />}
+            {isSidebarOpen ? null : <FaBars />}
+            {/* <FaBars /> */}
           </button>
 
           <ul className="side-bar__links">
@@ -58,6 +60,9 @@ const Wrapper = styled.nav`
   height: 10rem;
   overflow: hidden;
   min-width: 200px;
+  /* position: fixed; */
+  /* top: 0; */
+  /* left: 0; */
 
   .nav__wrapper {
     padding-block: var(--fs-300);
