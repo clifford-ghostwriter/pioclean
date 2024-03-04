@@ -5,9 +5,11 @@ import { FaBars } from "react-icons/fa";
 import { UseAppContext } from "../contexts/app.Context";
 import { Link } from "react-router-dom";
 import { links } from "../utils/link";
+// eslint-disable-next-line
 import { FaTimes } from "react-icons/fa";
 
 const Nav = () => {
+  // eslint-disable-next-line
   const { openSidebar, isSidebarOpen, closeSidebar } = UseAppContext();
   // console.log(isSidebarOpen);
   return (

@@ -1,6 +1,6 @@
 import { FaHome } from "react-icons/fa";
 import { BiSolidNotepad } from "react-icons/bi";
-import { MdLocalLaundryService } from "react-icons/md";
+// import { MdLocalLaundryService } from "react-icons/md";
 // import { RiLockPasswordFill } from "react-icons/ri";
 import { MdOutlineLocalLaundryService } from "react-icons/md";
 import { MdOutlinePriceChange } from "react-icons/md";
