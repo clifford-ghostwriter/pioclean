@@ -24,8 +24,9 @@ const Wrapper = styled.div`
   background-origin: border-box;
   width: 100%;
   height: 100%;
-
-  transform: translateX(${(p) => p.index * 100}%);
+  opacity: 0;
+  /* transform: translateX(${(p) => p.index * 100}%); */
+  /* transform: translateX(); */
   position: absolute;
   top: 0;
   left: 0;

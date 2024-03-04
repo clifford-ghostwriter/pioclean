@@ -129,6 +129,7 @@ const Wrapper = styled.div`
 
   .active {
     transform: translateX(0);
+    opacity: 1;
     /* transition: var(--transition); */
     /* border: 20px solid pink; */
   }
