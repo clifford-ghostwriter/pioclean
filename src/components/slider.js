@@ -124,18 +124,18 @@ const Wrapper = styled.div`
   .previous {
     transform: translateX(-100%);
     /* border: 20px solid pink; */
-    transition: var(--transition);
+    /* transition: var(--transition); */
   }
 
   .active {
     transform: translateX(0);
-    transition: var(--transition);
+    /* transition: var(--transition); */
     /* border: 20px solid pink; */
   }
 
   .next {
     transform: translateX(100%);
-    transition: var(--transition);
+    /* transition: var(--transition); */
   }
   .hello {
     display: none;

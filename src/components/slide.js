@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import bck from "../assests/dirtyclothes.png";
-const color = "blue";
+// import bck from "../assests/dirtyclothes.png";
+// const color = "blue";
 
 const Slide = ({ slide, index, type }) => {
-  const { text, image } = slide;
+  const { image } = slide;
   console.log(index);
 
   return (
@@ -30,6 +30,6 @@ const Wrapper = styled.div`
   top: 0;
   left: 0;
 
-  transition: var(--transition);
+  transition: var(--transition-slow);
 `;
 export default Slide;
