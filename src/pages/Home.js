@@ -32,6 +32,10 @@ const Home = () => {
         <Slider />
       </section>
       <section className="section steps__container">
+        <div className="steps__text">
+          <p>How it works</p>
+          {/* <div className="underline"></div> */}
+        </div>
         {orderSteps.map((step, index) => {
           return <Steps step={step} />;
         })}
@@ -43,6 +47,22 @@ const Home = () => {
 const Wrapper = styled.section`
   /* background-color: yellow; */
   /* height: 500px; */
+
+  counter-reset: count;
+
+  .step::before {
+    counter-increment: count;
+    content: " " counter(count) " ";
+    color: white;
+    width: 3rem;
+    aspect-ratio: 1;
+    background-color: red;
+    border-radius: 599vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    di
+  }
 
   .hero__text {
     /* border: 1px solid blue; */
@@ -99,6 +119,15 @@ const Wrapper = styled.section`
 
   .steps__container {
     /* border: 1px solid red; */
+  }
+
+  .steps__text p {
+    border-left: 5px solid red;
+    margin: auto;
+    width: 8rem;
+    padding-left: 0.5rem;
+  }
+  .underline {
   }
 `;
 

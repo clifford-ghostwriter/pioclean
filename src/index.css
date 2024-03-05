@@ -144,7 +144,7 @@ select {
 .section {
   /* min-width: max-content; */
   padding: 5rem 0;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .section-center {
@@ -153,6 +153,11 @@ select {
   margin-inline: auto;
   /* border: 1px solid red; */
 
+}
+
+.underline {
+  border-bottom: 3px solid red;
+  width: 4rem;
 }
 
 
