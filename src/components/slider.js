@@ -91,12 +91,12 @@ function Slider() {
           <FaChevronRight />
         </button>
       </div>
-
+      {/* 
       <div className="hero__text">
         <p>
           you wear..... <br /> we wash.
         </p>
-      </div>
+      </div> */}
 
       <div className="small__btn-container">
         {slides.map((_, btnIndex) => {
@@ -195,10 +195,11 @@ const Wrapper = styled.div`
     background-color: transparent;
     border: 1px solid white;
     box-shadow: 2px 2px 3px black;
+    cursor: pointer;
   }
 
   .active-btn {
-    background-color: white;
+    background-color: var(--clr--primary-six);
   }
 `;
 export default Slider;

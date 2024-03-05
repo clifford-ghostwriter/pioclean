@@ -9,6 +9,7 @@
   --clr--primary-four: #ffffff;
   --clr--primary-four: #c83fc8;
   --clr--primary-five: #c9abab;
+  --clr--primary-six: rgba(119, 144, 233, 0.8);
   /* sizes */
 
 
@@ -143,6 +144,7 @@ select {
 .section {
   /* min-width: max-content; */
   padding: 5rem 0;
+  border: 2px solid red;
 }
 
 .section-center {

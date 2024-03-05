@@ -9,6 +9,10 @@ import dirtyClothes from "../assests/dirtyclothes.png";
 import cleanClothes from "../assests/cleanclothes.png";
 import washingMachine from "../assests/washingmachine.png";
 import { GiClothes } from "react-icons/gi";
+import dirtyclothesone from "../assests/dirty-clothes-02.avif";
+import washingmachineone from "../assests/washing-machine-two.jpg";
+import cleanclothesone from "../assests/clean-clothes-one.jpg";
+
 export const links = [
   {
     id: 1,
@@ -70,5 +74,18 @@ export const slides = [
   {
     text: "washing machine",
     image: washingMachine,
+  },
+];
+
+export const orderSteps = [
+  {
+    image: dirtyclothesone,
+  },
+  {
+    image: washingmachineone,
+  },
+
+  {
+    image: cleanclothesone,
   },
 ];
