@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { slides } from "../utils/link";
 import styled from "styled-components";
-import Slide from "./slide";
+import { Slide } from "../components";
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 
@@ -21,11 +21,10 @@ function Slider() {
   }, [index, slidesData]);
 
   useEffect(() => {
-    let slider = setInterval(() => {
-      setIndex(index + 1);
-    }, 3000);
-
-    return () => clearInterval(slider);
+    // let slider = setInterval(() => {
+    //   setIndex(index + 1);
+    // }, 3000);
+    // return () => clearInterval(slider);
   }, [index]);
 
   const setIndexBtn = function (index) {
@@ -100,12 +99,14 @@ function Slider() {
       </div>
 
       <div className="small__btn-container">
-        {slides.map((_, index) => {
+        {slides.map((_, btnIndex) => {
           return (
             <button
-              className="small-btn"
+              className={
+                btnIndex === index ? "small-btn active-btn" : "small-btn"
+              }
               onClick={() => {
-                setIndexBtn(index);
+                setIndexBtn(btnIndex);
               }}></button>
           );
         })}
@@ -116,8 +117,8 @@ function Slider() {
 const Wrapper = styled.div`
   /* border: 1px solid red; */
   position: relative;
-  /* padding: 1rem; */
-  margin: 1rem;
+  padding-top: 2rem;
+  /* margin: 1rem; */
 
   .slider__center {
     /* display: flex; */
@@ -194,6 +195,10 @@ const Wrapper = styled.div`
     background-color: transparent;
     border: 1px solid white;
     box-shadow: 2px 2px 3px black;
+  }
+
+  .active-btn {
+    background-color: white;
   }
 `;
 export default Slider;

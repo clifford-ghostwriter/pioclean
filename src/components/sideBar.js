@@ -54,7 +54,7 @@ const Wrapper = styled.div`
     transform: translate(-100%);
     transition: var(--transition);
     z-index: 999;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
   }
 
   .side-bar__links {
@@ -66,6 +66,7 @@ const Wrapper = styled.div`
     align-items: flex-start;
     height: 100%;
     padding: 0 1rem;
+    padding-top: 3.4rem;
   }
 
   .link {
@@ -99,7 +100,8 @@ const Wrapper = styled.div`
   .side-bar__close-btn {
     position: absolute;
     display: block;
-    right: 0;
+    right: 0.7rem;
+    top: 3.4rem;
     /* width: 100%; */
     /* text-align: right; */
     background-color: transparent;
