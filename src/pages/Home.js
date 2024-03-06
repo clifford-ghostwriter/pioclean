@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { PageHero, Steps, Slider } from "../components";
+import { PageHero, Steps, Slider, Testimonies } from "../components";
 // import Slider from "../components/slider";
 import { FaLongArrowAltDown } from "react-icons/fa";
-import { orderSteps } from "../utils/link";
+import { orderSteps, testimonies } from "../utils/link";
 
 const Home = () => {
   return (
@@ -42,6 +42,15 @@ const Home = () => {
               return <Steps step={step} />;
             })}
           </div>
+        </div>
+        <div className="testimonials">
+          <h3 className="testimonial__heading">testimonials</h3>
+          <p className="testimonial__text">
+            Once you try us, you can't go back
+          </p>
+          {testimonies.map((customer, index) => {
+            return <Testimonies customer={customer} />;
+          })}
         </div>
       </section>
     </Wrapper>
@@ -135,6 +144,16 @@ const Wrapper = styled.section`
   }
   .steps {
     padding-top: 2rem;
+  }
+  .testimonials {
+    padding-top: 2rem;
+  }
+  .testimonial__heading {
+    text-transform: uppercase;
+  }
+
+  .testimonial__text {
+    padding-top: 0.5rem;
   }
 `;
 

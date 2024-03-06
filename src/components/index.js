@@ -5,5 +5,6 @@ import Slider from "./slider";
 import Steps from "./steps";
 import Slide from "./slide";
 import Footer from "./footer";
+import Testimonies from "./testimonies";
 
-export { Nav, Sidebar, PageHero, Slide, Steps, Slider, Footer };
+export { Nav, Sidebar, PageHero, Slide, Steps, Slider, Footer, Testimonies };

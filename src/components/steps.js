@@ -44,7 +44,7 @@ const Wrapper = styled.section`
 
     grid-row: 2/3;
     grid-column: 2/ -1;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     align-content: first baseline;
   }
 `;
