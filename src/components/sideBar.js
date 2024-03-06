@@ -49,7 +49,7 @@ const Wrapper = styled.div`
     background-color: var(--clr--primary-two);
     /* height: calc(100vh - 10rem); */
     height: 100dvh;
-    width: 100%;
+    /* width: 100%; */
     opacity: 0.7;
     transform: translate(-100%);
     transition: var(--transition);

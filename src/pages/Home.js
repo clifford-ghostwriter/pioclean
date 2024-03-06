@@ -31,14 +31,18 @@ const Home = () => {
         </div>
         <Slider />
       </section>
-      <section className="section steps__container">
-        <div className="steps__text">
-          <p>How it works</p>
-          {/* <div className="underline"></div> */}
+      <section className="section ">
+        <div className="steps__container section-center">
+          <div className="steps__text">
+            <p>How it works</p>
+            {/* <div className="underline"></div> */}
+          </div>
+          <div className="steps">
+            {orderSteps.map((step, index) => {
+              return <Steps step={step} />;
+            })}
+          </div>
         </div>
-        {orderSteps.map((step, index) => {
-          return <Steps step={step} />;
-        })}
       </section>
     </Wrapper>
   );
@@ -57,11 +61,11 @@ const Wrapper = styled.section`
     width: 3rem;
     aspect-ratio: 1;
     background-color: red;
+    /* background-color: var(--clr--primary-eight); */
     border-radius: 599vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    di
   }
 
   .hero__text {
@@ -119,6 +123,8 @@ const Wrapper = styled.section`
 
   .steps__container {
     /* border: 1px solid red; */
+    display: grid;
+    justify-content: center;
   }
 
   .steps__text p {
@@ -127,7 +133,8 @@ const Wrapper = styled.section`
     width: 8rem;
     padding-left: 0.5rem;
   }
-  .underline {
+  .steps {
+    padding-top: 2rem;
   }
 `;
 
