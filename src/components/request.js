@@ -60,7 +60,19 @@ const Request = () => {
         <textarea name="" id="" cols="30" rows="10">
           Enter additional information about your request
         </textarea>
+        <input type="submit" />
       </form>
+      <div className="pickup">
+        <h2>Collection and delivery service is available in the below area:</h2>
+        <p>
+          Ogba / Ikeja and it’s environs Send us a quick message using the
+          request form or call 08130969333 to arrange on demand pick
+          up/delivery. Please call the day before you wish a collection to take
+          place to maximize chances of booking the slot. Also give the driver a
+          big time window to cater for traffic. Collection and delivery charges
+          N1,000 for pick up and delivery Free for all orders over N10,000
+        </p>
+      </div>
     </Wrapper>
   );
 };
