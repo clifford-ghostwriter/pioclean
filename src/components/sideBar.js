@@ -100,14 +100,14 @@ const Wrapper = styled.div`
   .side-bar__close-btn {
     position: absolute;
     display: block;
-    right: 0.7rem;
-    top: 3.4rem;
-    /* width: 100%; */
-    /* text-align: right; */
+    right: 0.3rem;
+    top: 3.7rem;
     background-color: transparent;
     color: var(--clr--primary-three);
     font-size: var(--fs-700);
     /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
   }
   @media (width > 1100px) {
     .side-bar__center {

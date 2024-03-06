@@ -10,9 +10,9 @@ const Testimonies = ({ customer }) => {
       </div>
       <div className="customer__testimonials__text">
         <p className="text">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
+          " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
           impedit dolorum voluptatum laboriosam similique, rerum eveniet sit nam
-          corporis. Rem placeat excepturi vero a iusto.
+          corporis. Rem placeat excepturi vero a iusto. "
         </p>
         <p className="customer__name">-{name}</p>
       </div>

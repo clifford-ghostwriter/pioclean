@@ -12,6 +12,7 @@ import { GiClothes } from "react-icons/gi";
 import dirtyclothesone from "../assests/dirty-clothes-02.avif";
 import washingmachineone from "../assests/washing-machine-two.jpg";
 import cleanclothesone from "../assests/clean-clothes-one.jpg";
+import drycleanedclothes from "../assests/drycleanedclothes.avif";
 import ben from "../assests/customer/ben.jpg";
 import dave from "../assests/customer/dave.jpg";
 import hannah from "../assests/customer/hannah.jpg";
@@ -91,6 +92,9 @@ export const orderSteps = [
   {
     image: cleanclothesone,
   },
+  {
+    image: drycleanedclothes,
+  },
 ];
 
 export const testimonies = [
@@ -111,3 +115,5 @@ export const testimonies = [
     name: "josh joshua",
   },
 ];
+
+export const sampleorder = [];

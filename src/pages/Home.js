@@ -4,6 +4,7 @@ import { PageHero, Steps, Slider, Testimonies } from "../components";
 // import Slider from "../components/slider";
 import { FaLongArrowAltDown } from "react-icons/fa";
 import { orderSteps, testimonies } from "../utils/link";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -23,7 +24,9 @@ const Home = () => {
             iusto minus cupiditate nostrum alias. Obcaecati, autem?
           </p>
           <div className="cta__container">
-            <button className="cta-btn">order</button>
+            <Link to="/order" className="cta-btn">
+              order
+            </Link>
             <a href="#learnmore" className="cta-btn">
               <span>learn more</span> <FaLongArrowAltDown />
             </a>
@@ -112,6 +115,7 @@ const Wrapper = styled.section`
     border-radius: 5px;
     cursor: pointer;
     color: black;
+    text-decoration: none;
   }
 
   .cta-btn:last-child {
@@ -149,11 +153,16 @@ const Wrapper = styled.section`
     padding-top: 2rem;
   }
   .testimonial__heading {
-    text-transform: uppercase;
+    text-transform: capitalize;
+    border-left: 5px solid red;
+    margin: auto;
+    width: 8rem;
+    padding-left: 0.5rem;
   }
 
   .testimonial__text {
     padding-top: 0.5rem;
+    text-align: center;
   }
 `;
 
