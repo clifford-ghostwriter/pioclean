@@ -54,12 +54,12 @@ const Wrapper = styled.section`
   .footer__container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 80vw;
     padding-block: 1rem;
     margin: auto;
     /* padding-inline: 1rem; */
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .contact__us {
     display: grid;

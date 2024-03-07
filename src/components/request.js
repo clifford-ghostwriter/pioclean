@@ -5,12 +5,12 @@ import Formrowselect from "./formrowselect";
 
 const Request = () => {
   return (
-    <Wrapper>
+    <Wrapper className="section section-center">
       <h2 className="heading">
         fill the pick up <br />
         request form below
       </h2>
-      <form action="">
+      <form className="pickup__form" action="">
         <div className="form__customer__detail">
           <Formrow
             type="text"
@@ -60,9 +60,9 @@ const Request = () => {
         <textarea name="" id="" cols="30" rows="10">
           Enter additional information about your request
         </textarea>
-        <input type="submit" />
+        <input type="submit" className="submit-btn" />
       </form>
-      <div className="pickup">
+      <div className="pickup section section-center">
         <h2>Collection and delivery service is available in the below area:</h2>
         <p>
           Ogba / Ikeja and it’s environs Send us a quick message using the
@@ -78,8 +78,36 @@ const Request = () => {
 };
 
 const Wrapper = styled.div`
+  .pickup__form {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .pickup__form * {
+    border-radius: 5px;
+    max-width: 100%;
+  }
+  .pickup__form div {
+    display: grid;
+    gap: 0.5rem;
+  }
   .heading {
     text-transform: uppercase;
+    padding-top: 1rem;
+  }
+
+  .submit-btn {
+    width: 5rem;
+    background-color: var(--clr--primary-one);
+  }
+
+  .pickup {
+    border: 1px solid red;
+  }
+
+  .pickup p {
     padding-top: 1rem;
   }
 `;
