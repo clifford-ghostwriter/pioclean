@@ -32,7 +32,7 @@ export const links = [
     icon: <BiSolidNotepad />,
   },
   {
-    id: 4,
+    id: 3,
     text: "services",
     url: "/service",
     icon: <MdOutlineLocalLaundryService />,
@@ -44,7 +44,7 @@ export const links = [
     icon: <MdOutlinePriceChange />,
   },
   {
-    id: 3,
+    id: 5,
     text: "order online",
     url: "/order",
     // icon: <MdLocalLaundryService />,
@@ -59,7 +59,7 @@ export const links = [
   // },
 
   {
-    id: 4,
+    id: 6,
     text: "contact us",
     url: "/contact",
     icon: <IoMdContacts />,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import logo from "../assests/logo.png";
 import { FaBars } from "react-icons/fa";
@@ -11,9 +11,38 @@ import { FaTimes } from "react-icons/fa";
 const Nav = () => {
   // eslint-disable-next-line
   const { openSidebar, isSidebarOpen, closeSidebar } = UseAppContext();
-  // console.log(isSidebarOpen);
+  const [elemen, setElement] = useState(1);
+  const element = useRef();
+  let baba = element.current;
+  // const ele = document.querySelector(".ele");
+
+  useEffect(() => {
+    if (elemen >= 150) {
+      baba.style.position = "sticky";
+      // baba.style.left = 0;
+      baba.style.top = 0;
+      baba.style.zIndex = 999;
+      baba.style.transition = `all ${0.3}s linear`;
+    } else {
+      baba.style.position = "relative";
+    }
+    // eslint-disable-next-line
+  }, [elemen]);
+
+  useEffect(() => {
+    const event = window.addEventListener("scroll", () => {
+      // const ele = document.querySelector(".ele");
+      const elem = window.scrollY;
+      setElement(elem);
+      // console.log(ele);
+      console.log(elemen);
+    });
+
+    return () => window.removeEventListener("scroll", event);
+  }, [elemen]);
+
   return (
-    <Wrapper>
+    <Wrapper ref={element} className="ele">
       <div className="nav__wrapper section-center">
         <div className="nav__center">
           <div className="nav__logo">
@@ -62,9 +91,12 @@ const Wrapper = styled.nav`
   height: 10rem;
   overflow: hidden;
   min-width: 200px;
-  /* position: fixed; */
+  /* position: relative !important; */
+  /* position: sticky; */
   /* top: 0; */
   /* left: 0; */
+  /* z-index: 990; */
+  transition: var(--transition-slow);
 
   .nav__wrapper {
     padding-block: var(--fs-300);

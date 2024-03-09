@@ -42,7 +42,7 @@ const Home = () => {
           </div>
           <div className="steps">
             {orderSteps.map((step, index) => {
-              return <Steps step={step} />;
+              return <Steps step={step} key={index} />;
             })}
           </div>
         </div>
@@ -52,7 +52,7 @@ const Home = () => {
             Once you try us, you can't go back
           </p>
           {testimonies.map((customer, index) => {
-            return <Testimonies customer={customer} />;
+            return <Testimonies customer={customer} key={index} />;
           })}
         </div>
       </section>

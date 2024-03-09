@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Slide = ({ slide, index, type }) => {
   const { image } = slide;
-  console.log(index);
+  // console.log(index);
 
   return (
     <Wrapper

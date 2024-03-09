@@ -91,17 +91,12 @@ function Slider() {
           <FaChevronRight />
         </button>
       </div>
-      {/* 
-      <div className="hero__text">
-        <p>
-          you wear..... <br /> we wash.
-        </p>
-      </div> */}
 
       <div className="small__btn-container">
         {slides.map((_, btnIndex) => {
           return (
             <button
+              key={btnIndex}
               className={
                 btnIndex === index ? "small-btn active-btn" : "small-btn"
               }
