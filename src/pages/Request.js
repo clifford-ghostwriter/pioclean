@@ -5,6 +5,7 @@ import { Order, PageHero, Request } from "../components";
 const OrderOnline = () => {
   const [order, setOrder] = useState(false);
 
+  // request func
   const request = function (value) {
     setOrder(value);
   };

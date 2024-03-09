@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Formrow from "./formrow";
-import Formrowselect from "./formrowselect";
+import { Formrow, Formrowselect } from "../components";
+// import Formrow from "./formrow";
+// import Formrowselect from "./formrowselect";
 
 const Request = () => {
   return (
@@ -16,19 +17,19 @@ const Request = () => {
             type="text"
             placeholder="Name*"
             name="name"
-            required="true"
+            required={true}
           />
           <Formrow
             type="email"
             placeholder="E-mail*"
             name="name"
-            required="true"
+            required={true}
           />
           <Formrow
             type="number"
             placeholder="Phone Number*"
             name="name"
-            required="true"
+            required={true}
           />
         </div>
         <div className="pickup__area">
@@ -38,7 +39,7 @@ const Request = () => {
             type="text"
             placeholder="Your Address"
             name="name"
-            required="true"
+            required={true}
           />
         </div>
         <div className="date">
@@ -47,19 +48,17 @@ const Request = () => {
             type="date"
             placeholder="name*"
             name="name"
-            required="true"
+            required={true}
           />
           <Formrow
             type="time"
             placeholder="name*"
             name="name"
-            required="true"
+            required={true}
           />
         </div>
-        <Formrow type="date" placeholder="name*" name="name" required="true" />
-        <textarea name="" id="" cols="30" rows="10">
-          Enter additional information about your request
-        </textarea>
+        <Formrow type="date" placeholder="name*" name="name" required={true} />
+        <textarea name="" id="" cols="30" rows="10"></textarea>
         <input type="submit" className="submit-btn" />
       </form>
       <div className="pickup section section-center">

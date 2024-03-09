@@ -8,6 +8,11 @@ import Footer from "./footer";
 import Testimonies from "./testimonies";
 import Request from "./request";
 import Order from "./order";
+import Requestitem from "./requestitem";
+import Orderitem from "./orderitem";
+import Ordercolumn from "./ordercolumn";
+import Formrow from "./formrow";
+import Formrowselect from "./formrowselect";
 
 export {
   Nav,
@@ -20,4 +25,9 @@ export {
   Testimonies,
   Request,
   Order,
+  Requestitem,
+  Orderitem,
+  Ordercolumn,
+  Formrow,
+  Formrowselect,
 };

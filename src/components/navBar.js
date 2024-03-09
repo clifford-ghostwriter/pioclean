@@ -24,7 +24,7 @@ const Nav = () => {
       baba.style.zIndex = 999;
       baba.style.transition = `all ${0.3}s linear`;
     } else {
-      baba.style.position = "relative";
+      // baba.style.position = "relative";
     }
     // eslint-disable-next-line
   }, [elemen]);
@@ -35,7 +35,7 @@ const Nav = () => {
       const elem = window.scrollY;
       setElement(elem);
       // console.log(ele);
-      console.log(elemen);
+      // console.log(elemen);
     });
 
     return () => window.removeEventListener("scroll", event);

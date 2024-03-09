@@ -28,8 +28,8 @@ const Wrapper = styled.section`
   .image__container {
     width: 20rem;
     aspect-ratio: 1;
-    grid-column: 2/ -1;
-    /* border: 1px solid red; */
+    grid-column: 1/ -1;
+    border: 1px solid red;
   }
 
   img {
