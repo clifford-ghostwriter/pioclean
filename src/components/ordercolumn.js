@@ -16,13 +16,14 @@ const Ordercolumn = () => {
 };
 const Wrapper = styled.div`
   .header__container {
-    display: flex;
-    border: 1px solid red;
+    border: 1px solid blue;
+    display: grid;
+    grid-template-columns: auto repeat(4, 1fr);
+    gap: 1rem;
   }
 
-  .header__container > * {
-    flex: 1;
-    width: max-content;
+  .header__container > *:not(:first-child) {
+    text-align: center;
   }
 `;
 export default Ordercolumn;

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Order, PageHero, Request } from "../components";
+import { Order, PageHero, Request, Pricelist } from "../components";
 
 const OrderOnline = () => {
-  const [order, setOrder] = useState(false);
+  const [order, setOrder] = useState("pricelist");
 
   // request func
   const request = function (value) {
@@ -13,14 +13,25 @@ const OrderOnline = () => {
     <Wrapper>
       <PageHero path="/" text="Back Home" />
       <div className="btn__container section-center">
-        <button className=" request-btn" onClick={() => request(true)}>
+        <button className="request-btn" onClick={() => request("pricelist")}>
+          price list
+        </button>
+        <button className=" request-btn" onClick={() => request("makeorder")}>
           make order
         </button>
-        <button className="request-btn" onClick={() => request(false)}>
+        <button className="request-btn" onClick={() => request("pcikup")}>
           pick up order
         </button>
       </div>
-      <div className="section-center">{order ? <Order /> : <Request />}</div>
+      <div className="section-center">
+        {order === "pricelist" ? (
+          <Pricelist />
+        ) : order === "makeorder" ? (
+          <Order />
+        ) : (
+          <Request />
+        )}
+      </div>
     </Wrapper>
   );
 };

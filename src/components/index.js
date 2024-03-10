@@ -13,6 +13,7 @@ import Orderitem from "./orderitem";
 import Ordercolumn from "./ordercolumn";
 import Formrow from "./formrow";
 import Formrowselect from "./formrowselect";
+import Pricelist from "./pricelist";
 
 export {
   Nav,
@@ -30,4 +31,5 @@ export {
   Ordercolumn,
   Formrow,
   Formrowselect,
+  Pricelist,
 };
