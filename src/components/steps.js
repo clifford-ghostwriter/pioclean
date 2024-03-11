@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Steps = ({ step }) => {
+  const [scroll, setScroll] = useState(null);
   const { image } = step;
+
+  useEffect(() => {
+    const event = window.addEventListener("scroll", () => {
+      const scrollValue = window.scrollY;
+      setScroll(scrollValue);
+    });
+  });
+
+  useEffect(() => {
+    const step = document.querySelector(".step");
+    // console.log(scroll);
+
+    if (scroll >= 400) {
+      step.style.Color = "blue";
+    }
+  }, [scroll]);
 
   return (
     <Wrapper className="section-center step" id="learnmore">
@@ -23,12 +40,14 @@ const Wrapper = styled.section`
   grid-template-rows: auto auto;
   padding: 2rem;
   gap: 1rem;
+  /* transform: translateY(20%); */
+  transition: var(--transition);
   /* border: 1px solid green; */
 
   .image__container {
     width: 20rem;
     aspect-ratio: 1;
-    grid-column: 1/ -1;
+    grid-column: 2/ -1;
     border: 1px solid red;
   }
 

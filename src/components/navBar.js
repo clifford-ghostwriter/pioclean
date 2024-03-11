@@ -10,7 +10,7 @@ import { FaTimes } from "react-icons/fa";
 
 const Nav = () => {
   // eslint-disable-next-line
-  const { openSidebar, isSidebarOpen, closeSidebar } = UseAppContext();
+  const { openSidebar, isSidebarOpen } = UseAppContext();
   const [elemen, setElement] = useState(1);
   const element = useRef();
   let baba = element.current;

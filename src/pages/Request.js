@@ -23,7 +23,7 @@ const OrderOnline = () => {
           pick up order
         </button>
       </div>
-      <div className="section-center">
+      <div>
         {order === "pricelist" ? (
           <Pricelist />
         ) : order === "makeorder" ? (
@@ -38,7 +38,7 @@ const OrderOnline = () => {
 
 const Wrapper = styled.section`
   .btn__container {
-    padding-top: 0.5rem;
+    padding-top: 2rem;
     display: flex;
     gap: 0.5rem;
   }

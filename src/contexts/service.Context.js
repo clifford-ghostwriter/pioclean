@@ -5,6 +5,8 @@ import { HANDLE_CHANGE } from "../utils/actions";
 const serviceContext = React.createContext();
 
 const initialServiceState = {
+  length: 10,
+
   order: [
     {
       orderitem0: null,
@@ -71,14 +73,17 @@ const initialServiceState = {
 export const ServiceProvider = ({ children }) => {
   const [state, dispatch] = useReducer(service_reducer, initialServiceState);
 
-  const func = function (e) {
-    const name = e.name;
-    const value = e.value;
-    dispatch({ type: HANDLE_CHANGE, payload: { name, value } });
+  const handleChange = function (e, index) {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    console.log(name, value);
+    dispatch({ type: HANDLE_CHANGE, payload: { name, value, index } });
   };
 
+  // console.log(state);
   return (
-    <serviceContext.Provider value={{ ...state, func }}>
+    <serviceContext.Provider value={{ ...state, handleChange }}>
       {children}
     </serviceContext.Provider>
   );

@@ -148,7 +148,7 @@ select {
 }
 
 .section-center {
-  max-width: 95vw;
+  max-width: 90vw;
   /* min-width: min(1100px, 100%); */
   margin-inline: auto;
   /* border: 1px solid red; */
@@ -156,9 +156,13 @@ select {
 }
 
 .underline {
-  border-bottom: 3px solid red;
+  /* border-bottom: 3px solid red; */
   width: 4rem;
 }
 
 
 /* utility classes */
+
+.text-center {
+  text-align: center;
+}

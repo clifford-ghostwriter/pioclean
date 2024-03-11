@@ -3,43 +3,46 @@ import styled from "styled-components";
 import { Ordercolumn, Orderitem } from "../components";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
+import { UseServiceContext } from "../contexts/service.Context";
 
 const Order = () => {
-  const [length, setLength] = useState(2);
-  const [requestArray, setRequestArray] = useState([]);
-  const [number, setnumber] = useState([1, 2, 3, 4, 5]);
+  const { length, handleChange } = UseServiceContext();
 
-  const index = 2;
+  // const [length, setLength] = useState(2);
+  const [requestArray, setRequestArray] = useState(Array.from({ length }));
+  // const [number, setnumber] = useState([1, 2, 3, 4, 5]);
 
-  const { [index]: value } = number;
+  // const index = 2;
 
-  console.log(value);
+  // const { [index]: value } = number;
+
+  // console.log(value);
 
   useEffect(() => {});
 
-  const setVal = function (value) {
-    const maxLength = 10;
-    const minLength = 0;
-    if (value === "inc") {
-      setLength((initialvalue) => {
-        let newvalue = initialvalue + 1;
-        if (newvalue >= maxLength) {
-          newvalue = maxLength;
-        }
-        return newvalue;
-      });
-    }
+  // const setVal = function (value) {
+  //   const maxLength = 10;
+  //   const minLength = 0;
+  //   if (value === "inc") {
+  //     setLength((initialvalue) => {
+  //       let newvalue = initialvalue + 1;
+  //       if (newvalue >= maxLength) {
+  //         newvalue = maxLength;
+  //       }
+  //       return newvalue;
+  //     });
+  //   }
 
-    if (value === "dec") {
-      setLength((initialvalue) => {
-        let newvalue = initialvalue - 1;
-        if (newvalue <= minLength) {
-          newvalue = minLength;
-        }
-        return newvalue;
-      });
-    }
-  };
+  //   if (value === "dec") {
+  //     setLength((initialvalue) => {
+  //       let newvalue = initialvalue - 1;
+  //       if (newvalue <= minLength) {
+  //         newvalue = minLength;
+  //       }
+  //       return newvalue;
+  //     });
+  //   }
+  // };
 
   useEffect(() => {
     setRequestArray(Array.from({ length }));
@@ -53,16 +56,16 @@ const Order = () => {
 
         <div className="orderitems">
           {requestArray.map((_, index) => {
-            return <Orderitem key={index} />;
+            return <Orderitem key={index} index={index} />;
           })}
         </div>
         <div className="btn__container">
-          <button onClick={() => setVal("dec")}>
+          {/* <button onClick={() => setVal("dec")}>
             <FaMinus />
           </button>
           <button onClick={() => setVal("inc")}>
             <FaPlus />
-          </button>
+          </button> */}
         </div>
       </div>
     </Wrapper>

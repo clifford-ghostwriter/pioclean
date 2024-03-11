@@ -18,7 +18,7 @@ const Footer = () => {
             <FaLocationDot />: <span>15 Abeokuta street, Ogba</span>
           </span>
           <span>
-            <FaRegMessage />:<span>poicleanlaundry@gmail.com</span>
+            <FaRegMessage />:<span>piocleanlaundry@gmail.com</span>
           </span>
           <span>
             <IoIosTimer />: <span>Mon-Sat: 8:00am-6:00pm</span>

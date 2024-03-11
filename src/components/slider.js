@@ -70,7 +70,7 @@ function Slider() {
             position = "next";
           }
 
-          console.log(position);
+          // console.log(position);
           return (
             <Slide
               slide={slide}

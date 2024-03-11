@@ -1,20 +1,31 @@
 import React from "react";
 import styled from "styled-components";
+import { UseServiceContext } from "../contexts/service.Context";
 
-const Orderitem = () => {
-  const func = function (e) {
-    //  dispatch({ type: HANDLE_CHANGE });
-    console.log(e);
-  };
+const Orderitem = ({ index }) => {
+  const { handleChange } = UseServiceContext();
   return (
     <Wrapper>
       <p>S/N</p>
-      <select name="orderitem0" id="">
+      <select
+        name={`orderitem${index}`}
+        id=""
+        onChange={(e) => {
+          handleChange(e, index);
+          console.log(index);
+        }}>
         <option value="hello">hello</option>
         <option value="how far">how far</option>
       </select>
       <p>$5</p>
-      <input type="number" name="ordernumber0" />
+      <input
+        type="number"
+        name={`orderitem${index}`}
+        onChange={(e) => {
+          handleChange(e, index);
+          console.log(index);
+        }}
+      />
       <p>$5</p>
     </Wrapper>
   );

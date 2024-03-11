@@ -14,6 +14,8 @@ import Ordercolumn from "./ordercolumn";
 import Formrow from "./formrow";
 import Formrowselect from "./formrowselect";
 import Pricelist from "./pricelist";
+import Monthlyplan from "./monthlyplan";
+import Singleitemprice from "./singleitemprice";
 
 export {
   Nav,
@@ -32,4 +34,6 @@ export {
   Formrow,
   Formrowselect,
   Pricelist,
+  Monthlyplan,
+  Singleitemprice,
 };
