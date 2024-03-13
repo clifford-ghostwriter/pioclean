@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import heroImage from "../assests/hero-img.png";
 import polygon1 from "../assests/Polygon1.png";
 import polygon2 from "../assests/Polygon2.png";
 import { Link } from "react-router-dom";
+import { UseAppContext } from "../contexts/app.Context";
 
 const PageHero = ({ path, text }) => {
+  useEffect(() => {
+    console.log(document.querySelector(".hero").getBoundingClientRect().bottom);
+  });
+
   return (
-    <Wrapper>
+    <Wrapper className="hero">
       <div className="hero__center">
         <div className="img__container">
           <img src={polygon1} alt="polygon1" />

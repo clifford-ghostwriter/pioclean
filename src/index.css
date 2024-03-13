@@ -166,3 +166,12 @@ select {
 .text-center {
   text-align: center;
 }
+
+
+.stickyNav {
+  position: sticky;
+  border-bottom: 1px solid var(--clr--primary-four);
+  opacity: 0.9;
+  top: 0;
+  z-index: 999;
+}

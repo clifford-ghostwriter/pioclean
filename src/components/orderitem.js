@@ -3,7 +3,19 @@ import styled from "styled-components";
 import { UseServiceContext } from "../contexts/service.Context";
 
 const Orderitem = ({ index }) => {
-  const { handleChange } = UseServiceContext();
+  const { handleChange, order } = UseServiceContext();
+  const { [index]: orderitem } = order;
+  const properties = Object.getOwnPropertyNames(orderitem);
+  console.log(properties);
+
+  const item = orderitem[properties[0]];
+  const price = orderitem[properties[1]];
+  const number = orderitem[properties[2]];
+  const total = orderitem[properties[4]];
+  // const item = properties[0];
+  // console.log(orderitem[item]);
+
+  // console.log(item, price, number, total);
   return (
     <Wrapper>
       <p>S/N</p>
@@ -12,21 +24,19 @@ const Orderitem = ({ index }) => {
         id=""
         onChange={(e) => {
           handleChange(e, index);
-          console.log(index);
         }}>
         <option value="hello">hello</option>
         <option value="how far">how far</option>
       </select>
-      <p>$5</p>
+      <p>{price}</p>
       <input
         type="number"
-        name={`orderitem${index}`}
+        name={`ordernumber${index}`}
         onChange={(e) => {
           handleChange(e, index);
-          console.log(index);
         }}
       />
-      <p>$5</p>
+      <p>{price * number}</p>
     </Wrapper>
   );
 };

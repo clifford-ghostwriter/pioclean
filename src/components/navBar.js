@@ -9,40 +9,16 @@ import { links } from "../utils/link";
 import { FaTimes } from "react-icons/fa";
 
 const Nav = () => {
-  // eslint-disable-next-line
-  const { openSidebar, isSidebarOpen } = UseAppContext();
-  const [elemen, setElement] = useState(1);
-  const element = useRef();
-  let baba = element.current;
-  // const ele = document.querySelector(".ele");
+  const { isSidebarOpen, openSidebar } = UseAppContext();
+  const [isIntersecting, setIsIntersecting] = useState();
 
   useEffect(() => {
-    if (elemen >= 150) {
-      baba.style.position = "sticky";
-      // baba.style.left = 0;
-      baba.style.top = 0;
-      baba.style.zIndex = 999;
-      baba.style.transition = `all ${0.3}s linear`;
-    } else {
-      // baba.style.position = "relative";
-    }
-    // eslint-disable-next-line
-  }, [elemen]);
-
-  useEffect(() => {
-    const event = window.addEventListener("scroll", () => {
-      // const ele = document.querySelector(".ele");
-      const elem = window.scrollY;
-      setElement(elem);
-      // console.log(ele);
-      // console.log(elemen);
-    });
-
-    return () => window.removeEventListener("scroll", event);
-  }, [elemen]);
+    setIsIntersecting(window.scrollY);
+    console.log(isIntersecting);
+  }, [isIntersecting]);
 
   return (
-    <Wrapper ref={element} className="ele">
+    <Wrapper className="ele">
       <div className="nav__wrapper section-center">
         <div className="nav__center">
           <div className="nav__logo">
@@ -65,7 +41,7 @@ const Nav = () => {
             {/* <FaBars /> */}
           </button>
 
-          <ul className="side-bar__links">
+          <ul className="side-bar__links ">
             {links.map((link) => {
               const { id, text, url, icon } = link;
               return (

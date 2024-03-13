@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Footer, Nav } from "../components";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
@@ -7,6 +7,7 @@ import SideBar from "../components/sideBar";
 
 function SharedLayout() {
   // const { isSidebarOpen } = UseAppContext();
+
   return (
     <Wrapper>
       <Nav />

@@ -10,7 +10,7 @@ const Slide = ({ slide, index, type }) => {
   return (
     <Wrapper
       image={image}
-      color="yellow"
+      // color="yellow"
       index={index}
       className={type}></Wrapper>
   );

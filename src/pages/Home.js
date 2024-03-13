@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { PageHero, Steps, Slider, Testimonies } from "../components";
 // import Slider from "../components/slider";
 import { FaLongArrowAltDown } from "react-icons/fa";
 import { orderSteps, testimonies } from "../utils/link";
 import { Link } from "react-router-dom";
+import { UseAppContext } from "../contexts/app.Context";
 
 const Home = () => {
+  const { setheroref, heroref } = UseAppContext();
+  const [ref, setref] = useState();
+
+  useEffect(() => {
+    const element = document.querySelector(".hero__heading");
+    setheroref(element);
+  }, [ref]);
   return (
     <Wrapper>
       <PageHero path="/about" text="About us" />
