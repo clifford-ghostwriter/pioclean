@@ -14,7 +14,7 @@ const Nav = () => {
 
   useEffect(() => {
     setIsIntersecting(window.scrollY);
-    console.log(isIntersecting);
+    // console.log(isIntersecting);
   }, [isIntersecting]);
 
   return (

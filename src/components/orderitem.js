@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { UseServiceContext } from "../contexts/service.Context";
 
 const Orderitem = ({ index }) => {
-  const { handleChange, order } = UseServiceContext();
+  const { handleChange, order, updateTotal } = UseServiceContext();
+  const [totalAmount, setTotalAmount] = useState(0);
   const { [index]: orderitem } = order;
   const properties = Object.getOwnPropertyNames(orderitem);
-  console.log(properties);
+  // console.log(properties);
 
   const item = orderitem[properties[0]];
   const price = orderitem[properties[1]];
   const number = orderitem[properties[2]];
-  const total = orderitem[properties[4]];
+  // const total = orderitem[properties[4]];
   // const item = properties[0];
   // console.log(orderitem[item]);
-
-  // console.log(item, price, number, total);
+  const tot = number * price;
+  useEffect(() => {
+    setTotalAmount(tot);
+  });
+  console.log(tot, totalAmount);
   return (
     <Wrapper>
       <p>S/N</p>
@@ -23,17 +27,20 @@ const Orderitem = ({ index }) => {
         name={`orderitem${index}`}
         id=""
         onChange={(e) => {
-          handleChange(e, index);
+          handleChange(e, index, totalAmount);
+          // updateTotal(tot, index);
         }}>
-        <option value="hello">hello</option>
-        <option value="how far">how far</option>
+        <option value={item}>{item}</option>
+        {/* <option value="how far">how far</option> */}
       </select>
       <p>{price}</p>
       <input
         type="number"
         name={`ordernumber${index}`}
+        min={0}
         onChange={(e) => {
-          handleChange(e, index);
+          handleChange(e, index, totalAmount);
+          // updateTotal(totalAmount, index);
         }}
       />
       <p>{price * number}</p>

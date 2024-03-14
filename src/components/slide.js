@@ -9,14 +9,14 @@ const Slide = ({ slide, index, type }) => {
 
   return (
     <Wrapper
-      image={image}
-      // color="yellow"
-      index={index}
+      // warning
+      $image={image}
+      $index={index}
       className={type}></Wrapper>
   );
 };
 const Wrapper = styled.div`
-  background-image: url(${(p) => p.image});
+  background-image: url(${(p) => p.$image});
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   opacity: 0;
-  /* transform: translateX(${(p) => p.index * 100}%); */
+  /* transform: translateX(${(p) => p.$index * 100}%); */
   /* transform: translateX(); */
   position: absolute;
   top: 0;

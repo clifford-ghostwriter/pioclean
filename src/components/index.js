@@ -16,6 +16,7 @@ import Formrowselect from "./formrowselect";
 import Pricelist from "./pricelist";
 import Monthlyplan from "./monthlyplan";
 import Singleitemprice from "./singleitemprice";
+import Orderfooter from "./orderfooter";
 
 export {
   Nav,
@@ -36,4 +37,5 @@ export {
   Pricelist,
   Monthlyplan,
   Singleitemprice,
+  Orderfooter,
 };

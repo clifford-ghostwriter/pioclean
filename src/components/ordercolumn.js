@@ -24,6 +24,7 @@ const Wrapper = styled.div`
 
   .header__container > *:not(:first-child) {
     text-align: center;
+    text-transform: capitalize;
   }
 `;
 export default Ordercolumn;

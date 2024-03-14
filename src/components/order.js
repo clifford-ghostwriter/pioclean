@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Ordercolumn, Orderitem } from "../components";
+import { Ordercolumn, Orderitem, Orderfooter } from "../components";
 // eslint-disable-next-line
 import { FaPlus } from "react-icons/fa";
 // eslint-disable-next-line
@@ -81,6 +81,7 @@ const Order = () => {
             <FaPlus />
           </button> */}
         </div>
+        <Orderfooter />
       </div>
     </Wrapper>
   );
