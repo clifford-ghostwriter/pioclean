@@ -5,45 +5,52 @@ import { UseServiceContext } from "../contexts/service.Context";
 const Orderitem = ({ index }) => {
   const { handleChange, order, updateTotal } = UseServiceContext();
   const [totalAmount, setTotalAmount] = useState(0);
-  const { [index]: orderitem } = order;
-  const properties = Object.getOwnPropertyNames(orderitem);
-  // console.log(properties);
+  const { [index]: orderitemm } = order;
+  const properties = Object.getOwnPropertyNames(orderitemm);
+  // console.log(orderitem);
 
-  const item = orderitem[properties[0]];
-  const price = orderitem[properties[1]];
-  const number = orderitem[properties[2]];
+  const { orderitem, orderprice, ordernumber, ordertotal } = orderitemm;
+
+  console.log(orderitem, orderprice, ordernumber, ordertotal);
+  // const item = orderitem[properties[0]];
+  // const price = orderitem[properties[1]];
+  // const number = orderitem[properties[2]];
   // const total = orderitem[properties[4]];
   // const item = properties[0];
   // console.log(orderitem[item]);
-  const tot = number * price;
+  // const tot = number * price;
   useEffect(() => {
-    setTotalAmount(tot);
+    // setTotalAmount(tot);
   });
-  console.log(tot, totalAmount);
+  // console.log(tot, totalAmount);
   return (
     <Wrapper>
       <p>S/N</p>
       <select
-        name={`orderitem${index}`}
+        // name={`orderitem${index}`}
+        name="orderitem"
+        value={orderitem}
         id=""
         onChange={(e) => {
-          handleChange(e, index, totalAmount);
-          // updateTotal(tot, index);
+          handleChange(e, index);
+          updateTotal(index);
         }}>
-        <option value={item}>{item}</option>
+        <option value={orderitem}>{orderitem}</option>
         {/* <option value="how far">how far</option> */}
       </select>
-      <p>{price}</p>
+      <p>{orderprice}</p>
       <input
         type="number"
-        name={`ordernumber${index}`}
+        // name={`ordernumber${index}`}
+        name="ordernumber"
+        value={ordernumber}
         min={0}
         onChange={(e) => {
-          handleChange(e, index, totalAmount);
-          // updateTotal(totalAmount, index);
+          handleChange(e, index);
+          updateTotal(index);
         }}
       />
-      <p>{price * number}</p>
+      <p>{ordertotal}</p>
     </Wrapper>
   );
 };
