@@ -42,7 +42,7 @@ const Home = () => {
         </div>
         <Slider />
       </section>
-      <section className="section ">
+      <section className="section">
         <div className="steps__container section-center">
           <div className="steps__text">
             <p>How it works</p>
@@ -54,14 +54,18 @@ const Home = () => {
             })}
           </div>
         </div>
-        <div className="testimonials">
-          <h3 className="testimonial__heading">testimonials</h3>
-          <p className="testimonial__text">
-            Once you try us, you can't go back
-          </p>
-          {testimonies.map((customer, index) => {
-            return <Testimonies customer={customer} key={index} />;
-          })}
+        <div className="testimonials-section section-center">
+          <div className="testimonial-header">
+            <h3 className="testimonial__heading">testimonials</h3>
+            <p className="testimonial__text">
+              Once you try us, you can't go back
+            </p>
+          </div>
+          <div className="testimonial-center">
+            {testimonies.map((customer, index) => {
+              return <Testimonies customer={customer} key={index} />;
+            })}
+          </div>
         </div>
       </section>
     </Wrapper>
@@ -143,9 +147,10 @@ const Wrapper = styled.section`
   }
 
   .steps__container {
-    /* border: 1px solid red; */
-    display: grid;
+    /* display: grid; */
     justify-content: center;
+
+    /* border: 1px solid blue; */
   }
 
   .steps__text p {
@@ -156,16 +161,35 @@ const Wrapper = styled.section`
   }
   .steps {
     padding-top: 2rem;
+    /* border: 1px solid red; */
+    /* width: 90%; */
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    justify-items: center;
   }
-  .testimonials {
+  .testimonials-section {
     padding-top: 2rem;
+  }
+
+  .testimonial-header {
+    /* border: 1px solid red; */
+    /* width: 50%; */
+    /* margin-inline: auto; */
   }
   .testimonial__heading {
     text-transform: capitalize;
-    border-left: 5px solid red;
+    /* border-left: 5px solid red; */
     margin: auto;
     width: 8rem;
     padding-left: 0.5rem;
+  }
+  .testimonial-center {
+    /* border: 1px solid red; */
+    width: 90%;
+    margin-inline: auto;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    padding-block: 2rem;
   }
 
   .testimonial__text {

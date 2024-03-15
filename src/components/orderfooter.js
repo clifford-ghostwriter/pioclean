@@ -7,7 +7,7 @@ const Orderfooter = () => {
   return (
     <Wrapper>
       <div className="order_footer__container">
-        <p className="order_footer"></p>
+        {/* <p className="order_footer"></p> */}
         <p className="order_footer"></p>
         <p className="order_footer"></p>
         <h3 className="order_footer">
@@ -25,8 +25,9 @@ const Wrapper = styled.div`
   .order_footer__container {
     border: 1px solid blue;
     display: grid;
-    grid-template-columns: auto repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    padding-top: 1rem;
   }
 
   .order_footer__container > *:not(:first-child) {

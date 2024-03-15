@@ -60,8 +60,8 @@ const Order = () => {
   }, []);
 
   return (
-    <Wrapper>
-      <div>Order</div>
+    <Wrapper className="section-center">
+      <h3>Order</h3>
       <div className="order__container">
         <Ordercolumn />
 
@@ -73,14 +73,14 @@ const Order = () => {
             // return <Test />;
           })}
         </div>
-        <div className="btn__container">
-          {/* <button onClick={() => setVal("dec")}>
+        {/* <div className="btn__container">
+          <button onClick={() => setVal("dec")}>
             <FaMinus />
           </button>
           <button onClick={() => setVal("inc")}>
             <FaPlus />
-          </button> */}
-        </div>
+          </button>
+        </div> */}
         <Orderfooter />
       </div>
     </Wrapper>
@@ -89,8 +89,14 @@ const Order = () => {
 
 const Wrapper = styled.div`
   /* position: relative; */
-  border: 2px solid red;
-  min-height: 40dvh;
+  /* border: 2px solid red; */
+  /* min-height: 40dvh; */
+  padding: 2rem;
+
+  h3 {
+    padding-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
 
   .btn__container {
     /* border: 1px solid red; */
@@ -116,6 +122,7 @@ const Wrapper = styled.div`
 
   .orderitems {
     display: grid;
+    /* border: 2px solid pink; */
     gap: 0.5rem;
   }
 `;

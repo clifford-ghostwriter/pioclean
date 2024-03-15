@@ -12,7 +12,7 @@ const OrderOnline = () => {
   return (
     <Wrapper>
       <PageHero path="/" text="Back Home" />
-      <div className="btn__container section-center">
+      <div className="btn__container section">
         <button className="request-btn" onClick={() => request("pricelist")}>
           price list
         </button>
@@ -23,7 +23,7 @@ const OrderOnline = () => {
           pick up order
         </button>
       </div>
-      <div>
+      <div className="section">
         {order === "pricelist" ? (
           <Pricelist />
         ) : order === "makeorder" ? (
@@ -41,6 +41,7 @@ const Wrapper = styled.section`
     padding-top: 2rem;
     display: flex;
     gap: 0.5rem;
+    border: 1px solid red;
   }
 
   .request-btn {

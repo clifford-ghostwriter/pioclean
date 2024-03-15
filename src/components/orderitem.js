@@ -25,7 +25,7 @@ const Orderitem = ({ index }) => {
   // console.log(tot, totalAmount);
   return (
     <Wrapper>
-      <p>S/N</p>
+      {/* <p>{index + 1}</p> */}
       <select
         // name={`orderitem${index}`}
         name="orderitem"
@@ -58,11 +58,15 @@ const Orderitem = ({ index }) => {
 const Wrapper = styled.div`
   border: 1px solid blue;
   display: grid;
-  grid-template-columns: auto repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 
   > *:not(:first-child) {
     text-align: center;
+  }
+
+  > * {
+    min-width: 0;
   }
 `;
 export default Orderitem;

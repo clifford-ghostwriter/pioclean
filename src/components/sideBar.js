@@ -100,8 +100,8 @@ const Wrapper = styled.div`
   .side-bar__close-btn {
     position: absolute;
     display: block;
-    right: 0.3rem;
-    top: 3.7rem;
+    right: 1.6rem;
+    top: 3.8rem;
     background-color: transparent;
     color: var(--clr--primary-three);
     font-size: var(--fs-700);

@@ -37,7 +37,7 @@ export const service_reducer = (state, action) => {
       ...state,
       ...(state.order[action.payload] = {
         ...state.order[action.payload],
-        ordertotal: ordernumber * orderprice,
+        ordertotal: Number(ordernumber * orderprice),
       }),
     };
   }

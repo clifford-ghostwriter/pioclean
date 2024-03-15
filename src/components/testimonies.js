@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Testimonies = ({ customer }) => {
   const { image, name } = customer;
   return (
-    <Wrapper className="section-center">
+    <Wrapper>
       <div className="customer__image__container">
         <img src={image} alt="customer" />
       </div>
@@ -21,8 +21,9 @@ const Testimonies = ({ customer }) => {
 };
 
 const Wrapper = styled.div`
-  padding-top: 2rem;
-  .customer__image__containe {
+  padding-block: 2rem;
+  /* border: 1px solid red; */
+  .customer__image__container {
     display: grid;
   }
   .customer__name {

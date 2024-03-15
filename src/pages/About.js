@@ -18,6 +18,15 @@ const About = () => {
           recognizable names in the dry cleaning industry.
         </p>
       </div>
+
+      <div className="mission__statement">
+        <h2 className="header">mission statement</h2>
+        <p className="statement">
+          We strive to be the acknowledged Nigera leader in Dry cleaning and
+          preferred parter by setting the highest standards in service,
+          reliability and cost containment.
+        </p>
+      </div>
     </Wrapper>
   );
 };

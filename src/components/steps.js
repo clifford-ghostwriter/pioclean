@@ -22,7 +22,7 @@ const Steps = ({ step }) => {
   }, [scroll]);
 
   return (
-    <Wrapper className="section-center step" id="learnmore">
+    <Wrapper className="step" id="learnmore">
       <div className="image__container">
         <img src={image} alt="step__image" />
       </div>
@@ -43,18 +43,20 @@ const Wrapper = styled.section`
   /* transform: translateY(20%); */
   transition: var(--transition);
   /* border: 1px solid green; */
+  width: max-content;
 
   .image__container {
     width: 20rem;
     aspect-ratio: 1;
     grid-column: 2/ -1;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50vw;
   }
 
   .step__text {
@@ -62,7 +64,7 @@ const Wrapper = styled.section`
     /* aspect-ratio: 1; */
 
     grid-row: 2/3;
-    grid-column: 2/ -1;
+    grid-column: 1/ -1;
     /* border: 1px solid red; */
     align-content: first baseline;
   }
