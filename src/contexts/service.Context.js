@@ -85,7 +85,7 @@ const initialServiceState = {
     {
       orderitem: "asoke",
       orderprice: 5,
-      ordernumbe: 0,
+      ordernumber: 0,
       ordertotal: 0,
     },
     {

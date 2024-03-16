@@ -16,7 +16,7 @@ const Ordercolumn = () => {
 };
 const Wrapper = styled.div`
   .header__container {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: grid;
     grid-template-columns: auto repeat(4, 1fr);
     gap: 1rem;

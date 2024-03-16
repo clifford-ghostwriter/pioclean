@@ -91,7 +91,7 @@ const Wrapper = styled.div`
   padding-top: 2rem;
 
   .container {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     padding: 2rem;
     /* width: 50%; */
     /* margin-inline: auto; */
@@ -134,6 +134,10 @@ const Wrapper = styled.div`
 
   .pickup p {
     padding-top: 1rem;
+  }
+  .submit-btn {
+    margin-top: -0.7rem;
+    border: 1px solid red;
   }
 `;
 export default Request;

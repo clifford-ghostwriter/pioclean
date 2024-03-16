@@ -56,7 +56,6 @@ const Orderitem = ({ index }) => {
 };
 
 const Wrapper = styled.div`
-  border: 1px solid blue;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
@@ -67,6 +66,8 @@ const Wrapper = styled.div`
 
   > * {
     min-width: 0;
+    /* width: minmax(0, ); */
+    border: 1px solid var(--clr--primary-one);
   }
 `;
 export default Orderitem;

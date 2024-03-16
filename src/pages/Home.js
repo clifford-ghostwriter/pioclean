@@ -20,24 +20,26 @@ const Home = () => {
       <PageHero path="/about" text="About us" />
       <section className="section">
         <div className="hero__text | section-center">
-          <h3 className="hero__heading">
-            You wear, <br /> We wash
-          </h3>
-          <p className="hero__paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum rem
-            quo non, ea voluptatibus architecto a placeat tenetur quos inventore
-            veritatis aspernatur delectus qui. Ipsam, distinctio provident
-            atque, necessitatibus cum, at exercitationem illum neque quasi
-            laborum iste delectus doloribus? Voluptate tempora dolores, beatae
-            iusto minus cupiditate nostrum alias. Obcaecati, autem?
-          </p>
-          <div className="cta__container">
-            <Link to="/order" className="cta-btn">
-              order
-            </Link>
-            <a href="#learnmore" className="cta-btn">
-              <span>learn more</span> <FaLongArrowAltDown />
-            </a>
+          <div className="text__container">
+            <h3 className="hero__heading">
+              You wear, <br /> We wash
+            </h3>
+            <p className="hero__paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
+              rem quo non, ea voluptatibus architecto a placeat tenetur quos
+              inventore veritatis aspernatur delectus qui. Ipsam, distinctio
+              provident atque, necessitatibus cum, at exercitationem illum neque
+              quasi laborum iste delectus doloribus? Voluptate tempora dolores,
+              beatae iusto minus cupiditate nostrum alias. Obcaecati, autem?
+            </p>
+            <div className="cta__container">
+              <Link to="/order" className="cta-btn">
+                order
+              </Link>
+              <a href="#learnmore" className="cta-btn">
+                <span>learn more</span> <FaLongArrowAltDown />
+              </a>
+            </div>
           </div>
         </div>
         <Slider />
@@ -78,6 +80,12 @@ const Wrapper = styled.section`
 
   counter-reset: count;
 
+  .text__container {
+    /* border: 1px solid blue; */
+    width: 60%;
+    margin-inline: auto;
+  }
+
   .step::before {
     counter-increment: count;
     content: " " counter(count) " ";
@@ -94,7 +102,7 @@ const Wrapper = styled.section`
 
   .hero__text {
     /* border: 1px solid blue; */
-    padding-top: 2rem;
+    padding-block: 2rem;
   }
 
   .hero__heading {
@@ -161,11 +169,13 @@ const Wrapper = styled.section`
   }
   .steps {
     padding-top: 2rem;
-    /* border: 1px solid red; */
-    /* width: 90%; */
+    border: 1px solid red;
+    width: 80vw;
+    /* width: 70%; */
     display: grid;
     /* grid-template-columns: 1fr 1fr; */
     justify-items: center;
+    margin-inline: auto;
   }
   .testimonials-section {
     padding-top: 2rem;
@@ -178,7 +188,7 @@ const Wrapper = styled.section`
   }
   .testimonial__heading {
     text-transform: capitalize;
-    /* border-left: 5px solid red; */
+    border-left: 5px solid red;
     margin: auto;
     width: 8rem;
     padding-left: 0.5rem;
