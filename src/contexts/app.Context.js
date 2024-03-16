@@ -1,4 +1,4 @@
-import React, { useReducer, useContext } from "react";
+import React, { useReducer, useContext, useEffect, useState } from "react";
 import { app_reducer } from "../reducers";
 import { SIDEBAR_OPEN, SIDEBAR_CLOSE, SET_HERO_REF } from "../utils/actions";
 
@@ -11,6 +11,20 @@ const initialAppState = {
 
 export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(app_reducer, initialAppState);
+  const [windowWidth, setWdith] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      const width = window.innerWidth;
+      setWdith(width);
+      console.log(width, windowWidth);
+      console.log(state.isSidebarOpen);
+    });
+  }, [windowWidth]);
+
+  useEffect(() => {
+    if (windowWidth >= 1100) closeSidebar();
+  }, [windowWidth]);
 
   const closeSidebar = () => {
     dispatch({ type: SIDEBAR_CLOSE });

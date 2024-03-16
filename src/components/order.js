@@ -115,7 +115,7 @@ const Wrapper = styled.div`
   }
 
   .order__container {
-    /* border: 1px solid green; */
+    border: 1px solid green;
     position: relative;
     height: max-content;
   }

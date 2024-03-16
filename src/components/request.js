@@ -6,8 +6,8 @@ import { Formrow, Formrowselect } from "../components";
 
 const Request = () => {
   return (
-    <Wrapper className="section">
-      <div className="section-center">
+    <Wrapper className="section-center">
+      <div className="container">
         <h2 className="heading">
           fill the pick up <br />
           request form below
@@ -87,8 +87,15 @@ const Request = () => {
 };
 
 const Wrapper = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding-top: 2rem;
+
+  .container {
+    border: 2px solid blue;
+    padding: 2rem;
+    /* width: 50%; */
+    /* margin-inline: auto; */
+  }
   .pickup__form {
     /* border: 1px solid red; */
     display: flex;
