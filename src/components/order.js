@@ -12,11 +12,13 @@ import { UseServiceContext } from "../contexts/service.Context";
 import { UseAppContext } from "../contexts/app.Context";
 // eslint-disable-next-line
 import Test from "./test";
+import { Link } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Order = () => {
   // eslint-disable-next-line
-  const { handleChange } = UseServiceContext();
-  const { order } = UseServiceContext();
+  const { handleChange, totalamount, order, clearList } = UseServiceContext();
+  // const { order } = UseServiceContext();
 
   // console.log(order);
 
@@ -83,6 +85,16 @@ const Order = () => {
         </div> */}
         <Orderfooter />
       </div>
+      <div className="listbuttons">
+        <button className="list__btn" onClick={clearList}>
+          clear list
+        </button>
+        {totalamount > 0 && (
+          <Link className="list__btn" to="/checkout">
+            checkout
+          </Link>
+        )}
+      </div>
     </Wrapper>
   );
 };
@@ -124,6 +136,24 @@ const Wrapper = styled.div`
     display: grid;
     /* border: 2px solid pink; */
     gap: 0.5rem;
+  }
+  .listbuttons {
+    /* border: 1px solid red; */
+    width: max-content;
+    padding-block: 0.3rem;
+    display: flex;
+    gap: 0.3rem;
+  }
+
+  .list__btn {
+    text-transform: capitalize;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    width: max-content;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: var(--clr--primary-six);
+    color: black;
   }
 `;
 

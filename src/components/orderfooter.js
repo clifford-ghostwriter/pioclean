@@ -14,7 +14,7 @@ const Orderfooter = () => {
           total item: <span>{totalitems}</span>
         </h3>
         <h3 className="order_footer">
-          Total: <span>N{totalamount}</span>
+          Total: <span>{`${totalamount > 0 ? "N" : ""}${totalamount}`}</span>
         </h3>
       </div>
     </Wrapper>

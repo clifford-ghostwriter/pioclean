@@ -1,6 +1,11 @@
 import React, { useContext, useEffect, useReducer } from "react";
 import { service_reducer } from "../reducers";
-import { HANDLE_CHANGE, SUM_ITEM, UPDATE_TOTAL } from "../utils/actions";
+import {
+  HANDLE_CHANGE,
+  SUM_ITEM,
+  UPDATE_TOTAL,
+  CLEAR_LIST,
+} from "../utils/actions";
 
 const serviceContext = React.createContext();
 
@@ -136,7 +141,7 @@ const initialServiceState = {
 };
 export const ServiceProvider = ({ children }) => {
   const [state, dispatch] = useReducer(service_reducer, initialServiceState);
-  console.log(state.totalitems, state.totalamount);
+  // console.log(state.totalitems, state.totalamount);
 
   useEffect(() => {
     sumItem();
@@ -152,6 +157,11 @@ export const ServiceProvider = ({ children }) => {
     // console.log("i am here", total, index);
   };
 
+  const clearList = () => {
+    dispatch({ type: CLEAR_LIST });
+    sumItem();
+  };
+
   const handleChange = function (e, index) {
     const name = e.target.name;
     const value = e.target.value;
@@ -163,7 +173,8 @@ export const ServiceProvider = ({ children }) => {
 
   // console.log(state);
   return (
-    <serviceContext.Provider value={{ ...state, handleChange, updateTotal }}>
+    <serviceContext.Provider
+      value={{ ...state, handleChange, updateTotal, clearList }}>
       {children}
     </serviceContext.Provider>
   );

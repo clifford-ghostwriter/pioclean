@@ -1,4 +1,9 @@
-import { HANDLE_CHANGE, SUM_ITEM, UPDATE_TOTAL } from "../utils/actions";
+import {
+  HANDLE_CHANGE,
+  SUM_ITEM,
+  UPDATE_TOTAL,
+  CLEAR_LIST,
+} from "../utils/actions";
 
 export const service_reducer = (state, action) => {
   if (action.type === HANDLE_CHANGE) {
@@ -15,11 +20,11 @@ export const service_reducer = (state, action) => {
   }
 
   if (action.type === SUM_ITEM) {
-    console.log("hello");
+    // console.log("hello");
     const { totalitems, totalamount } = state.order.reduce(
       (total, cartItem) => {
         const { ordernumber, orderprice } = cartItem;
-        console.log(ordernumber, orderprice);
+        // console.log(ordernumber, orderprice);
         total.totalitems += Number(ordernumber);
         total.totalamount += Number(orderprice * ordernumber);
         return total;
@@ -30,7 +35,7 @@ export const service_reducer = (state, action) => {
   }
 
   if (action.type === UPDATE_TOTAL) {
-    const item = state.order[action.payload];
+    // const item = state.order[action.payload];
     const { orderprice, ordernumber } = state.order[action.payload];
     // console.log(state.order, action.payload);
     return {
@@ -39,6 +44,25 @@ export const service_reducer = (state, action) => {
         ...state.order[action.payload],
         ordertotal: Number(ordernumber * orderprice),
       }),
+    };
+  }
+
+  if (action.type === CLEAR_LIST) {
+    const { order } = state;
+
+    const resetOrder = order.map((item) => {
+      // const { ordernumber } = item;
+
+      const { orderitem, orderprice, ordernumber, ordertotal } = item;
+      return { orderitem, orderprice, ordernumber: 0, ordertotal: 0 };
+    });
+
+    console.log(resetOrder);
+    return {
+      ...state,
+      order: [...resetOrder],
+      totalitems: 0,
+      totalamount: 0,
     };
   }
 

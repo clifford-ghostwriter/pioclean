@@ -4,14 +4,14 @@ import { UseServiceContext } from "../contexts/service.Context";
 
 const Orderitem = ({ index }) => {
   const { handleChange, order, updateTotal } = UseServiceContext();
-  const [totalAmount, setTotalAmount] = useState(0);
+  // const [totalAmount, setTotalAmount] = useState(0);
   const { [index]: orderitemm } = order;
-  const properties = Object.getOwnPropertyNames(orderitemm);
+  // const properties = Object.getOwnPropertyNames(orderitemm);
   // console.log(orderitem);
 
   const { orderitem, orderprice, ordernumber, ordertotal } = orderitemm;
 
-  console.log(orderitem, orderprice, ordernumber, ordertotal);
+  // console.log(orderitem, orderprice, ordernumber, ordertotal);
   // const item = orderitem[properties[0]];
   // const price = orderitem[properties[1]];
   // const number = orderitem[properties[2]];

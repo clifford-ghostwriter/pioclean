@@ -17,8 +17,8 @@ export const AppProvider = ({ children }) => {
     window.addEventListener("resize", () => {
       const width = window.innerWidth;
       setWdith(width);
-      console.log(width, windowWidth);
-      console.log(state.isSidebarOpen);
+      // console.log(width, windowWidth);
+      // console.log(state.isSidebarOpen);
     });
   }, [windowWidth]);
 

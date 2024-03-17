@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Order, PageHero, Request, Pricelist } from "../components";
 
 const OrderOnline = () => {
-  const [order, setOrder] = useState("pricelist");
+  const [order, setOrder] = useState("makeorder");
 
   // request func
   const request = function (value) {
@@ -45,6 +45,7 @@ const OrderOnline = () => {
 const Wrapper = styled.section`
   .btn__container {
     padding-top: 2rem;
+    padding-left: 2rem;
     display: flex;
     gap: 0.5rem;
     /* width: 50%; */

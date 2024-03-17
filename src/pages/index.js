@@ -7,6 +7,7 @@ import PasswordReset from "./passwordReset";
 import PriceList from "./PriceList";
 import Service from "./Service";
 import Contact from "./Contact";
+import Checkout from "./Checkout";
 
 export {
   About,
@@ -18,4 +19,5 @@ export {
   PriceList,
   Service,
   Contact,
+  Checkout,
 };
