@@ -1,16 +1,37 @@
 import React from "react";
-import { PageHero } from "../components";
+import {
+  Checkoutitem,
+  Ordercolumn,
+  Orderfooter,
+  PageHero,
+} from "../components";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { UseServiceContext } from "../contexts/service.Context";
 
 const Checkout = () => {
+  const { order } = UseServiceContext();
+
   return (
     <Wrapper>
       <PageHero text=" Back Home" />
-      <Link className="list__btn" to="/order">
-        Add more items
-      </Link>
-      <div>Checkout</div>;
+      <div className="section">
+        <div className="section-center">
+          <div className="section-container">
+            <Link className="list__btn list-btn" to="/order">
+              Add more items
+            </Link>
+            <div className="order">
+              <Ordercolumn />
+              {order.map((item, index) => {
+                return <Checkoutitem key={index} item={item} />;
+              })}
+              <Orderfooter />
+            </div>
+            <button className="list__btn payment-btn">make payment</button>
+          </div>
+        </div>
+      </div>
     </Wrapper>
   );
 };
@@ -25,6 +46,34 @@ const Wrapper = styled.div`
     border-radius: 3px;
     background-color: var(--clr--primary-six);
     color: black;
+    cursor: pointer;
+    padding: 0.3rem;
+    display: block;
+  }
+
+  .list-btn {
+    margin-left: 2rem;
+  }
+
+  .payment-btn {
+    /* border: 1px solid red; */
+    position: absolute;
+    right: 0;
+    margin-top: 0.3rem;
+    margin-right: 2rem;
+  }
+
+  .section-container {
+    /* width: 80%; */
+    /* border: 1px solid red; */
+    position: relative;
+  }
+  .order {
+    /* border: 2px solid pink; */
+    padding: 2rem;
+  }
+  .item:nth-child(even) {
+    background-color: wheat;
   }
 `;
 export default Checkout;

@@ -16,6 +16,7 @@ const OrderOnline = () => {
         <div className=" section-center">
           <div className="btn__container">
             <button
+              // data-id="pricelist"
               className="request-btn"
               onClick={() => request("pricelist")}>
               price list
@@ -60,6 +61,10 @@ const Wrapper = styled.section`
     letter-spacing: 0.1rem;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .active-btn {
+    background-color: white;
   }
 `;
 export default OrderOnline;

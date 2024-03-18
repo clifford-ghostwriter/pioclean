@@ -154,6 +154,8 @@ const Wrapper = styled.div`
     border-radius: 3px;
     background-color: var(--clr--primary-six);
     color: black;
+    cursor: pointer;
+    padding: 0.3rem;
   }
 `;
 

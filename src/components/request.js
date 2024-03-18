@@ -88,7 +88,7 @@ const Request = () => {
 
 const Wrapper = styled.div`
   /* border: 1px solid red; */
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
 
   .container {
     /* border: 2px solid blue; */

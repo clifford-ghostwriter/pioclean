@@ -17,6 +17,7 @@ import Pricelist from "./pricelist";
 import Monthlyplan from "./monthlyplan";
 import Singleitemprice from "./singleitemprice";
 import Orderfooter from "./orderfooter";
+import Checkoutitem from "./checkoutitem";
 
 export {
   Nav,
@@ -38,4 +39,5 @@ export {
   Monthlyplan,
   Singleitemprice,
   Orderfooter,
+  Checkoutitem,
 };
