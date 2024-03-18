@@ -18,6 +18,7 @@ import Monthlyplan from "./monthlyplan";
 import Singleitemprice from "./singleitemprice";
 import Orderfooter from "./orderfooter";
 import Checkoutitem from "./checkoutitem";
+import Plan from "./plan";
 
 export {
   Nav,
@@ -40,4 +41,5 @@ export {
   Singleitemprice,
   Orderfooter,
   Checkoutitem,
+  Plan,
 };

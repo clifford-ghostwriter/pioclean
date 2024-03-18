@@ -42,7 +42,7 @@ const Wrapper = styled.div`
     letter-spacing: 0.05rem;
     text-decoration: none;
     width: max-content;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 3px;
     background-color: var(--clr--primary-six);
     color: black;

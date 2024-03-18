@@ -17,6 +17,9 @@ import ben from "../assests/customer/ben.jpg";
 import dave from "../assests/customer/dave.jpg";
 import hannah from "../assests/customer/hannah.jpg";
 import josh from "../assests/customer/customer-5.jpg";
+import basicPlan from "../assests/planimages/basicplanImage.jpg";
+import elitePlan from "../assests/planimages/eliteplanImage.jpg";
+import unlimitedPlan from "../assests/planimages/unlimitedImage.jpg";
 export const links = [
   {
     id: 1,
@@ -116,4 +119,21 @@ export const testimonies = [
   },
 ];
 
-export const sampleorder = [];
+export const monthlyplan = [
+  {
+    plan: "basic",
+    amount: 1000,
+    image: basicPlan,
+  },
+
+  {
+    plan: "elite",
+    amount: 1000,
+    image: elitePlan,
+  },
+  {
+    plan: "unlimited",
+    amount: 1000,
+    image: unlimitedPlan,
+  },
+];

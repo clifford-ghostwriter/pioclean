@@ -126,6 +126,7 @@ const Wrapper = styled.div`
     width: 5rem;
     background-color: var(--clr--primary-one);
     cursor: pointer;
+    margin-top: -0.7rem;
   }
 
   .pickup {
@@ -134,10 +135,6 @@ const Wrapper = styled.div`
 
   .pickup p {
     padding-top: 1rem;
-  }
-  .submit-btn {
-    margin-top: -0.7rem;
-    border: 1px solid red;
   }
 `;
 export default Request;
