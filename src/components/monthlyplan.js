@@ -22,8 +22,8 @@ const Wrapper = styled.div`
   .monthly__plans {
     /* border: 1px solid red; */
     display: flex;
-    column-gap: 2rem;
-    background-color: black;
+    column-gap: 1rem;
+    /* background-color: black; */
   }
 `;
 export default Monthlyplan;
