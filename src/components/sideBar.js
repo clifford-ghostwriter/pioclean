@@ -101,7 +101,7 @@ const Wrapper = styled.div`
     position: absolute;
     display: block;
     right: 1.6rem;
-    top: 3.8rem;
+    top: 3.7rem;
     background-color: transparent;
     color: var(--clr--primary-three);
     font-size: var(--fs-700);

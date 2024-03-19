@@ -8,10 +8,15 @@ import {
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { UseServiceContext } from "../contexts/service.Context";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
-  const { order } = UseServiceContext();
-
+  const { order, clearList } = UseServiceContext();
+  const navigate = useNavigate();
+  const payment = function () {
+    clearList();
+    navigate("/payment");
+  };
   return (
     <Wrapper>
       <PageHero text=" Back Home" />
@@ -28,7 +33,9 @@ const Checkout = () => {
               })}
               <Orderfooter />
             </div>
-            <button className="list__btn payment-btn">make payment</button>
+            <button className="list__btn payment-btn" onClick={payment}>
+              make payment
+            </button>
           </div>
         </div>
       </div>

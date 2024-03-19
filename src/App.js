@@ -13,6 +13,7 @@ import {
   Contact,
   Service,
   Checkout,
+  Payment,
 } from "./pages";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Service />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/payment" element={<Payment />} />
         </Route>
 
         <Route path="*" element={<Error />} />

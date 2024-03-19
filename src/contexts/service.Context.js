@@ -141,6 +141,7 @@ const initialServiceState = {
 };
 export const ServiceProvider = ({ children }) => {
   const [state, dispatch] = useReducer(service_reducer, initialServiceState);
+
   // console.log(state.totalitems, state.totalamount);
 
   useEffect(() => {
@@ -151,6 +152,11 @@ export const ServiceProvider = ({ children }) => {
     dispatch({ type: SUM_ITEM });
     // console.log("how far");
   };
+
+  // const payment = function () {
+  //   clearList();
+  //   navigate("/payment");
+  // };
 
   const updateTotal = function (index) {
     dispatch({ type: UPDATE_TOTAL, payload: index });

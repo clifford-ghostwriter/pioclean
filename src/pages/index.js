@@ -8,6 +8,7 @@ import PriceList from "./PriceList";
 import Service from "./Service";
 import Contact from "./Contact";
 import Checkout from "./Checkout";
+import Payment from "./Payment";
 
 export {
   About,
@@ -20,4 +21,5 @@ export {
   Service,
   Contact,
   Checkout,
+  Payment,
 };

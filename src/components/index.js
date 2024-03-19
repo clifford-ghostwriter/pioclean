@@ -19,6 +19,7 @@ import Singleitemprice from "./singleitemprice";
 import Orderfooter from "./orderfooter";
 import Checkoutitem from "./checkoutitem";
 import Plan from "./plan";
+import Loading from "./loading";
 
 export {
   Nav,
@@ -42,4 +43,5 @@ export {
   Orderfooter,
   Checkoutitem,
   Plan,
+  Loading,
 };
