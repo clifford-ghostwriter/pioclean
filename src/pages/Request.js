@@ -1,14 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Order, PageHero, Request, Pricelist } from "../components";
 
 const OrderOnline = () => {
   const [order, setOrder] = useState("makeorder");
 
-  // request func
-  const request = function (value) {
-    setOrder(value);
+  const [number, setnumber] = useState(0);
+  // console.log(order);
+
+  const changeNumber = () => {
+    setnumber(number + 1);
+    // console.log(number);
   };
+
+  const request = function (e) {
+    const id = e.target.dataset.id;
+    setOrder(id);
+    if (id === order) {
+      e.target.classList.add("active");
+    }
+    console.log(order);
+  };
+
+  useEffect(() => {
+    // request();
+    // console.log(order);
+  }, [order]);
+
   return (
     <Wrapper>
       <PageHero path="/" text="Back Home" />
@@ -18,15 +36,17 @@ const OrderOnline = () => {
             <button
               // data-id="pricelist"
               className="request-btn"
-              onClick={() => request("pricelist")}>
+              data-id="pricelist"
+              onClick={request}>
               price list
             </button>
             <button
               className=" request-btn"
-              onClick={() => request("makeorder")}>
+              data-id="makeorder"
+              onClick={request}>
               make order
             </button>
-            <button className="request-btn" onClick={() => request("pcikup")}>
+            <button className="request-btn" data-id="pickup" onClick={request}>
               pick up order
             </button>
           </div>
@@ -39,6 +59,7 @@ const OrderOnline = () => {
           <Request />
         )}
       </div>
+      <p>{(number, order)}</p>
     </Wrapper>
   );
 };
@@ -63,7 +84,7 @@ const Wrapper = styled.section`
     cursor: pointer;
   }
 
-  .active-btn {
+  .active {
     background-color: white;
   }
 `;

@@ -15,23 +15,23 @@ const Plan = ({ item }) => {
       </div>
       <div className="plan__features">
         <p>
-          <FaCheckCircle className="icon" /> <span>pucket friendly</span>
+          <FaCheckCircle className="icon" /> <span>pocket friendly</span>
         </p>
         <p>
           <FaCheckCircle className="icon" />
-          <span>pucket friendly</span>
+          <span>pocket friendly</span>
         </p>
         <p>
           <FaCheckCircle className="icon" />
-          <span>pucket friendly</span>
+          <span>pocket friendly</span>
         </p>
         <p>
           <FaCheckCircle className="icon" />
-          <span>pucket friendly</span>
+          <span>pocket friendly</span>
         </p>
         <p>
           <FaCheckCircle className="icon" />
-          <span>pucket friendly</span>
+          <span>pocket friendly</span>
         </p>
       </div>
     </Wrapper>
@@ -51,7 +51,7 @@ const Wrapper = styled.div`
     /* display: grid; */
     background: url(${(p) => p.$image});
     width: 15rem;
-    height: 8rem;
+    height: 17rem;
     /* align-content: stretch; */
     /* border: 2px solid pink; */
     min-width: 100%;

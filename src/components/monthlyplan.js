@@ -37,6 +37,11 @@ const Wrapper = styled.div`
     flex: 1;
   }
 
+  .plan__container:hover {
+    transform: translateY(-0.2rem);
+    transition: var(--transition-two);
+  }
+
   .plan__container:nth-child(2) {
     /* margin-top: 3rem; */
   }

@@ -2,9 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Loading } from "../components";
 import styled from "styled-components";
 import { FaRegCheckCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const PaymentSuccess = () => {
   const [isLoading, setIsloading] = useState(true);
+
+  const navigate = useNavigate();
+
+  const checked = () => navigate("/");
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -23,7 +28,7 @@ const PaymentSuccess = () => {
   }
 
   return (
-    <Wrapper className="section secton-center">
+    <Wrapper className="section secton-center" onClick={checked}>
       <div className="payment__checked">
         <FaRegCheckCircle className="icon" />
         <p className="text">payment successful</p>
@@ -33,7 +38,7 @@ const PaymentSuccess = () => {
 };
 
 const Wrapper = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   min-height: 50dvh;
   position: relative;
   display: grid;

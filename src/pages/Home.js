@@ -55,6 +55,9 @@ const Home = () => {
               return <Steps step={step} key={index} />;
             })}
           </div>
+          <Link to="/order" className="cta-btn">
+            place order
+          </Link>
         </div>
         <div className="testimonials-section section-center">
           <div className="testimonial-header">
@@ -138,13 +141,26 @@ const Wrapper = styled.section`
     text-decoration: none;
   }
 
-  .cta-btn:last-child {
+  .cta-btn:nth-child(2) {
     background-color: transparent;
     display: flex;
     align-items: center;
     border: 1px solid var(--clr--primary-one);
     text-decoration: none;
     /* color: var(--clr--primary-one); */
+  }
+
+  .cta-btn:nth-child(3) {
+    /* background-color: transparent; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--clr--primary-one);
+    text-decoration: none;
+    /* color: var(--clr--primary-one); */
+    width: 60%;
+    text-align: center;
+    margin: 2rem auto;
   }
 
   .cta-btn:hover {

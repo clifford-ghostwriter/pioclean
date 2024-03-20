@@ -20,6 +20,23 @@ import josh from "../assests/customer/customer-5.jpg";
 import basicPlan from "../assests/planimages/basicplanImage.jpg";
 import elitePlan from "../assests/planimages/eliteplanImage.jpg";
 import unlimitedPlan from "../assests/planimages/unlimitedImage.jpg";
+
+// pricelist images
+import suit from "../assests/priceimages/shirts/suits.jpg";
+import agbada from "../assests/priceimages/shirts/agbada.jpg";
+import denim from "../assests/priceimages/shirts/denim.jpg";
+import hanginShirt from "../assests/priceimages/shirts/hanging shirt.webp";
+import ironedShirt from "../assests/priceimages/shirts/ironedshirt.webp";
+import trousers from "../assests/priceimages/shirts/plaintrousers.jpg";
+import tshirt from "../assests/priceimages/shirts/tshirt.jpg";
+
+// female
+import dress from "../assests/priceimages/ladies/dress.jpg";
+import bedsheet from "../assests/priceimages/duvet and towel/bedsheet.jpg";
+import duvet from "../assests/priceimages/duvet and towel/duvet.jpg";
+import pyjamas from "../assests/priceimages/duvet and towel/pyjamas.webp";
+import towel from "../assests/priceimages/duvet and towel/towel.jpg";
+
 export const links = [
   {
     id: 1,
@@ -135,5 +152,82 @@ export const monthlyplan = [
     plan: "unlimited",
     amount: 1000,
     image: unlimitedPlan,
+  },
+];
+
+// import suit from "../assests/priceimages/shirts/suits.jpg"
+// import agbada from "../assests/priceimages/shirts/agbada.jpg"
+// import denim from "../assests/priceimages/shirts/denim.jpg"
+// import hanginShirt from "../assests/priceimages/shirts/hanging shirt.webp"
+// import ironedShirt from "../assests/priceimages/shirts/ironedshirt.webp"
+// import trousers from "../assests/priceimages/shirts/plaintrousers.jpg"
+// import tshirt from "../assests/priceimages/shirts/tshirt.jpg"
+
+// import dress from "../assests/priceimages/ladies/dress.jpg"
+// import bedsheet from "../assests/priceimages/duvet and towel/bedsheet.jpg"
+// import duvet from "../assests/priceimages/duvet and towel/duvet.jpg"
+// import pyjamas from "../assests/priceimages/duvet and towel/pyjamas.webp"
+// import towel from "../assests/priceimages/duvet and towel/towel.jpg"
+
+export const prices = [
+  {
+    name: "suit",
+    image: suit,
+    price: 1000,
+  },
+  {
+    name: "agbada",
+    image: agbada,
+    price: 1000,
+  },
+  {
+    name: "denim",
+    image: denim,
+    price: 1000,
+  },
+  {
+    name: "hangin shirt",
+    image: hanginShirt,
+    price: 1000,
+  },
+  {
+    name: "ironed shirt",
+    image: ironedShirt,
+    price: 1000,
+  },
+  {
+    name: "trousers",
+    image: trousers,
+    price: 1000,
+  },
+  {
+    name: "t shirt",
+    image: tshirt,
+    price: 1000,
+  },
+  {
+    name: "dress",
+    image: dress,
+    price: 1000,
+  },
+  {
+    name: "bedsheet",
+    image: bedsheet,
+    price: 1000,
+  },
+  {
+    name: "duvet",
+    image: duvet,
+    price: 1000,
+  },
+  {
+    name: "pyjamas",
+    image: pyjamas,
+    price: 1000,
+  },
+  {
+    name: "towel",
+    image: towel,
+    price: 1000,
   },
 ];

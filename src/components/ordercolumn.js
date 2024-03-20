@@ -8,7 +8,7 @@ const Ordercolumn = () => {
         {/* <h3 className="header">S/N</h3> */}
         <h3 className="header">item</h3>
         <h3 className="header">unit price</h3>
-        <h3 className="header">numbers</h3>
+        <h3 className="header">quantity</h3>
         <h3 className="header">total</h3>
       </div>
     </Wrapper>
