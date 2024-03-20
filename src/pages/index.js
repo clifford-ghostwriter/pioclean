@@ -9,6 +9,7 @@ import Service from "./Service";
 import Contact from "./Contact";
 import Checkout from "./Checkout";
 import Payment from "./Payment";
+import PaymentSuccess from "./PaymentSuccess";
 
 export {
   About,
@@ -22,4 +23,5 @@ export {
   Contact,
   Checkout,
   Payment,
+  PaymentSuccess,
 };

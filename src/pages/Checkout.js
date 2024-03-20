@@ -13,8 +13,8 @@ import { useNavigate } from "react-router-dom";
 const Checkout = () => {
   const { order, clearList } = UseServiceContext();
   const navigate = useNavigate();
-  const payment = function () {
-    clearList();
+  const checkout = function () {
+    // clearList();
     navigate("/payment");
   };
   return (
@@ -33,7 +33,7 @@ const Checkout = () => {
               })}
               <Orderfooter />
             </div>
-            <button className="list__btn payment-btn" onClick={payment}>
+            <button className="list__btn payment-btn" onClick={checkout}>
               make payment
             </button>
           </div>

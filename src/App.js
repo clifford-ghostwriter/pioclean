@@ -14,6 +14,7 @@ import {
   Service,
   Checkout,
   Payment,
+  PaymentSuccess,
 } from "./pages";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/service" element={<Service />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/paymentsuccess" element={<PaymentSuccess />} />
         </Route>
 
         <Route path="*" element={<Error />} />
