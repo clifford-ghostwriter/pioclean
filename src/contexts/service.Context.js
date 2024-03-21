@@ -7,6 +7,20 @@ import {
   CLEAR_LIST,
   SUBSCRIBE,
 } from "../utils/actions";
+import suit from "../assests/priceimages/shirts/suits.jpg";
+import agbada from "../assests/priceimages/shirts/agbada.jpg";
+import denim from "../assests/priceimages/shirts/denim.jpg";
+import hangingShirt from "../assests/priceimages/shirts/hanging shirt.webp";
+import ironedShirt from "../assests/priceimages/shirts/ironedshirt.webp";
+import trousers from "../assests/priceimages/shirts/plaintrousers.jpg";
+import tshirt from "../assests/priceimages/shirts/tshirt.jpg";
+
+// female
+import dress from "../assests/priceimages/ladies/dress.jpg";
+import bedsheet from "../assests/priceimages/duvet and towel/bedsheet.jpg";
+import duvet from "../assests/priceimages/duvet and towel/duvet.jpg";
+import pyjamas from "../assests/priceimages/duvet and towel/pyjamas.webp";
+import towel from "../assests/priceimages/duvet and towel/towel.jpg";
 
 const serviceContext = React.createContext();
 
@@ -78,63 +92,73 @@ const initialServiceState = {
   order: [
     {
       orderitem: "denim",
-      orderprice: 5,
+      orderprice: 500,
       ordernumber: 0,
       ordertotal: 0,
+      image: denim,
     },
     {
-      orderitem: "silk",
-      orderprice: 5,
+      orderitem: "suit",
+      orderprice: 500,
       ordernumber: 0,
       ordertotal: 0,
+      image: suit,
     },
     {
-      orderitem: "asoke",
-      orderprice: 5,
+      orderitem: "agbada",
+      orderprice: 500,
       ordernumber: 0,
       ordertotal: 0,
+      image: agbada,
     },
     {
-      orderitem: "agabda",
-      orderprice: 5,
+      orderitem: "hanging shirt",
+      orderprice: 500,
       ordernumber: 0,
       ordertotal: 0,
+      image: hangingShirt,
     },
     {
-      orderitem: "ankara",
-      orderprice: 5,
+      orderitem: "ironed shirt",
+      orderprice: 500,
       ordernumber: 0,
       ordertotal: 0,
+      image: ironedShirt,
     },
     {
-      orderitem: "isiagu",
-      orderprice: 5,
+      orderitem: "tshirt",
+      orderprice: 500,
       ordernumber: 0,
       ordertotal: 0,
+      image: tshirt,
     },
     {
-      orderitem: "cotton",
-      orderprice: 5,
+      orderitem: "trousers",
+      orderprice: 500,
       ordernumber: 0,
       ordertotal: 0,
+      image: trousers,
     },
     {
-      orderitem: "hope",
-      orderprice: 5,
+      orderitem: "dress",
+      orderprice: 500,
       ordernumber: 0,
       ordertotal: 0,
+      image: dress,
     },
     {
-      orderitem: "silk",
-      orderprice: 5,
+      orderitem: "bedsheet",
+      orderprice: 500,
       ordernumber: 0,
       ordertotal: 0,
+      image: bedsheet,
     },
     {
-      orderitem: "silk",
-      orderprice: 5,
+      orderitem: "duvet",
+      orderprice: 500,
       ordernumber: 0,
       ordertotal: 0,
+      image: duvet,
     },
   ],
   totalitems: 0,

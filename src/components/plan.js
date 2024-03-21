@@ -52,8 +52,9 @@ const Plan = ({ item }) => {
   );
 };
 const Wrapper = styled.div`
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   box-shadow: 2px 2px 3px black;
+  overflow: hidden;
   /* border: 1px solid red; */
 
   /* overflow: hidden; */
@@ -117,6 +118,7 @@ const Wrapper = styled.div`
   .btn__subscribe {
     background-color: var(--clr--primary-six);
     text-transform: capitalize;
+    border: none;
   }
 `;
 export default Plan;

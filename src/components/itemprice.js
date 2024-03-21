@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { UseServiceContext } from "../contexts/service.Context";
 
-const Itemprice = ({ item }) => {
-  const { image, price, name } = item;
+const Itemprice = ({ item, index }) => {
+  const { handleChange, updateTotal } = UseServiceContext();
+  const { image, orderitem, orderprice, ordernumber, ordertotal } = item;
   return (
     <Wrapper>
       <div className="container">
@@ -10,9 +12,20 @@ const Itemprice = ({ item }) => {
           <img src={image} alt="" />
         </div>
         <div className="text">
-          <p>{name}</p>
-          <p>{price}</p>
+          <p>{orderitem}</p>
+          <p>N{orderprice}</p>
         </div>
+        <input
+          type="number"
+          // name={`ordernumber${index}`}
+          name="ordernumber"
+          value={ordernumber}
+          min={0}
+          onChange={(e) => {
+            handleChange(e, index);
+            updateTotal(index);
+          }}
+        />
       </div>
     </Wrapper>
   );
@@ -23,9 +36,9 @@ const Wrapper = styled.div`
   border: 1px solid red;
 
   .container {
-    display: flex;
+    /* display: flex; */
     height: 100%;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
   }
 
   .image__container {

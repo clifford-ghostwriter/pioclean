@@ -16,10 +16,10 @@ const OrderOnline = () => {
   const request = function (e) {
     const id = e.target.dataset.id;
     setOrder(id);
-    if (id === order) {
-      e.target.classList.add("active");
-    }
-    console.log(order);
+    // if (id === order) {
+    //   e.target.classList.add("active");
+    // }
+    // console.log(order);
   };
 
   useEffect(() => {
