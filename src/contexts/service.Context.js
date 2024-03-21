@@ -22,6 +22,12 @@ import duvet from "../assests/priceimages/duvet and towel/duvet.jpg";
 import pyjamas from "../assests/priceimages/duvet and towel/pyjamas.webp";
 import towel from "../assests/priceimages/duvet and towel/towel.jpg";
 
+import {
+  addUToLocalStorage,
+  getFromLocalStorage,
+  removeFromLocalStorage,
+} from "../utils/localstorage";
+
 const serviceContext = React.createContext();
 
 const initialServiceState = {
@@ -89,80 +95,85 @@ const initialServiceState = {
   //   },
   // ],
 
-  order: [
-    {
-      orderitem: "denim",
-      orderprice: 500,
-      ordernumber: 0,
-      ordertotal: 0,
-      image: denim,
-    },
-    {
-      orderitem: "suit",
-      orderprice: 500,
-      ordernumber: 0,
-      ordertotal: 0,
-      image: suit,
-    },
-    {
-      orderitem: "agbada",
-      orderprice: 500,
-      ordernumber: 0,
-      ordertotal: 0,
-      image: agbada,
-    },
-    {
-      orderitem: "hanging shirt",
-      orderprice: 500,
-      ordernumber: 0,
-      ordertotal: 0,
-      image: hangingShirt,
-    },
-    {
-      orderitem: "ironed shirt",
-      orderprice: 500,
-      ordernumber: 0,
-      ordertotal: 0,
-      image: ironedShirt,
-    },
-    {
-      orderitem: "tshirt",
-      orderprice: 500,
-      ordernumber: 0,
-      ordertotal: 0,
-      image: tshirt,
-    },
-    {
-      orderitem: "trousers",
-      orderprice: 500,
-      ordernumber: 0,
-      ordertotal: 0,
-      image: trousers,
-    },
-    {
-      orderitem: "dress",
-      orderprice: 500,
-      ordernumber: 0,
-      ordertotal: 0,
-      image: dress,
-    },
-    {
-      orderitem: "bedsheet",
-      orderprice: 500,
-      ordernumber: 0,
-      ordertotal: 0,
-      image: bedsheet,
-    },
-    {
-      orderitem: "duvet",
-      orderprice: 500,
-      ordernumber: 0,
-      ordertotal: 0,
-      image: duvet,
-    },
-  ],
-  totalitems: 0,
-  totalamount: 0,
+  order: getFromLocalStorage("Data")
+    ? getFromLocalStorage("Data")[0]
+    : [
+        {
+          orderitem: "denim",
+          orderprice: 500,
+          ordernumber: 0,
+          ordertotal: 0,
+          image: denim,
+        },
+        {
+          orderitem: "suit",
+          orderprice: 500,
+          ordernumber: 0,
+          ordertotal: 0,
+          image: suit,
+        },
+        {
+          orderitem: "agbada",
+          orderprice: 500,
+          ordernumber: 0,
+          ordertotal: 0,
+          image: agbada,
+        },
+        {
+          orderitem: "hanging shirt",
+          orderprice: 500,
+          ordernumber: 0,
+          ordertotal: 0,
+          image: hangingShirt,
+        },
+        {
+          orderitem: "ironed shirt",
+          orderprice: 500,
+          ordernumber: 0,
+          ordertotal: 0,
+          image: ironedShirt,
+        },
+        {
+          orderitem: "tshirt",
+          orderprice: 500,
+          ordernumber: 0,
+          ordertotal: 0,
+          image: tshirt,
+        },
+        {
+          orderitem: "trousers",
+          orderprice: 500,
+          ordernumber: 0,
+          ordertotal: 0,
+          image: trousers,
+        },
+        {
+          orderitem: "dress",
+          orderprice: 500,
+          ordernumber: 0,
+          ordertotal: 0,
+          image: dress,
+        },
+        {
+          orderitem: "bedsheet",
+          orderprice: 500,
+          ordernumber: 0,
+          ordertotal: 0,
+          image: bedsheet,
+        },
+        {
+          orderitem: "duvet",
+          orderprice: 500,
+          ordernumber: 0,
+          ordertotal: 0,
+          image: duvet,
+        },
+      ],
+
+  // totalitems: 0,
+  // totalamount: 0,
+  totalitems: getFromLocalStorage("Data") ? getFromLocalStorage("Data")[1] : 0,
+  totalamount: getFromLocalStorage("Data") ? getFromLocalStorage("Data")[2] : 0,
 };
 export const ServiceProvider = ({ children }) => {
   const [state, dispatch] = useReducer(service_reducer, initialServiceState);
@@ -170,8 +181,16 @@ export const ServiceProvider = ({ children }) => {
   // console.log(state.totalitems, state.totalamount);
 
   useEffect(() => {
-    sumItem();
-  }, [state.order]);
+    let Data = [];
+
+    console.log(state.order);
+    Data[0] = state.order;
+    Data[1] = state.totalitems;
+    Data[2] = state.totalamount;
+    addUToLocalStorage("Data", Data);
+  }, [state.totalamount, state.totalitems, ...state.order]);
+
+  useEffect(() => {}, [state.order]);
 
   const sumItem = () => {
     dispatch({ type: SUM_ITEM });

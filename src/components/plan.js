@@ -119,6 +119,7 @@ const Wrapper = styled.div`
     background-color: var(--clr--primary-six);
     text-transform: capitalize;
     border: none;
+    cursor: pointer;
   }
 `;
 export default Plan;

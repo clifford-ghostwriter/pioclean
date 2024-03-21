@@ -14,6 +14,7 @@ const Itemprice = ({ item, index }) => {
         <div className="text">
           <p>{orderitem}</p>
           <p>N{orderprice}</p>
+          <p>{ordertotal}</p>
         </div>
         <input
           type="number"
@@ -32,7 +33,7 @@ const Itemprice = ({ item, index }) => {
 };
 
 const Wrapper = styled.div`
-  height: 15rem;
+  height: 20rem;
   border: 1px solid red;
 
   .container {

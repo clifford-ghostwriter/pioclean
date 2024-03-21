@@ -54,8 +54,8 @@ export const service_reducer = (state, action) => {
     const resetOrder = order.map((item) => {
       // const { ordernumber } = item;
 
-      const { orderitem, orderprice, ordernumber, ordertotal } = item;
-      return { orderitem, orderprice, ordernumber: 0, ordertotal: 0 };
+      const { orderitem, orderprice, ordernumber, ordertotal, image } = item;
+      return { image, orderitem, orderprice, ordernumber: 0, ordertotal: 0 };
     });
 
     // console.log(resetOrder);
@@ -70,6 +70,7 @@ export const service_reducer = (state, action) => {
   if (action.type === SUBSCRIBE) {
     // const { amount } = action.payload;
     // console.log(act);
+    console.log(action.payload);
     return { ...state, totalamount: action.payload };
   }
 
