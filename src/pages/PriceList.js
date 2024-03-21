@@ -1,13 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import { Monthlyplan, PageHero, Singleitemprice } from "../components";
+import {
+  Monthlyplan,
+  PageHero,
+  Pricelist,
+  Singleitemprice,
+} from "../components";
 
 const PriceList = () => {
   return (
     <Wrapper>
       <PageHero path="/" text="Back Home" />
       <Monthlyplan />
-      <Singleitemprice />
+      {/* <Singleitemprice /> */}
+      <Pricelist />
     </Wrapper>
   );
 };

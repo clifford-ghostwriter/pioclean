@@ -145,12 +145,12 @@ export const monthlyplan = [
 
   {
     plan: "elite",
-    amount: 1000,
+    amount: 2000,
     image: elitePlan,
   },
   {
     plan: "unlimited",
-    amount: 1000,
+    amount: 3000,
     image: unlimitedPlan,
   },
 ];

@@ -20,6 +20,7 @@ import Orderfooter from "./orderfooter";
 import Checkoutitem from "./checkoutitem";
 import Plan from "./plan";
 import Loading from "./loading";
+import Itemprice from "./itemprice";
 
 export {
   Nav,
@@ -44,4 +45,5 @@ export {
   Checkoutitem,
   Plan,
   Loading,
+  Itemprice,
 };

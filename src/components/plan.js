@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
+import { UseServiceContext } from "../contexts/service.Context";
+import { useNavigate } from "react-router-dom";
 
 const Plan = ({ item }) => {
+  const { subscribe } = UseServiceContext();
+  const navigate = useNavigate();
   const { plan, amount, image } = item;
+
   return (
     <Wrapper $image={image} className="plan__container">
       <div className="image__container">
@@ -34,6 +39,15 @@ const Plan = ({ item }) => {
           <span>pocket friendly</span>
         </p>
       </div>
+      <button
+        className="btn__subscribe"
+        onClick={() => {
+          subscribe(amount);
+          console.log(amount);
+          navigate("/payment");
+        }}>
+        subscribe
+      </button>
     </Wrapper>
   );
 };
@@ -80,6 +94,7 @@ const Wrapper = styled.div`
     color: var(--clr--primary-four);
     text-align: center;
     border-bottom: var(--clr--primary-four);
+    padding-block: 0.5rem;
   }
   .plan {
     background-color: var(--clr--primary-two);
@@ -97,6 +112,11 @@ const Wrapper = styled.div`
 
   .icon {
     color: pink;
+  }
+
+  .btn__subscribe {
+    background-color: var(--clr--primary-six);
+    text-transform: capitalize;
   }
 `;
 export default Plan;

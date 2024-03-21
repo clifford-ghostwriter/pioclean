@@ -8,7 +8,7 @@ function Payment() {
   const [isLoading, setIsloading] = useState(true);
   const { totalamount, clearList } = UseServiceContext();
 
-  console.log(totalamount);
+  // console.log(totalamount);
 
   const navigate = useNavigate();
   const payment = function () {

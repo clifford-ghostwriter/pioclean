@@ -3,6 +3,7 @@ import {
   SUM_ITEM,
   UPDATE_TOTAL,
   CLEAR_LIST,
+  SUBSCRIBE,
 } from "../utils/actions";
 
 export const service_reducer = (state, action) => {
@@ -57,13 +58,19 @@ export const service_reducer = (state, action) => {
       return { orderitem, orderprice, ordernumber: 0, ordertotal: 0 };
     });
 
-    console.log(resetOrder);
+    // console.log(resetOrder);
     return {
       ...state,
       order: [...resetOrder],
       totalitems: 0,
       totalamount: 0,
     };
+  }
+
+  if (action.type === SUBSCRIBE) {
+    // const { amount } = action.payload;
+    // console.log(act);
+    return { ...state, totalamount: action.payload };
   }
 
   throw new Error(`No matching "${action.type}" - action type`);

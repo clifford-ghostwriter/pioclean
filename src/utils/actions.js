@@ -5,3 +5,4 @@ export const SET_HERO_REF = "SET_HERO_REF";
 export const SUM_ITEM = "SUM_ITEM";
 export const UPDATE_TOTAL = "UPDATE_TOTAL";
 export const CLEAR_LIST = "CLEAR_LIST";
+export const SUBSCRIBE = "SUBSCRIBE";

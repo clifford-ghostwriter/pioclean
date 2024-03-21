@@ -59,7 +59,6 @@ const OrderOnline = () => {
           <Request />
         )}
       </div>
-      <p>{(number, order)}</p>
     </Wrapper>
   );
 };

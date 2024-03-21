@@ -5,6 +5,7 @@ import {
   SUM_ITEM,
   UPDATE_TOTAL,
   CLEAR_LIST,
+  SUBSCRIBE,
 } from "../utils/actions";
 
 const serviceContext = React.createContext();
@@ -168,6 +169,10 @@ export const ServiceProvider = ({ children }) => {
     sumItem();
   };
 
+  const subscribe = (price) => {
+    dispatch({ type: SUBSCRIBE, payload: price });
+  };
+
   const handleChange = function (e, index) {
     const name = e.target.name;
     const value = e.target.value;
@@ -180,7 +185,7 @@ export const ServiceProvider = ({ children }) => {
   // console.log(state);
   return (
     <serviceContext.Provider
-      value={{ ...state, handleChange, updateTotal, clearList }}>
+      value={{ ...state, handleChange, updateTotal, clearList, subscribe }}>
       {children}
     </serviceContext.Provider>
   );
