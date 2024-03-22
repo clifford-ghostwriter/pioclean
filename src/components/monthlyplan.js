@@ -10,8 +10,8 @@ const Monthlyplan = () => {
       <div className="section-center ">
         <h3 className="heading">Monthly plan</h3>
         <p className="text">
-          our monthly plans have been carefully design to cover your various dry
-          cleaning needs, as an individual, family or organization
+          our monthly plans have been carefully designed to cover your various
+          dry cleaning needs, as an individual, family or organization
         </p>
         <div className="monthly__plans">
           {monthlyplan.map((plan, index) => {

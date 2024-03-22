@@ -2,19 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 const Testimonies = ({ customer }) => {
-  const { image, name } = customer;
+  const { image, name, occupation, text } = customer;
   return (
     <Wrapper>
       <div className="customer__image__container">
         <img src={image} alt="customer" />
       </div>
       <div className="customer__testimonials__text">
-        <p className="text">
-          " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
-          impedit dolorum voluptatum laboriosam similique, rerum eveniet sit nam
-          corporis. Rem placeat excepturi vero a iusto. "
-        </p>
+        <p className="text">{text}</p>
         <p className="customer__name">-{name}</p>
+        <p className="customer__occupation">-{occupation}</p>
       </div>
     </Wrapper>
   );
@@ -26,7 +23,8 @@ const Wrapper = styled.div`
   .customer__image__container {
     display: grid;
   }
-  .customer__name {
+  .customer__name,
+  .customer__occupation {
     text-transform: capitalize;
     padding-top: 0.5rem;
     font-style: italic;

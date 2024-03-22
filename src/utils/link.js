@@ -108,7 +108,7 @@ export const orderSteps = [
   },
   {
     image: washingmachineone,
-    text: "we pick up your clothes",
+    text: "we pick up and wash your clothes",
   },
 
   {
@@ -124,19 +124,27 @@ export const orderSteps = [
 export const testimonies = [
   {
     image: ben,
-    name: "ben benjamin",
+    name: "David Awoniyi",
+    text: "I haven’t had too much experience with dry cleaners in the past, but i was please with the service i received at The Laundry Box. The prices were reasonable and my items were ready at the time they were supposed to bready at. I’d go back!",
+    occupation: "Banker",
   },
   {
     image: hannah,
-    name: "hannah ann",
+    name: "Femi Adelaja",
+    text: "The Laundry Box treats their customers with the utmost respect and courtesy. The employees are so friendly and really want to help all of the customers that walk through the door. You can point out what stubborn stains need to be treated and they do their best to get rid of them for you. I’d trust any of my items tothese cleaners",
+    occupation: "Engineer",
   },
   {
     image: dave,
     name: "dave david",
+    text: "The Laundry Box treats their customers with the utmost respect and courtesy. The employees are so friendly and really want to help all of the customers that walk through the door. You can point out what stubborn stains need to be treated and they do their best to get rid of them for you. I’d trust any of my items tothese cleaners",
+    occupation: "Engineer",
   },
   {
     image: josh,
     name: "josh joshua",
+    text: "I haven’t had too much experience with dry cleaners in the past, but i was please with the service i received at The Laundry Box. The prices were reasonable and my items were ready at the time they were supposed to bready at. I’d go back!",
+    occupation: "Banker",
   },
 ];
 
@@ -145,17 +153,41 @@ export const monthlyplan = [
     plan: "basic",
     amount: 1000,
     image: basicPlan,
+    features: [
+      "covers only one person",
+      "covers unlimited dirty clothes",
+      "two pickup monthly",
+      "free laundry bag",
+      "free amendment item",
+      "covers two duvet monthly",
+    ],
   },
 
   {
     plan: "elite",
     amount: 2000,
     image: elitePlan,
+    features: [
+      "covers only one person",
+      "covers unlimited dirty clothes",
+      "two pickup monthly",
+      "free laundry bag",
+      "free amendment item",
+      "covers two duvet monthly",
+    ],
   },
   {
     plan: "unlimited",
     amount: 3000,
     image: unlimitedPlan,
+    features: [
+      "covers only one person",
+      "covers unlimited dirty clothes",
+      "two pickup monthly",
+      "free laundry bag",
+      "free amendment item",
+      "covers two duvet monthly",
+    ],
   },
 ];
 

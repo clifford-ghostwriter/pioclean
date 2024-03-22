@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Plan = ({ item }) => {
   const { subscribe } = UseServiceContext();
   const navigate = useNavigate();
-  const { plan, amount, image } = item;
+  const { plan, amount, image, features } = item;
 
   return (
     <Wrapper $image={image} className="plan__container">
@@ -19,25 +19,13 @@ const Plan = ({ item }) => {
         <p className="amount">N{amount}</p>
       </div>
       <div className="plan__features">
-        <p>
-          <FaCheckCircle className="icon" /> <span>pocket friendly</span>
-        </p>
-        <p>
-          <FaCheckCircle className="icon" />
-          <span>pocket friendly</span>
-        </p>
-        <p>
-          <FaCheckCircle className="icon" />
-          <span>pocket friendly</span>
-        </p>
-        <p>
-          <FaCheckCircle className="icon" />
-          <span>pocket friendly</span>
-        </p>
-        <p>
-          <FaCheckCircle className="icon" />
-          <span>pocket friendly</span>
-        </p>
+        {features.map((item) => {
+          return (
+            <p>
+              <FaCheckCircle className="icon" /> <span>{item}</span>
+            </p>
+          );
+        })}
       </div>
       <button
         className="btn__subscribe"
@@ -110,7 +98,10 @@ const Wrapper = styled.div`
   }
 
   .plan__features {
-    text-align: center;
+    /* text-align: center; */
+    display: grid;
+    justify-content: center;
+    padding-block: 1rem;
   }
 
   .icon {
