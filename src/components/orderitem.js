@@ -26,8 +26,8 @@ const Orderitem = ({ index }) => {
   return (
     <Wrapper>
       {/* <p>{index + 1}</p> */}
-      <select
-        // name={`orderitem${index}`}
+      <p>{orderitem}</p>
+      {/* <select
         name="orderitem"
         value={orderitem}
         id=""
@@ -36,8 +36,7 @@ const Orderitem = ({ index }) => {
           updateTotal(index);
         }}>
         <option value={orderitem}>{orderitem}</option>
-        {/* <option value="how far">how far</option> */}
-      </select>
+      </select> */}
       <p>{orderprice}</p>
       <input
         type="number"
@@ -68,6 +67,8 @@ const Wrapper = styled.div`
     min-width: 0;
     /* width: minmax(0, ); */
     border: 1px solid var(--clr--primary-one);
+    word-break: keep-all;
+    word-wrap: normal;
   }
 `;
 export default Orderitem;

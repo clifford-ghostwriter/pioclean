@@ -6,7 +6,11 @@ const Contact = () => {
   return (
     <Wrapper>
       <PageHero path="/" text="Back Home" />
-      <div>Contact</div>
+      <div>
+        <h3>Contact us</h3>
+        <h4>our address</h4>
+        <p>address no</p>
+      </div>
     </Wrapper>
   );
 };

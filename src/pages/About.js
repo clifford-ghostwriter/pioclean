@@ -32,6 +32,15 @@ const About = () => {
             </p>
           </div>
         </div>
+        <div className="chooseus">
+          <h3>why choose use</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
+            tenetur laudantium quas, quis atque impedit repellendus maxime id
+            iusto doloribus obcaecati nostrum distinctio, aliquid veniam
+            aspernatur! Provident, debitis in!
+          </p>
+        </div>
       </div>
     </Wrapper>
   );

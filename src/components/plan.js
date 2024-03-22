@@ -56,6 +56,8 @@ const Wrapper = styled.div`
   box-shadow: 2px 2px 3px black;
   overflow: hidden;
   /* border: 1px solid red; */
+  width: 25rem;
+  margin-inline: auto;
 
   /* overflow: hidden; */
   display: grid;
@@ -65,7 +67,7 @@ const Wrapper = styled.div`
     /* height: 4rem; */
     /* display: grid; */
     background: url(${(p) => p.$image});
-    width: 15rem;
+    width: 10rem;
     height: 17rem;
     /* align-content: stretch; */
     /* border: 2px solid pink; */

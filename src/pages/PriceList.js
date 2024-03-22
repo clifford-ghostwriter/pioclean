@@ -12,7 +12,6 @@ const PriceList = () => {
     <Wrapper>
       <PageHero path="/" text="Back Home" />
       <Monthlyplan />
-      {/* <Singleitemprice /> */}
       <Pricelist />
     </Wrapper>
   );

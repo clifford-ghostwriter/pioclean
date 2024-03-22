@@ -6,7 +6,10 @@ const Service = () => {
   return (
     <Wrapper>
       <PageHero path="/" text="Back Home" />
-      <div>services</div>
+      <div>
+        <h3>our services</h3>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, vero?
+      </div>
     </Wrapper>
   );
 };

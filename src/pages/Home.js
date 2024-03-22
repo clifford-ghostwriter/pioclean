@@ -185,7 +185,7 @@ const Wrapper = styled.section`
   }
   .steps {
     padding-top: 2rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 80vw;
     /* width: 70%; */
     display: grid;

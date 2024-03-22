@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Steps = ({ step }) => {
   const [scroll, setScroll] = useState(null);
-  const { image } = step;
+  const { image, text } = step;
 
   useEffect(() => {
     const event = window.addEventListener("scroll", () => {
@@ -26,10 +26,7 @@ const Steps = ({ step }) => {
       <div className="image__container">
         <img src={image} alt="step__image" />
       </div>
-      <p className="step__text">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae iste
-        sunt impedit, nulla quos placeat! Nulla accusamus ut commodi quidem!
-      </p>
+      <p className="step__text">{text}</p>
     </Wrapper>
   );
 };
