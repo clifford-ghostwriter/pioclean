@@ -1,7 +1,8 @@
 import React from "react";
 import { PageHero } from "../components";
 import styled from "styled-components";
-
+import calender from "../assests/aboutus images/calendar.png";
+import smiley from "../assests/aboutus images/smiley.png";
 const About = () => {
   return (
     <Wrapper>
@@ -32,14 +33,39 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="chooseus">
-          <h3>why choose use</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
-            tenetur laudantium quas, quis atque impedit repellendus maxime id
-            iusto doloribus obcaecati nostrum distinctio, aliquid veniam
-            aspernatur! Provident, debitis in!
-          </p>
+        <div className="section-center">
+          <div className="chooseus">
+            <h3>why choose use</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
+              tenetur laudantium quas, quis atque impedit repellendus maxime id
+              iusto doloribus obcaecati nostrum distinctio, aliquid veniam
+              aspernatur! Provident, debitis in!
+            </p>
+          </div>
+        </div>
+        <div className="section-center">
+          <div className="history__center">
+            <div className="history__point">
+              <img src={calender} alt="" />
+              <p>2004</p>
+              <p>we started dry cleaning</p>
+            </div>
+            <div className="history__point">
+              <img src={smiley} alt="" />
+              <p>
+                100000<span>+</span>
+              </p>
+              <p>wsatisfied customers</p>
+            </div>
+            <div className="history__point">
+              <img src={calender} alt="" />
+              <p>
+                100000<span>+</span>
+              </p>
+              <p>dry cleaned garments</p>
+            </div>
+          </div>
         </div>
       </div>
     </Wrapper>
@@ -61,6 +87,39 @@ const Wrapper = styled.section`
     /* width: 70%; */
     margin-inline: auto;
     /* border: 1px solid pink; */
+  }
+
+  .history__center {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    padding: 2rem;
+    background-color: var(--clr--primary-one);
+    color: var(--clr--primary-four);
+  }
+
+  .history__center p {
+    text-align: center;
+    /* font-size: xx-large; */
+  }
+  .history__center img {
+    /* border: 1px solid red; */
+    /* display: block; */
+    margin: auto;
+  }
+
+  .history__point {
+    /* border: 1px solid red; */
+    padding-top: 1rem;
+  }
+
+  span {
+    font-size: 1.3rem;
+    color: orange;
+  }
+  .chooseus {
+    padding: 2rem;
+    text-align: center;
   }
 `;
 

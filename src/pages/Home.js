@@ -25,12 +25,12 @@ const Home = () => {
               You wear, <br /> We wash
             </h3>
             <p className="hero__paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum
-              rem quo non, ea voluptatibus architecto a placeat tenetur quos
-              inventore veritatis aspernatur delectus qui. Ipsam, distinctio
-              provident atque, necessitatibus cum, at exercitationem illum neque
-              quasi laborum iste delectus doloribus? Voluptate tempora dolores,
-              beatae iusto minus cupiditate nostrum alias. Obcaecati, autem?
+              <span>Dirt has never been a problem.</span> <br />
+              We Clean Everything Offering innovative solutions is our passion.
+              We endeavor to attain a high customer satisfaction in our field
+              and want to exceed your satisfactions. Our services are affordable
+              and reliable <br />
+              Guaranteed Services.
             </p>
             <div className="cta__container">
               <Link to="/order" className="cta-btn">
@@ -236,6 +236,10 @@ const Wrapper = styled.section`
   .testimonial__text {
     padding-top: 0.5rem;
     text-align: center;
+  }
+
+  .hero__paragraph span {
+    color: red;
   }
 `;
 
