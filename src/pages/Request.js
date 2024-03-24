@@ -5,13 +5,13 @@ import { Order, PageHero, Request, Pricelist } from "../components";
 const OrderOnline = () => {
   const [order, setOrder] = useState("makeorder");
 
-  const [number, setnumber] = useState(0);
+  // const [number, setnumber] = useState(0);
   // console.log(order);
 
-  const changeNumber = () => {
-    setnumber(number + 1);
-    // console.log(number);
-  };
+  // const changeNumber = () => {
+  //   setnumber(number + 1);
+  //   console.log(number);
+  // };
 
   const request = function (e) {
     const id = e.target.dataset.id;

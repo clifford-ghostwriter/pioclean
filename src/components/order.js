@@ -63,7 +63,7 @@ const Order = () => {
 
   return (
     <Wrapper className="section-center">
-      <h3>Order</h3>
+      <h3>make order</h3>
       <div className="order__container">
         <Ordercolumn />
 
@@ -111,7 +111,7 @@ const Wrapper = styled.div`
   /* position: relative; */
   /* border: 2px solid red; */
   /* min-height: 40dvh; */
-  padding: 2rem;
+  padding-top: 2rem;
 
   h3 {
     padding-bottom: 0.5rem;
@@ -135,9 +135,10 @@ const Wrapper = styled.div`
   }
 
   .order__container {
-    /* border: 2px solid green; */
+    border: 2px solid green;
     position: relative;
     height: max-content;
+    /* padding-top: 2rem; */
   }
 
   .orderitems {
@@ -164,6 +165,7 @@ const Wrapper = styled.div`
     color: black;
     cursor: pointer;
     padding: 0.3rem;
+    font-size: smaller;
   }
 
   .iformation {

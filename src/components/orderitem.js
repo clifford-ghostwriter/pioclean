@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { UseServiceContext } from "../contexts/service.Context";
 
@@ -69,6 +69,9 @@ const Wrapper = styled.div`
     border: 1px solid var(--clr--primary-one);
     word-break: keep-all;
     word-wrap: normal;
+  }
+  p {
+    text-transform: capitalize;
   }
 `;
 export default Orderitem;

@@ -11,7 +11,7 @@ import { UseServiceContext } from "../contexts/service.Context";
 import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
-  const { order, clearList } = UseServiceContext();
+  const { order } = UseServiceContext();
   const navigate = useNavigate();
   const checkout = function () {
     // clearList();
@@ -59,7 +59,7 @@ const Wrapper = styled.div`
   }
 
   .list-btn {
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
   }
 
   .payment-btn {
@@ -67,17 +67,19 @@ const Wrapper = styled.div`
     position: absolute;
     right: 0;
     margin-top: 0.3rem;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
   }
 
   .section-container {
     /* width: 80%; */
     /* border: 1px solid red; */
     position: relative;
+    /* padding-top: 2rem; */
+    margin-bottom: 3rem;
   }
   .order {
     /* border: 2px solid pink; */
-    padding: 2rem;
+    padding-top: 2rem;
   }
   .item:nth-child(even) {
     background-color: wheat;

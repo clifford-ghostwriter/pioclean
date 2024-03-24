@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Itemprice, itemprice } from "../components";
-import { prices } from "../utils/link";
+import { Itemprice } from "../components";
+// import { prices } from "../utils/link";
 import { UseServiceContext } from "../contexts/service.Context";
 import { Link } from "react-router-dom";
 
@@ -29,8 +29,8 @@ const Wrapper = styled.div`
   /* border: 1px solid red; */
 
   .section__container {
-    padding-top: 1rem;
-    border: 1px solid blue;
+    padding-top: 2rem;
+    /* border: 1px solid blue; */
     display: grid;
     /* grid-template-columns: 1fr; */
     gap: 1rem;
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   .itemprice__container {
     display: grid;
     gap: 0.5rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
   }
 
@@ -62,6 +62,7 @@ const Wrapper = styled.div`
     display: block;
     margin-top: 0.5rem;
     /* margin-left: 1rem; */
+    font-size: medium;
   }
 
   .heading {

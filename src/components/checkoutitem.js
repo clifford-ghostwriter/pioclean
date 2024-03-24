@@ -14,7 +14,7 @@ const Checkoutitem = ({ item }) => {
 };
 
 const Wrapper = styled.div`
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
@@ -24,6 +24,9 @@ const Wrapper = styled.div`
 
   > *:not(:first-child) {
     text-align: center;
+  }
+  p {
+    text-transform: capitalize;
   }
 `;
 

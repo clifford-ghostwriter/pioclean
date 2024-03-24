@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   /* padding: 2rem; */
 
   .monthly__plans {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     gap: 2rem;
     /* height: max-content; */

@@ -67,32 +67,32 @@ const Request = () => {
           <textarea name="" id="" cols="30" rows="10"></textarea>
           <input type="submit" className="submit-btn" />
         </form>
-        <div className="pickup section-center text-center">
-          <h2>Collection and delivery service :</h2>
-          <p>
-            Collection and delivery service is available in Ogba / Ikeja and
-            it’s environs. <br />
-            Send us a quick message using the request form or call 08130969333
-            to arrange on demand pick up/delivery. <br />
-            Please call the day before you wish a collection to take place to
-            maximize chances of booking the slot, also give the driver a big
-            time window to cater for traffic. <br />
-            Collection and delivery charges N1,000 for pick up and delivery Free
-            for all orders over N10,000
-          </p>
-        </div>
+      </div>
+      <div className="pickup__text text-center">
+        <h2>Collection and delivery:</h2>
+        <p>
+          Collection and delivery service is available in Ogba / Ikeja and it’s
+          environs. <br />
+          Send us a quick message using the request form or call 08130969333 to
+          arrange on demand pick up/delivery. <br />
+          Please call the day before you wish a collection to take place to
+          maximize chances of booking the slot, also give the driver a big time
+          window to cater for traffic. <br />
+          Collection and delivery charges N1,000 for pick up and delivery Free
+          for all orders over N10,000
+        </p>
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  /* border: 1px solid red; */
+  border: 1px solid red;
   /* padding-top: 2rem; */
 
   .container {
     /* border: 2px solid blue; */
-    padding: 2rem;
+    /* padding: 2rem; */
     /* width: 50%; */
     /* margin-inline: auto; */
   }
@@ -123,18 +123,21 @@ const Wrapper = styled.div`
   }
 
   .submit-btn {
-    width: 5rem;
+    /* width: 5rem; */
     background-color: var(--clr--primary-one);
     cursor: pointer;
-    margin-top: -0.7rem;
+    margin-top: -0.5rem;
+    font-size: medium;
+    padding-block: 0.3rem;
   }
 
-  .pickup {
+  .pickup__text {
     padding-block: 2rem;
+    border: 1px solid red;
   }
 
-  .pickup p {
-    padding-top: 1rem;
+  .pickup__text p {
+    padding: 1rem;
   }
 `;
 export default Request;

@@ -34,7 +34,7 @@ const Wrapper = styled.div`
   .partners__container {
     display: flex;
     height: max-content;
-    box-shadow: 1px 2px 2px black;
+    box-shadow: 1px 1px 1px black;
     margin-top: 2rem;
     gap: 1rem;
   }
