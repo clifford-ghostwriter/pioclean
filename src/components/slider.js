@@ -86,12 +86,14 @@ function Slider() {
       </div>
 
       <div className="btn__container">
-        <button className="btn prev-btn" onClick={decrement}>
-          <FaChevronLeft />
-        </button>
-        <button className="btn next-btn" onClick={increment}>
-          <FaChevronRight />
-        </button>
+        <div className="btn__center">
+          <button className="btn prev-btn" onClick={decrement}>
+            <FaChevronLeft />
+          </button>
+          <button className="btn next-btn" onClick={increment}>
+            <FaChevronRight />
+          </button>
+        </div>
       </div>
 
       <div className="small__btn-container">
@@ -128,15 +130,28 @@ const Wrapper = styled.div`
   }
 
   .btn__container {
-    display: flex;
-    justify-content: space-between;
+    /* display: inline-flex; */
+    /* justify-content: space-between; */
     /* border: 1px solid red; */
     /* padding-inline: var(--size--100); */
     position: absolute;
     top: 50%;
+    /* left: 5%; */
     width: 100%;
-    /* left: 0; */
-    /* margin-inline: auto; */
+
+    margin: auto;
+  }
+  .btn__center {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    /* padding-inline: var(--size--100); */
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 5%; */
+    width: 90%;
+
+    margin: auto;
   }
 
   .hero__text {

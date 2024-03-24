@@ -9,6 +9,6 @@ export const removeFromLocalStorage = (name) => {
 export const getFromLocalStorage = (name) => {
   const result = localStorage.getItem("name");
   const item = result ? JSON.parse(result) : null;
-  console.log(item);
+  // console.log(item);
   return item;
 };

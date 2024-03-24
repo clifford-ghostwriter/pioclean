@@ -144,15 +144,15 @@ select {
 
 .section {
   /* min-width: max-content; */
-  padding: 5rem 0;
-  /* border: 2px solid yellow; */
+  padding-top: 3rem;
+  /* border: 2px solid orange; */
 }
 
 .section-center {
   max-width: 90vw;
   /* min-width: min(1100px, 100%); */
   margin-inline: auto;
-  border: 1px solid red;
+  /* border: 1px solid blue; */
 
 }
 

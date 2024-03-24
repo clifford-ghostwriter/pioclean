@@ -20,6 +20,7 @@ import josh from "../assests/customer/customer-5.jpg";
 import basicPlan from "../assests/planimages/basicplanImage.jpg";
 import elitePlan from "../assests/planimages/eliteplanImage.jpg";
 import unlimitedPlan from "../assests/planimages/unlimitedImage.jpg";
+import organizationPlan from "../assests/planimages/organizationimage.jpeg";
 
 // pricelist images
 import suit from "../assests/priceimages/shirts/suits.jpg";
@@ -36,6 +37,10 @@ import bedsheet from "../assests/priceimages/duvet and towel/bedsheet.jpg";
 import duvet from "../assests/priceimages/duvet and towel/duvet.jpg";
 import pyjamas from "../assests/priceimages/duvet and towel/pyjamas.webp";
 import towel from "../assests/priceimages/duvet and towel/towel.jpg";
+
+// partners
+import partnerOne from "../assests/partners/partner1.png";
+import partnerTwo from "../assests/partners/partner2.png";
 
 export const links = [
   {
@@ -189,6 +194,19 @@ export const monthlyplan = [
       "covers two duvet monthly",
     ],
   },
+  {
+    plan: "organization",
+    amount: 5000,
+    image: organizationPlan,
+    features: [
+      "covers only one person",
+      "covers unlimited dirty clothes",
+      "two pickup monthly",
+      "free laundry bag",
+      "free amendment item",
+      "covers two duvet monthly",
+    ],
+  },
 ];
 
 // import suit from "../assests/priceimages/shirts/suits.jpg"
@@ -267,3 +285,7 @@ export const prices = [
     price: 1000,
   },
 ];
+
+export const partners = [partnerOne, partnerTwo, partnerOne, partnerTwo];
+
+// export const partners = [{ image: partnerOne }, { image: partnerTwo }];

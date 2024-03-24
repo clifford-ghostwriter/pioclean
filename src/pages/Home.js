@@ -6,6 +6,7 @@ import { FaLongArrowAltDown } from "react-icons/fa";
 import { orderSteps, testimonies } from "../utils/link";
 import { Link } from "react-router-dom";
 import { UseAppContext } from "../contexts/app.Context";
+import Partners from "../components/partners";
 
 const Home = () => {
   const { setheroref, heroref } = UseAppContext();
@@ -17,7 +18,7 @@ const Home = () => {
   }, [ref]);
   return (
     <Wrapper>
-      <PageHero path="/about" text="About us" />
+      <PageHero path="/home" text="Home" />
       <section className="section">
         <div className="hero__text | section-center">
           <div className="text__container">
@@ -27,10 +28,10 @@ const Home = () => {
             <p className="hero__paragraph">
               <span>Dirt has never been a problem.</span> <br />
               We Clean Everything Offering innovative solutions is our passion.
-              We endeavor to attain a high customer satisfaction in our field
-              and want to exceed your satisfactions. Our services are affordable
-              and reliable <br />
-              Guaranteed Services.
+              We endeavor to attain a high customer satisfaction in our field,
+              exceeding customer's expectations. Our services are affordable and
+              reliable <br />
+              Guaranteed Satisfaction.
             </p>
             <div className="cta__container">
               <Link to="/order" className="cta-btn">
@@ -64,6 +65,9 @@ const Home = () => {
             place order
           </Link>
         </div>
+        <div className="partners">
+          <Partners />
+        </div>
         <div className="testimonials-section section-center">
           <div className="testimonial-header">
             <h3 className="testimonial__heading">testimonials</h3>
@@ -90,7 +94,7 @@ const Wrapper = styled.section`
 
   .text__container {
     /* border: 1px solid blue; */
-    width: 60%;
+    width: 100%;
     margin-inline: auto;
   }
 
@@ -187,7 +191,7 @@ const Wrapper = styled.section`
 
   .steps__container {
     /* display: grid; */
-    justify-content: center;
+    /* justify-content: center; */
 
     /* border: 1px solid blue; */
   }
@@ -201,11 +205,11 @@ const Wrapper = styled.section`
   .steps {
     padding-top: 2rem;
     /* border: 1px solid red; */
-    width: 80vw;
+    width: 100%;
     /* width: 70%; */
     display: grid;
     /* grid-template-columns: 1fr 1fr; */
-    justify-items: center;
+    justify-content: center;
     margin-inline: auto;
   }
   .testimonials-section {
@@ -221,16 +225,18 @@ const Wrapper = styled.section`
     text-transform: capitalize;
     border-left: 5px solid red;
     margin: auto;
-    width: 8rem;
+    width: 9rem;
     padding-left: 0.5rem;
   }
   .testimonial-center {
     /* border: 1px solid red; */
-    width: 90%;
+    width: 100%;
     margin-inline: auto;
     display: grid;
     /* grid-template-columns: 1fr 1fr; */
     padding-block: 2rem;
+    padding-inline: 1rem;
+    /* gap: 1rem; */
   }
 
   .testimonial__text {
@@ -240,6 +246,15 @@ const Wrapper = styled.section`
 
   .hero__paragraph span {
     color: red;
+  }
+
+  .cta__text {
+    padding-inline: 1rem;
+    text-align: center;
+  }
+
+  .partners {
+    padding-top: 3rem;
   }
 `;
 

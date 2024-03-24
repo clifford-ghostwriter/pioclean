@@ -183,7 +183,7 @@ export const ServiceProvider = ({ children }) => {
   useEffect(() => {
     let Data = [];
 
-    console.log(state.order);
+    // console.log(state.order);
     Data[0] = state.order;
     Data[1] = state.totalitems;
     Data[2] = state.totalamount;

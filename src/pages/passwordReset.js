@@ -5,7 +5,7 @@ import { PageHero } from "../components";
 const PasswordReset = () => {
   return (
     <Wrapper>
-      <PageHero path="/" text="Back Home" />
+      <PageHero path="/passwordreset" text="Password Reset" />
       <div>passwordReset</div>
     </Wrapper>
   );

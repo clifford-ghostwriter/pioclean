@@ -44,5 +44,9 @@ const Wrapper = styled.div`
     /* border: 1px solid red; */
     /* max-width: max-content; */
   }
+
+  .customer__testimonials__text {
+    /* text-align: center; */
+  }
 `;
 export default Testimonies;

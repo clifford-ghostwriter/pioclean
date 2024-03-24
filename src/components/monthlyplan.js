@@ -28,15 +28,15 @@ const Wrapper = styled.div`
   /* padding: 2rem; */
 
   .monthly__plans {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: flex;
     gap: 2rem;
     /* height: max-content; */
     flex-wrap: wrap;
-    padding: 1rem;
+    padding-block: 1rem;
     flex-direction: column;
     /* background-color: black; */
-    /* width: 80%; */
+    width: 100%;
     /* margin-inline: auto; */
   }
 
@@ -56,8 +56,10 @@ const Wrapper = styled.div`
   .heading {
     border-left: 5px solid red;
     /* margin: auto; */
-    width: 8rem;
+    width: 10rem;
     padding-left: 0.5rem;
+
+    margin: auto;
     margin-bottom: 1rem;
   }
 

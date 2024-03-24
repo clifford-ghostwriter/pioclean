@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   box-shadow: 2px 2px 3px black;
   overflow: hidden;
   /* border: 1px solid red; */
-  width: 25rem;
+  width: 90%;
   margin-inline: auto;
 
   /* overflow: hidden; */

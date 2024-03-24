@@ -6,14 +6,14 @@ import smiley from "../assests/aboutus images/smiley.png";
 const About = () => {
   return (
     <Wrapper>
-      <PageHero path="/" text="Back Home" />
+      <PageHero path="/about" text="About" />
       <div className="section">
         <div className="section-center" r>
           <div className="about-us__container ">
-            <h2>OUR HISTORY & FACTS</h2>
-            <p>
+            <h2 className="header">our history and facts</h2>
+            <p className="history__text">
               PioClean Laundry Service was incorporated on 29th of March, 2006
-              with the mission pf providing customers wiyh high
+              with the mission of providing customers wiyh high
               value,exceptional service and convenience for all garment care
               needs, carpets and upholstery, training, consulting for dry
               cleaning companies, corporate bodies, hotels, events managers etc.
@@ -35,7 +35,7 @@ const About = () => {
         </div>
         <div className="section-center">
           <div className="chooseus">
-            <h3>why choose use</h3>
+            <h3 className="header">why choose use</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
               tenetur laudantium quas, quis atque impedit repellendus maxime id
@@ -117,9 +117,15 @@ const Wrapper = styled.section`
     font-size: 1.3rem;
     color: orange;
   }
-  .chooseus {
-    padding: 2rem;
+  .chooseus,
+  .history__text,
+  .statement {
+    padding: 1.5rem;
     text-align: center;
+  }
+
+  .header {
+    text-transform: uppercase;
   }
 `;
 

@@ -5,7 +5,7 @@ import { PageHero } from "../components";
 const Service = () => {
   return (
     <Wrapper>
-      <PageHero path="/" text="Back Home" />
+      <PageHero path="/service" text="Services" />
       <div>
         <h3>our services</h3>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, vero?

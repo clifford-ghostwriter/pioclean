@@ -34,9 +34,10 @@ const Itemprice = ({ item, index }) => {
 };
 
 const Wrapper = styled.div`
-  height: 100%;
-  border: 1px solid red;
-  width: 100%;
+  /* height: 100%; */
+  /* border: 1px solid red; */
+  /* width: 100%; */
+  box-shadow: 2px 2px 3px black;
 
   .container {
     display: flex;
@@ -44,7 +45,7 @@ const Wrapper = styled.div`
     /* flex-direction: column; */
     gap: 1rem;
     padding: 1rem;
-    width: 25rem;
+    /* width: 25rem; */
     /* border: 1px solid yellow; */
     margin: auto;
   }
@@ -77,7 +78,7 @@ const Wrapper = styled.div`
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 0.5rem;
     padding-block: 1rem;
   }
   .text__container > * {
@@ -85,9 +86,18 @@ const Wrapper = styled.div`
   }
   input {
     /* width: 7rem; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 5px;
     min-width: 0;
+    max-width: 5rem;
+  }
+
+  .text__container > *:nth-child(1) {
+    word-break: keep-all;
+    word-wrap: break-word;
+  }
+  .text__container > * {
+    text-transform: capitalize;
   }
 `;
 export default Itemprice;

@@ -40,10 +40,10 @@ const Wrapper = styled.section`
   /* transform: translateY(20%); */
   /* transition: var(--transition); */
   /* border: 1px solid green; */
-  max-width: 100%;
+  /* max-width: 100%; */
 
   .image__container {
-    width: 15rem;
+    max-width: 15rem;
     aspect-ratio: 1;
     grid-column: 2/ -1;
     /* border: 1px solid red; */
@@ -58,11 +58,11 @@ const Wrapper = styled.section`
 
   .step__text {
     /* border: 1px solid red; */
-    max-width: 20rem;
+    /* max-width: 20rem; */
     /* aspect-ratio: 1; */
 
     grid-row: 2/3;
-    grid-column: 1/ -1;
+    grid-column: 2/ -1;
     /* border: 1px solid red; */
     align-content: first baseline;
   }

@@ -29,7 +29,7 @@ const OrderOnline = () => {
 
   return (
     <Wrapper>
-      <PageHero path="/" text="Back Home" />
+      <PageHero path="/order" text="order online" />
       <div className="section">
         <div className=" section-center">
           <div className="btn__container">
@@ -66,9 +66,9 @@ const OrderOnline = () => {
 const Wrapper = styled.section`
   .btn__container {
     padding-top: 2rem;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
     display: flex;
-    gap: 0.5rem;
+    gap: 0.3rem;
     /* width: 50%; */
     /* margin-inline: auto; */
     /* border: 1px solid red; */
@@ -77,10 +77,11 @@ const Wrapper = styled.section`
   .request-btn {
     text-transform: capitalize;
     background-color: var(--clr--primary-one);
-    padding: 0.2rem;
+    padding: 0.3rem;
     letter-spacing: 0.1rem;
     border-radius: 5px;
     cursor: pointer;
+    font-size: smaller;
   }
 
   .active {

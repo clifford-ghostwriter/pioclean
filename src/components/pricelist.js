@@ -11,10 +11,11 @@ const Pricelist = () => {
     <Wrapper className="section-center">
       <div className="section__container">
         <h3 className="heading">price list</h3>
-
-        {order.map((item, index) => {
-          return <Itemprice item={item} key={index} index={index} />;
-        })}
+        <div className="itemprice__container">
+          {order.map((item, index) => {
+            return <Itemprice item={item} key={index} index={index} />;
+          })}
+        </div>
       </div>
       <Link className="list__btn" to="/checkout">
         checkout
@@ -28,10 +29,10 @@ const Wrapper = styled.div`
   /* border: 1px solid red; */
 
   .section__container {
-    padding: 1rem;
-    /* border: 1px solid blue; */
+    padding-top: 1rem;
+    border: 1px solid blue;
     display: grid;
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     gap: 1rem;
     /* display: flex; */
     /* flex-wrap: wrap; */
@@ -40,6 +41,12 @@ const Wrapper = styled.div`
   /* .section__container > * {
     flex: 1;
   } */
+  .itemprice__container {
+    display: grid;
+    gap: 0.5rem;
+    border: 1px solid black;
+    width: 100%;
+  }
 
   .list__btn {
     text-transform: capitalize;
@@ -54,6 +61,7 @@ const Wrapper = styled.div`
     padding: 0.3rem;
     display: block;
     margin-top: 0.5rem;
+    /* margin-left: 1rem; */
   }
 
   .heading {
