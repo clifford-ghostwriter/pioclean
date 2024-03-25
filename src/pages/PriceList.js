@@ -4,7 +4,7 @@ import {
   Monthlyplan,
   PageHero,
   Pricelist,
-  Singleitemprice,
+  // Singleitemprice,
 } from "../components";
 
 const PriceList = () => {

@@ -19,13 +19,13 @@ import tshirt from "../assests/priceimages/shirts/tshirt.jpg";
 import dress from "../assests/priceimages/ladies/dress.jpg";
 import bedsheet from "../assests/priceimages/duvet and towel/bedsheet.jpg";
 import duvet from "../assests/priceimages/duvet and towel/duvet.jpg";
-import pyjamas from "../assests/priceimages/duvet and towel/pyjamas.webp";
-import towel from "../assests/priceimages/duvet and towel/towel.jpg";
+// import pyjamas from "../assests/priceimages/duvet and towel/pyjamas.webp";
+// import towel from "../assests/priceimages/duvet and towel/towel.jpg";
 
 import {
   addUToLocalStorage,
   getFromLocalStorage,
-  removeFromLocalStorage,
+  // removeFromLocalStorage,
 } from "../utils/localstorage";
 
 const serviceContext = React.createContext();
@@ -188,7 +188,7 @@ export const ServiceProvider = ({ children }) => {
     Data[1] = state.totalitems;
     Data[2] = state.totalamount;
     addUToLocalStorage("Data", Data);
-  }, [state.totalamount, state.totalitems, ...state.order]);
+  }, [state.totalamount, state.totalitems, ...state.order, state.order]);
 
   useEffect(() => {}, [state.order]);
 

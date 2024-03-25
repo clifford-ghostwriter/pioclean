@@ -9,13 +9,13 @@ import { UseAppContext } from "../contexts/app.Context";
 import Partners from "../components/partners";
 
 const Home = () => {
-  const { setheroref, heroref } = UseAppContext();
+  // const { setheroref, heroref } = UseAppContext();
   const [ref, setref] = useState();
 
-  useEffect(() => {
-    const element = document.querySelector(".hero__heading");
-    setheroref(element);
-  }, [ref]);
+  // useEffect(() => {
+  //   const element = document.querySelector(".hero__heading");
+  //   setheroref(element);
+  // }, [ref]);
   return (
     <Wrapper>
       <PageHero path="/home" text="Home" />

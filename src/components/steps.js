@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Steps = ({ step }) => {
-  const [scroll, setScroll] = useState(null);
+  // const [scroll, setScroll] = useState(null);
   const { image, text } = step;
 
-  useEffect(() => {
-    const event = window.addEventListener("scroll", () => {
-      const scrollValue = window.scrollY;
-      setScroll(scrollValue);
-    });
-  });
+  // useEffect(() => {
+  //   const event = window.addEventListener("scroll", () => {
+  //     const scrollValue = window.scrollY;
+  //     setScroll(scrollValue);
+  //   });
+  // });
 
-  useEffect(() => {
-    const step = document.querySelector(".step");
-    // console.log(scroll);
+  // useEffect(() => {
+  //   const step = document.querySelector(".step");
+  //   console.log(scroll);
 
-    if (scroll >= 400) {
-      step.style.Color = "blue";
-    }
-  }, [scroll]);
+  //   if (scroll >= 400) {
+  //     step.style.Color = "blue";
+  //   }
+  // }, [scroll]);
 
   return (
     <Wrapper className="step" id="learnmore">
