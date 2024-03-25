@@ -30,7 +30,7 @@ const Home = () => {
               We Clean Everything Offering innovative solutions is our passion.
               We endeavor to attain a high customer satisfaction in our field,
               exceeding customer's expectations. Our services are affordable and
-              reliable <br />
+              reliable. <br />
               Guaranteed Satisfaction.
             </p>
             <div className="cta__container">

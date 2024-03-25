@@ -87,7 +87,7 @@ const Request = () => {
 };
 
 const Wrapper = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* padding-top: 2rem; */
 
   .container {
@@ -104,14 +104,17 @@ const Wrapper = styled.div`
     padding-top: 2rem;
   }
   .pickup__form * {
-    border-radius: 5px;
+    border-radius: 2px;
     max-width: 100%;
     padding: 0;
+    /* padding: 0.3rem; */
   }
 
   .pickup__form input,
   textarea {
     padding-left: 0.5rem;
+    border: 1px solid black;
+    display: block;
   }
   .pickup__form div {
     display: grid;
@@ -133,7 +136,7 @@ const Wrapper = styled.div`
 
   .pickup__text {
     padding-block: 2rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .pickup__text p {

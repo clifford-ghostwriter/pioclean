@@ -288,4 +288,30 @@ export const prices = [
 
 export const partners = [partnerOne, partnerTwo, partnerOne, partnerTwo];
 
-// export const partners = [{ image: partnerOne }, { image: partnerTwo }];
+export const whyUs = [
+  {
+    heading: "Quality and unique services",
+    text: ` We have a 
+    community of professionals that deliver 
+    quality services that meet your needs.`,
+  },
+  {
+    heading: "Safe and transparent system",
+    text: `  Your items and personal
+     data with us are 100% secured. Track your
+     requests from conception to delivery.`,
+  },
+  {
+    heading: "User friendly technology",
+    text: `  Our channels are user friendly,
+                thereby making your online process seamless and effective.`,
+  },
+  {
+    heading: "24hours support system",
+    text: `  We have a team of professionals ready to support and provide assistance through our various online outlet at anytime .`,
+  },
+  {
+    heading: "Flexible payment systems",
+    text: `  We have a flexible payment system, payment can be made through various payment channels.`,
+  },
+];

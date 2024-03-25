@@ -3,6 +3,8 @@ import { PageHero } from "../components";
 import styled from "styled-components";
 import calender from "../assests/aboutus images/calendar.png";
 import smiley from "../assests/aboutus images/smiley.png";
+import { whyUs } from "../utils/link";
+import { TbPoint } from "react-icons/tb";
 const About = () => {
   return (
     <Wrapper>
@@ -36,30 +38,38 @@ const About = () => {
         <div className="section-center">
           <div className="chooseus">
             <h3 className="header">why choose use</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
-              tenetur laudantium quas, quis atque impedit repellendus maxime id
-              iusto doloribus obcaecati nostrum distinctio, aliquid veniam
-              aspernatur! Provident, debitis in!
-            </p>
+            <ul>
+              {whyUs.map((item) => {
+                const { text, heading } = item;
+                return (
+                  <li>
+                    <h4>
+                      <TbPoint className="point" /> {heading}:
+                    </h4>
+
+                    {text}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
         <div className="section-center">
           <div className="history__center">
             <div className="history__point">
-              <img src={calender} alt="" />
+              <img src={calender} alt="calender" />
               <p>2004</p>
               <p>we started dry cleaning</p>
             </div>
             <div className="history__point">
-              <img src={smiley} alt="" />
+              <img src={smiley} alt="calender" />
               <p>
                 100000<span>+</span>
               </p>
               <p>wsatisfied customers</p>
             </div>
             <div className="history__point">
-              <img src={calender} alt="" />
+              <img src={calender} alt="calender" />
               <p>
                 100000<span>+</span>
               </p>
@@ -126,6 +136,26 @@ const Wrapper = styled.section`
 
   .header {
     text-transform: uppercase;
+  }
+
+  li {
+    text-align: left;
+    padding-block: 0.5rem;
+    list-style: none;
+    /* border: 1px solid red; */
+  }
+
+  li h4 {
+    display: grid;
+
+    grid-template-columns: auto 1fr;
+
+    font-weight: bold;
+  }
+
+  .point {
+    color: orange;
+    font-size: 1.5rem;
   }
 `;
 

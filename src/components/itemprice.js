@@ -15,18 +15,22 @@ const Itemprice = ({ item, index }) => {
           <p>{orderitem}</p>
           <p>N{orderprice}</p>
           <p>{ordertotal}</p>
-          <input
-            type="number"
-            // name={`ordernumber${index}`}
-            name="ordernumber"
-            value={ordernumber}
-            min={0}
-            // placeholder="add item"
-            onChange={(e) => {
-              handleChange(e, index);
-              updateTotal(index);
-            }}
-          />
+          <div className="input">
+            <label htmlFor="quantity">quantity</label>
+            <input
+              type="number"
+              // name={`ordernumber${index}`}
+              name="ordernumber"
+              value={ordernumber}
+              min={0}
+              id="quantity"
+              // placeholder="add item"
+              onChange={(e) => {
+                handleChange(e, index);
+                updateTotal(index);
+              }}
+            />
+          </div>
         </div>
       </div>
     </Wrapper>
