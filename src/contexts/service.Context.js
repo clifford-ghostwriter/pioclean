@@ -188,6 +188,7 @@ export const ServiceProvider = ({ children }) => {
     Data[1] = state.totalitems;
     Data[2] = state.totalamount;
     addUToLocalStorage("Data", Data);
+    // eslint-disable-next-line
   }, [state.totalamount, state.totalitems, ...state.order, state.order]);
 
   useEffect(() => {}, [state.order]);
