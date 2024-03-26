@@ -42,6 +42,15 @@ import towel from "../assests/priceimages/duvet and towel/towel.jpg";
 import partnerOne from "../assests/partners/partner1.png";
 import partnerTwo from "../assests/partners/partner2.png";
 
+// services
+import { GiWashingMachine } from "react-icons/gi";
+// import { PiNeedleDuotone } from "react-icons/pi";
+import { PiVanBold } from "react-icons/pi";
+import { BsFillHousesFill } from "react-icons/bs";
+import { GiSewingNeedle } from "react-icons/gi";
+import { GiFactory } from "react-icons/gi";
+import { HiBuildingOffice2 } from "react-icons/hi2";
+
 export const links = [
   {
     id: 1,
@@ -209,20 +218,6 @@ export const monthlyplan = [
   },
 ];
 
-// import suit from "../assests/priceimages/shirts/suits.jpg"
-// import agbada from "../assests/priceimages/shirts/agbada.jpg"
-// import denim from "../assests/priceimages/shirts/denim.jpg"
-// import hanginShirt from "../assests/priceimages/shirts/hanging shirt.webp"
-// import ironedShirt from "../assests/priceimages/shirts/ironedshirt.webp"
-// import trousers from "../assests/priceimages/shirts/plaintrousers.jpg"
-// import tshirt from "../assests/priceimages/shirts/tshirt.jpg"
-
-// import dress from "../assests/priceimages/ladies/dress.jpg"
-// import bedsheet from "../assests/priceimages/duvet and towel/bedsheet.jpg"
-// import duvet from "../assests/priceimages/duvet and towel/duvet.jpg"
-// import pyjamas from "../assests/priceimages/duvet and towel/pyjamas.webp"
-// import towel from "../assests/priceimages/duvet and towel/towel.jpg"
-
 export const prices = [
   {
     name: "suit",
@@ -308,10 +303,46 @@ export const whyUs = [
   },
   {
     heading: "24hours support system",
-    text: `  We have a team of professionals ready to support and provide assistance through our various online outlet at anytime .`,
+    text: `  We have a team of professionals ready to support 
+    and provide assistance through our various online outlet at anytime .`,
   },
   {
     heading: "Flexible payment systems",
-    text: `  We have a flexible payment system, payment can be made through various payment channels.`,
+    text: `  We have a flexible payment system, payment can be made through 
+    various payment channels.`,
+  },
+];
+
+export const services = [
+  {
+    icon: <PiVanBold />,
+    text: "pickup and delivery",
+  },
+  {
+    icon: <GiSewingNeedle />,
+    text: "garment repair",
+  },
+  // {
+  //   icon: <PiNeedleDuotone />,
+  //   text: "garment repair",
+  // },
+  {
+    icon: <GiWashingMachine />,
+    text: "laundry service",
+  },
+
+  {
+    icon: <BsFillHousesFill />,
+    text: "household cleaning",
+  },
+
+  {
+    icon: <GiFactory />,
+    text: "factory cleaning",
+  },
+
+  {
+    icon: <HiBuildingOffice2 />,
+    text: "office cleaning",
   },
 ];

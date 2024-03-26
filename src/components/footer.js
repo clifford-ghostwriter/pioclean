@@ -55,7 +55,7 @@ const Wrapper = styled.section`
     display: grid;
     grid-template-columns: 2fr 1fr;
     /* border: 1px solid red; */
-    width: 80vw;
+    /* width: 80vw; */
     padding-block: 1rem;
     margin: auto;
     /* padding-inline: 1rem; */
