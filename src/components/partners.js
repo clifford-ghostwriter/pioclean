@@ -7,10 +7,9 @@ const Partners = () => {
     <Wrapper>
       <h3>our partners</h3>
       <div className="partners__container">
-        {partners.map((partner) => {
-          console.log(partner);
+        {partners.map((partner, index) => {
           return (
-            <div className="img__container">
+            <div className="img__container" key={index}>
               <img src={partner} alt="partner" />
             </div>
           );

@@ -51,7 +51,7 @@ const Wrapper = styled.div`
     height: 100dvh;
     width: 100%;
     opacity: 0.7;
-    transform: translate(-100%);
+    transform: translateX(-100%);
     transition: var(--transition);
     z-index: 999;
     /* padding-top: 1rem; */

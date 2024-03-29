@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import logo from "../assests/logo.png";
 import { FaBars } from "react-icons/fa";
@@ -8,9 +8,10 @@ import { links } from "../utils/link";
 // eslint-disable-next-line
 import { FaTimes } from "react-icons/fa";
 
-const Nav = () => {
+const Nav = forwardRef(function (_, ref) {
   const { isSidebarOpen, openSidebar } = UseAppContext();
   const [isIntersecting, setIsIntersecting] = useState();
+  // const ref = useRef(ref);
 
   useEffect(() => {
     setIsIntersecting(window.scrollY);
@@ -18,7 +19,7 @@ const Nav = () => {
   }, [isIntersecting]);
 
   return (
-    <Wrapper className="ele">
+    <Wrapper className="navbar" ref={ref}>
       <div className="nav__wrapper section-center">
         <div className="nav__center">
           <div className="nav__logo">
@@ -58,7 +59,7 @@ const Nav = () => {
       </div>
     </Wrapper>
   );
-};
+});
 
 const Wrapper = styled.nav`
   background-color: var(--clr--primary-one);
@@ -72,7 +73,8 @@ const Wrapper = styled.nav`
   /* top: 0; */
   /* left: 0; */
   /* z-index: 990; */
-  transition: var(--transition-slow);
+  transition: var(--transition-slower);
+  position: relative;
 
   .nav__wrapper {
     padding-block: var(--fs-300);
@@ -127,7 +129,7 @@ const Wrapper = styled.nav`
   .side-bar__links {
     display: flex;
     gap: 1rem;
-    margin-left: -2rem;
+    margin-left: -1rem;
     /* border: 1px solid red; */
     flex-grow: 0.3;
     display: none;
