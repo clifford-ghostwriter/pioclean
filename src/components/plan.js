@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   box-shadow: 2px 2px 3px black;
   overflow: hidden;
   /* border: 1px solid red; */
-  width: 90%;
+  max-width: 90%;
   margin-inline: auto;
 
   /* overflow: hidden; */
@@ -113,6 +113,16 @@ const Wrapper = styled.div`
     text-transform: capitalize;
     border: none;
     cursor: pointer;
+  }
+
+  @media (min-width: 600px) {
+    width: 70%;
+  }
+  @media (min-width: 1000px) {
+    width: 50%;
+    .monthly__plans {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 `;
 export default Plan;

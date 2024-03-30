@@ -27,7 +27,7 @@ const Home = () => {
             </h3>
             <p className="hero__paragraph">
               <span>Dirt has never been a problem.</span> <br />
-              We Clean Everything Offering innovative solutions is our passion.
+              We Clean Everything, Offering innovative solutions is our passion.
               We endeavor to attain a high customer satisfaction in our field,
               exceeding customer's expectations. Our services are affordable and
               reliable. <br />
@@ -65,7 +65,7 @@ const Home = () => {
             place order
           </Link>
         </div>
-        <div className="partners">
+        <div className="partners section-center">
           <Partners />
         </div>
         <div className="testimonials-section section-center">
@@ -114,7 +114,7 @@ const Wrapper = styled.section`
 
   .hero__text {
     /* border: 1px solid blue; */
-    padding-block: 2rem;
+    padding-block: 0.5rem;
   }
 
   .hero__heading {
@@ -236,7 +236,7 @@ const Wrapper = styled.section`
     /* grid-template-columns: 1fr 1fr; */
     padding-block: 2rem;
     padding-inline: 1rem;
-    /* gap: 1rem; */
+    gap: 1rem;
   }
 
   .testimonial__text {
@@ -255,6 +255,20 @@ const Wrapper = styled.section`
 
   .partners {
     padding-top: 3rem;
+  }
+
+  @media (min-width: 900px) {
+    .text__container {
+      padding: 0 12rem;
+      line-height: 2rem;
+    }
+
+    .steps,
+    .testimonial-center {
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid blue;
+      width: 90%;
+    }
   }
 `;
 

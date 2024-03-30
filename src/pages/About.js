@@ -138,6 +138,12 @@ const Wrapper = styled.section`
     text-transform: uppercase;
   }
 
+  .chooseus ul {
+    border: 2px solid red;
+    display: grid;
+    justify-content: center;
+  }
+
   li {
     text-align: left;
     padding-block: 0.5rem;
@@ -156,6 +162,19 @@ const Wrapper = styled.section`
   .point {
     color: orange;
     font-size: 1.5rem;
+  }
+
+  @media (min-width: 1000px) {
+    .history__center {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (min-width: 1400px) {
+    .history__text {
+      border: 2px solid blue;
+      padding: 0 12rem;
+      line-height: 2rem;
+    }
   }
 `;
 

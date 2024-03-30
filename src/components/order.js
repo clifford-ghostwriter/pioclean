@@ -112,6 +112,7 @@ const Wrapper = styled.div`
   /* border: 2px solid red; */
   /* min-height: 40dvh; */
   padding-top: 2rem;
+  border: 3px solid pink;
 
   h3 {
     padding-bottom: 0.5rem;
@@ -174,6 +175,13 @@ const Wrapper = styled.div`
 
   .iformation span {
     color: red;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 10rem;
+    .orderitems {
+      border: 2px solid red;
+    }
   }
 `;
 

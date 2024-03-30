@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 
   .monthly__plans {
     /* border: 1px solid red; */
-    display: flex;
+    display: grid;
     gap: 2rem;
     /* height: max-content; */
     flex-wrap: wrap;
@@ -66,6 +66,12 @@ const Wrapper = styled.div`
   .text {
     padding: 1rem;
     text-align: center;
+  }
+
+  @media (min-width: 1200px) {
+    .monthly__plans {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 `;
 export default Monthlyplan;

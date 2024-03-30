@@ -39,7 +39,7 @@ const Wrapper = styled.section`
   }
   .service__center {
     background-color: var(--clr--primary-one);
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-items: center;
     align-content: center;
@@ -68,6 +68,12 @@ const Wrapper = styled.section`
     display: block;
     font-size: 8rem;
     color: white;
+  }
+
+  @media (min-width: 1000px) {
+    .service__center {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 `;
 export default Service;

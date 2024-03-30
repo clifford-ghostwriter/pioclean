@@ -13,7 +13,7 @@ function SharedLayout() {
 
   useEffect(() => {
     const hero = document.querySelector(".hero");
-    // const nav = document.querySelector(".navbar");
+    const nav = document.querySelector(".navbar");
     // console.log(hero, nav);
 
     const observer = new IntersectionObserver(
@@ -26,7 +26,7 @@ function SharedLayout() {
         // entries.forEach((entry) => {
         // });
       },
-      { root: null, rootMargin: "50px", threshold: 0.5 }
+      { rootMargin: "-50px", threshold: 0.5 }
     );
 
     console.log(isIntersecting);
@@ -37,9 +37,9 @@ function SharedLayout() {
   useEffect(() => {
     // const hero = document.querySelector(".hero");
     const nav = document.querySelector(".navbar");
-    if (!isIntersecting) {
-      nav.classList.add("stickyNav");
-    } else nav.classList.remove("stickyNav");
+    // if (!isIntersecting) {
+    //   nav.classList.add("stickyNav");
+    // } else nav.classList.remove("stickyNav");
   }, [isIntersecting]);
 
   // useEffect(() => {

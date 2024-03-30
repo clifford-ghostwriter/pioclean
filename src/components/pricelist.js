@@ -77,5 +77,11 @@ const Wrapper = styled.div`
     padding: 1rem;
     text-align: center;
   }
+
+  @media (min-width: 980px) {
+    .itemprice__container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 `;
 export default Pricelist;
