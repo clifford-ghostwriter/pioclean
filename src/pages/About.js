@@ -8,7 +8,7 @@ import { TbPoint } from "react-icons/tb";
 const About = () => {
   return (
     <Wrapper>
-      <PageHero path="/about" text="About" />
+      {/* <PageHero path="/about" text="About" /> */}
       <div className="section">
         <div className="section-center" r>
           <div className="about-us__container ">

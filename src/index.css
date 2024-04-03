@@ -3,12 +3,14 @@
 :root {
 
   /* colors */
-  --clr--primary-one: #7790E9;
+  /* --clr--primary-one: #7790E9; */
+  --clr--primary-one: #5f9ea0;
   --clr--primary-two: #000000;
   --clr--primary-three: #ff0000;
   --clr--primary-four: #ffffff;
   --clr--primary-five: #c9abab;
-  --clr--primary-six: rgba(119, 144, 233, 0.8);
+  /* --clr--primary-six: rgba(119, 144, 233, 0.8); */
+  --clr--primary-six: rgba(95, 158, 160, 0.8);
   --clr--primary-eight: #c83fc8;
   /* sizes */
 
@@ -153,7 +155,7 @@ select {
   max-width: 90vw;
   /* min-width: min(1100px, 100%); */
   margin-inline: auto;
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
 
 }
 

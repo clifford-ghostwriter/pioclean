@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Footer, Nav } from "../components";
+import { Footer, HeroTwo, Nav } from "../components";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import SideBar from "../components/sideBar";
@@ -11,36 +11,36 @@ function SharedLayout() {
   const ref = useRef(null);
   console.log(ref);
 
-  useEffect(() => {
-    const hero = document.querySelector(".hero");
-    const nav = document.querySelector(".navbar");
-    // console.log(hero, nav);
+  // useEffect(() => {
+  //   const hero = document.querySelector(".hero");
+  //   const nav = document.querySelector(".navbar");
+  //   console.log(hero, nav);
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        console.log(entry);
-        // const target = entry.target;
-        // setIsIntersecting(entry.isIntersecting);
-        setIsIntersecting(entry.isIntersecting);
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       console.log(entry);
+  //       const target = entry.target;
+  //       setIsIntersecting(entry.isIntersecting);
+  //       setIsIntersecting(entry.isIntersecting);
 
-        // entries.forEach((entry) => {
-        // });
-      },
-      { rootMargin: "-50px", threshold: 0.5 }
-    );
+  //       entries.forEach((entry) => {
+  //       });
+  //     },
+  //     { rootMargin: "-50px", threshold: 0.5 }
+  //   );
 
-    console.log(isIntersecting);
-    observer.observe(hero);
-    return () => observer.unobserve(hero);
-  }, [isIntersecting]);
+  //   console.log(isIntersecting);
+  //   observer.observe(hero);
+  //   return () => observer.unobserve(hero);
+  // }, [isIntersecting]);
 
-  useEffect(() => {
-    // const hero = document.querySelector(".hero");
-    const nav = document.querySelector(".navbar");
-    // if (!isIntersecting) {
-    //   nav.classList.add("stickyNav");
-    // } else nav.classList.remove("stickyNav");
-  }, [isIntersecting]);
+  // useEffect(() => {
+  //   const hero = document.querySelector(".hero");
+  //   const nav = document.querySelector(".navbar");
+  //   if (!isIntersecting) {
+  //     nav.classList.add("stickyNav");
+  //   } else nav.classList.remove("stickyNav");
+  // }, [isIntersecting]);
 
   // useEffect(() => {
   //   if (isIntersecting) {
@@ -57,6 +57,7 @@ function SharedLayout() {
   return (
     <Wrapper>
       <Nav ref={ref} />
+      <HeroTwo />
       <SideBar />
       {/* {isSidebarOpen && <SideBar />} */}
       <Outlet />

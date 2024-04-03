@@ -23,7 +23,7 @@ export const AppProvider = ({ children }) => {
   }, [windowWidth]);
 
   useEffect(() => {
-    if (windowWidth >= 1100) closeSidebar();
+    if (windowWidth >= 1200) closeSidebar();
   }, [windowWidth]);
 
   const closeSidebar = () => {

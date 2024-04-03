@@ -100,8 +100,8 @@ const Wrapper = styled.div`
   .side-bar__close-btn {
     position: absolute;
     display: block;
-    right: 1.6rem;
-    top: 3.7rem;
+    right: 2.5rem;
+    top: 4rem;
     background-color: transparent;
     color: var(--clr--primary-three);
     font-size: var(--fs-700);
@@ -109,7 +109,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
   }
-  @media (width > 1100px) {
+  @media (width > 1200px) {
     .side-bar__center {
       transform: translate(-100%);
     }

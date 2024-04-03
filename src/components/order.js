@@ -68,7 +68,7 @@ const Order = () => {
         <Ordercolumn />
 
         <div className="orderitems">
-          {order.map((item, index) => {
+          {order.map((_, index) => {
             // return <p key={index}>hello</p>;
             // console.log(item);
             return <Orderitem key={index} index={index} />;

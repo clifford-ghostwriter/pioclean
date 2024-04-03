@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import styled from "styled-components";
-import logo from "../assests/logo.png";
+import logo from "../assests/logo2.png";
 import { FaBars } from "react-icons/fa";
 import { UseAppContext } from "../contexts/app.Context";
 import { Link } from "react-router-dom";
@@ -23,7 +23,7 @@ const Nav = forwardRef(function (_, ref) {
       <div className="nav__wrapper section-center">
         <div className="nav__center">
           <div className="nav__logo">
-            <Link to="/">
+            <Link to="/" className="logo__link">
               <img src={logo} alt="logo" />
             </Link>
             <p className="nav__text">Pioclean</p>
@@ -75,6 +75,7 @@ const Wrapper = styled.nav`
   /* z-index: 990; */
   transition: var(--transition-slower);
   position: relative;
+  border-bottom: 1px solid white;
 
   .nav__wrapper {
     padding-block: var(--fs-300);
@@ -99,18 +100,32 @@ const Wrapper = styled.nav`
 
   .nav__logo {
     display: flex;
-    gap: var(--fs-400);
+    gap: var(--size--50);
+    /* border: 1px solid red; */
+    width: 8rem;
+    /* align-self: center; */
+    /* height: 5rem; */
+    /* background-color: white; */
   }
   .nav__logo > * {
+    /* flex: 1; */
     flex-shrink: 0;
+    /* flex-basis: 0; */
     height: 100%;
+    width: 100%;
+    align-items: center;
+  }
+
+  .logo__link {
+    /* width: ; */
   }
 
   .nav__text {
     text-transform: uppercase;
-    padding-top: var(--fs-700);
+    /* padding-top: var(--fs-700); */
     font-size: var(--fs-650);
     letter-spacing: 0.3rem;
+    align-self: center;
   }
 
   .nav__btn {
@@ -123,13 +138,13 @@ const Wrapper = styled.nav`
     /* color: red; */
     /* padding-right: 0; */
     /* margin-right: -1rem; */
-    margin-top: -0.5rem;
+    /* margin-top: -0.5rem; */
   }
 
   .side-bar__links {
     display: flex;
     gap: 1rem;
-    margin-left: -1rem;
+    /* margin-right: -1rem; */
     /* border: 1px solid red; */
     flex-grow: 0.3;
     display: none;
@@ -147,7 +162,7 @@ const Wrapper = styled.nav`
     letter-spacing: 0.1rem;
   }
 
-  @media (width > 1100px) {
+  @media (width > 1200px) {
     .nav__btn {
       display: none;
     }
@@ -156,9 +171,9 @@ const Wrapper = styled.nav`
     }
   }
 
-  @media (width < 1000px) {
+  @media (width < 1300px) {
     .side-bar__links {
-      margin-left: 3rem;
+      margin-left: 5rem;
       /* border: 1px solid red; */
     }
   }

@@ -28,20 +28,21 @@ const Wrapper = styled.div`
   /* padding: 2rem; */
 
   .monthly__plans {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: grid;
     gap: 2rem;
     /* height: max-content; */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     padding-block: 1rem;
-    flex-direction: column;
+    /* flex-direction: column; */
     /* background-color: black; */
-    width: 100%;
-    /* margin-inline: auto; */
+    /* width: 90%; */
+    margin-inline: auto;
   }
 
   .monthly__plans > * {
     /* flex: 1; */
+    border: 1px solid red;
   }
 
   .plan__container:hover {
@@ -68,9 +69,35 @@ const Wrapper = styled.div`
     text-align: center;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 600px) {
+    .monthly__plans {
+      width: 70%;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .monthly__plans {
+      /* width: 70%; */
+    }
+  }
+
+  @media (min-width: 1000px) {
     .monthly__plans {
       grid-template-columns: 1fr 1fr;
+      width: 90%;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .monthly__plans {
+      /* grid-template-columns: 1fr 1fr; */
+      width: 80%;
+    }
+
+    .monthly__plans > *:nth-child(3) {
+      background-position: top left;
+      color: yellow;
+      background-size: fill;
     }
   }
 `;

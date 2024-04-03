@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { PageHero, Steps, Slider, Testimonies } from "../components";
+import { Steps, Slider, Testimonies } from "../components";
 // import Slider from "../components/slider";
 import { FaLongArrowAltDown } from "react-icons/fa";
 import { orderSteps, testimonies } from "../utils/link";
@@ -18,7 +18,7 @@ const Home = () => {
   // }, [ref]);
   return (
     <Wrapper>
-      <PageHero path="/home" text="Home" />
+      {/* <PageHero path="/home" text="Home" /> */}
       <section className="section">
         <div className="hero__text | section-center">
           <div className="text__container">
@@ -26,7 +26,6 @@ const Home = () => {
               You wear, <br /> We wash
             </h3>
             <p className="hero__paragraph">
-              <span>Dirt has never been a problem.</span> <br />
               We Clean Everything, Offering innovative solutions is our passion.
               We endeavor to attain a high customer satisfaction in our field,
               exceeding customer's expectations. Our services are affordable and

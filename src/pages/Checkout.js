@@ -19,7 +19,7 @@ const Checkout = () => {
   };
   return (
     <Wrapper>
-      <PageHero path="/checkout" text="Checkout" />
+      {/* <PageHero path="/checkout" text="Checkout" /> */}
       <div className="section">
         <div className="section-center">
           <div className="section-container">

@@ -23,7 +23,7 @@ import duvet from "../assests/priceimages/duvet and towel/duvet.jpg";
 // import towel from "../assests/priceimages/duvet and towel/towel.jpg";
 
 import {
-  addUToLocalStorage,
+  addToLocalStorage,
   getFromLocalStorage,
   // removeFromLocalStorage,
 } from "../utils/localstorage";
@@ -187,7 +187,7 @@ export const ServiceProvider = ({ children }) => {
     Data[0] = state.order;
     Data[1] = state.totalitems;
     Data[2] = state.totalamount;
-    addUToLocalStorage("Data", Data);
+    addToLocalStorage("Data", Data);
     // eslint-disable-next-line
   }, [state.totalamount, state.totalitems, ...state.order, state.order]);
 

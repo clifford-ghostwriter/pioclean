@@ -12,17 +12,17 @@ const Plan = ({ item }) => {
   return (
     <Wrapper $image={image} className="plan__container">
       <div className="image__container">
-        {/* <img src={image} alt="plan image" /> */}
+        <img src={image} alt="planpicture" />
       </div>
       <div className="plan__text">
         <p className="plan">{plan}</p>
         <p className="amount">N{amount}</p>
       </div>
       <div className="plan__features">
-        {features.map((item) => {
+        {features.map((item, index) => {
           return (
-            <p>
-              <FaCheckCircle className="icon" /> <span>{item}</span>
+            <p className="features">
+              <FaCheckCircle className="icon" key={index} /> <span>{item}</span>
             </p>
           );
         })}
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   box-shadow: 2px 2px 3px black;
   overflow: hidden;
   /* border: 1px solid red; */
-  max-width: 90%;
+  width: 80%;
   margin-inline: auto;
 
   /* overflow: hidden; */
@@ -54,7 +54,7 @@ const Wrapper = styled.div`
   .image__container {
     /* height: 4rem; */
     /* display: grid; */
-    background: url(${(p) => p.$image});
+    /* background: url(${(p) => p.$image}); */
     width: 10rem;
     height: 17rem;
     /* align-content: stretch; */
@@ -115,14 +115,29 @@ const Wrapper = styled.div`
     cursor: pointer;
   }
 
-  @media (min-width: 600px) {
-    width: 70%;
+  .features {
+    display: flex;
+    /* color: yellow; */
+    align-items: center;
+  }
+
+  /* .features > :nth-child(1) {
+    align-self: ;
+  } */
+
+  @media (min-width: 550px) {
+    /* width: 70%; */
+  }
+
+  @media (min-width: 800px) {
+    /* width: 60%; */
+  }
+
+  @media (min-width: 950px) {
+    /* width: 50%; */
   }
   @media (min-width: 1000px) {
-    width: 50%;
-    .monthly__plans {
-      grid-template-columns: 1fr 1fr;
-    }
+    /* width: 100%; */
   }
 `;
 export default Plan;

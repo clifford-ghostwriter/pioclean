@@ -10,7 +10,7 @@ import {
 const PriceList = () => {
   return (
     <Wrapper>
-      <PageHero path="pricelist" text="Price List" />
+      {/* <PageHero path="pricelist" text="Price List" /> */}
       <Monthlyplan />
       <Pricelist />
     </Wrapper>

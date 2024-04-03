@@ -6,7 +6,7 @@ import { services } from "../utils/link";
 const Service = () => {
   return (
     <Wrapper>
-      <PageHero path="/service" text="Services" />
+      {/* <PageHero path="/service" text="Services" /> */}
       <div className="section-center text__center">
         <h3>our services</h3>
         <p>
@@ -21,7 +21,7 @@ const Service = () => {
           {services.map((item, index) => {
             const { icon, text } = item;
             return (
-              <div className="service__item">
+              <div className="service__item" key={index}>
                 <div className="icon">{icon}</div>
                 <p>{text}</p>
               </div>

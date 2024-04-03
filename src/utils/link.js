@@ -118,7 +118,7 @@ export const slides = [
 export const orderSteps = [
   {
     image: dirtyclothesone,
-    text: "bag up your dity clothes",
+    text: "bag up your dirty clothes",
   },
   {
     image: washingmachineone,
