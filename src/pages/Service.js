@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { PageHero } from "../components";
+// import { PageHero } from "../components";
 import { services } from "../utils/link";
 
 const Service = () => {
@@ -9,7 +9,7 @@ const Service = () => {
       {/* <PageHero path="/service" text="Services" /> */}
       <div className="section-center text__center">
         <h3>our services</h3>
-        <p>
+        <p className="services__text">
           A list of our well tailored services aimed at providing the best
           experience for every of our customers. These services include
           household and organization laundry, garment repairs, pick up and
@@ -73,6 +73,13 @@ const Wrapper = styled.section`
   @media (min-width: 1000px) {
     .service__center {
       grid-template-columns: 1fr 1fr;
+    }
+
+    .services__text {
+      padding-inline: 5rem;
+      /* border: 1px solid red; */
+      width: 90%;
+      margin: auto;
     }
   }
 `;

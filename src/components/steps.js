@@ -58,7 +58,7 @@ const Wrapper = styled.section`
 
   .step__text {
     /* border: 1px solid red; */
-    /* max-width: 20rem; */
+    max-width: 15rem;
     /* aspect-ratio: 1; */
 
     grid-row: 2/3;

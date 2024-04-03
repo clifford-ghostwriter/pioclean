@@ -1,5 +1,5 @@
 import React from "react";
-import { PageHero } from "../components";
+// import { PageHero } from "../components";
 import styled from "styled-components";
 import calender from "../assests/aboutus images/calendar.png";
 import smiley from "../assests/aboutus images/smiley.png";
@@ -10,7 +10,7 @@ const About = () => {
     <Wrapper>
       {/* <PageHero path="/about" text="About" /> */}
       <div className="section">
-        <div className="section-center" r>
+        <div className="section-center">
           <div className="about-us__container ">
             <h2 className="header">our history and facts</h2>
             <p className="history__text">

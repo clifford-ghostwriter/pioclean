@@ -10,6 +10,8 @@ import { FaPhone } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+  // console.log(year);
   return (
     <Wrapper>
       <div className="section-center footer__container">
@@ -42,6 +44,7 @@ const Footer = () => {
             <FaWhatsapp />
           </a>
         </div>
+        <p>&copy;{` ${year} pioclean dry cleaning and laundry services`}</p>
       </div>
     </Wrapper>
   );
@@ -50,12 +53,14 @@ const Footer = () => {
 const Wrapper = styled.section`
   background-color: var(--clr--primary-two);
   color: var(--clr--primary-four);
+  opacity: 0.9;
 
   .footer__container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    /* grid-template-columns: 2fr 1fr; */
     /* border: 1px solid red; */
     /* width: 80vw; */
+    gap: 2rem;
     padding-block: 1rem;
     margin: auto;
     /* padding-inline: 1rem; */
@@ -75,7 +80,7 @@ const Wrapper = styled.section`
 
   .socials {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 
   .socials > * {

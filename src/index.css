@@ -155,7 +155,7 @@ select {
   max-width: 90vw;
   /* min-width: min(1100px, 100%); */
   margin-inline: auto;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 
 }
 

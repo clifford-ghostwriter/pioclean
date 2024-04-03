@@ -116,14 +116,14 @@ function Slider() {
 const Wrapper = styled.div`
   /* border: 1px solid red; */
   position: relative;
-  padding-block: 2rem;
+  /* padding-block: 2rem; */
   /* margin: 1rem; */
 
   .slider__center {
     /* display: flex; */
     /* height: 100%; */
-    border: 1px solid blue;
-    height: 70vh;
+    /* border: 1px solid blue; */
+    height: 80vh;
     overflow-x: hidden;
     /* padding: 1rem; */
     position: relative;

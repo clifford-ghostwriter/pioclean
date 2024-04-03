@@ -17,7 +17,7 @@ const HeroTwo = () => {
 
 const Wrapper = styled.div`
   background-color: var(--clr--primary-one);
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   border: 1px solid red;
   .hero__center {
     display: grid;
@@ -25,8 +25,9 @@ const Wrapper = styled.div`
     align-items: center;
     justify-items: center;
     padding-block: 10rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding-inline: 2rem;
+    gap: 1rem;
   }
 
   > * {
@@ -37,8 +38,14 @@ const Wrapper = styled.div`
   .hero__img {
     /* flex-basis: 1; */
     /* flex-grow: 1; */
-    transform: rotate(40deg);
+    transform: rotate(45deg);
     /* width: 60%; */
+    border: 1px solid red;
+    margin-top: -2rem;
+  }
+
+  .hero__text {
+    text-transform: capitalize;
   }
 `;
 export default HeroTwo;

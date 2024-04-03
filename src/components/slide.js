@@ -21,10 +21,10 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-origin: border-box;
+  /* background-origin: border-box; */
   width: 100%;
   height: 100%;
-  opacity: 0;
+  /* opacity: 0; */
   /* transform: translateX(${(p) => p.$index * 100}%); */
   /* transform: translateX(); */
   position: absolute;

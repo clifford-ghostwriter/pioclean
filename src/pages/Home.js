@@ -175,10 +175,11 @@ const Wrapper = styled.section`
     justify-content: center;
     border: 1px solid var(--clr--primary-one);
     text-decoration: none;
-    /* color: var(--clr--primary-one); */
+    /* color: white; */
     width: 60%;
     text-align: center;
     margin: 2rem auto;
+    display: none;
   }
 
   .cta-btn:hover {
@@ -265,7 +266,7 @@ const Wrapper = styled.section`
     .steps,
     .testimonial-center {
       grid-template-columns: 1fr 1fr;
-      border: 1px solid blue;
+      /* border: 1px solid blue; */
       width: 90%;
     }
   }

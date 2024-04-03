@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {
   Monthlyplan,
-  PageHero,
+  // PageHero,
   Pricelist,
   // Singleitemprice,
 } from "../components";

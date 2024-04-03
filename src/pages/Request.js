@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Order, PageHero, Request, Pricelist } from "../components";
+import { Order, Request, Pricelist } from "../components";
 
 const OrderOnline = () => {
   const [order, setOrder] = useState("makeorder");
@@ -29,7 +29,7 @@ const OrderOnline = () => {
 
   return (
     <Wrapper>
-      <PageHero path="/order" text="order online" />
+      {/* <PageHero path="/order" text="order online" /> */}
       <div className="section">
         <div className=" section-center">
           <div className="btn__container">

@@ -96,7 +96,7 @@ const Wrapper = styled.div`
 
     .monthly__plans > *:nth-child(3) {
       background-position: top left;
-      color: yellow;
+      /* color: yellow; */
       background-size: fill;
     }
   }
