@@ -22,9 +22,7 @@ const Home = () => {
       <section className="section">
         <div className="hero__text | section-center">
           <div className="text__container">
-            <h3 className="hero__heading">
-              You wear, <br /> We wash
-            </h3>
+            <h3 className="hero__heading">dirt has never been a problem</h3>
             <p className="hero__paragraph">
               We Clean Everything, Offering innovative solutions is our passion.
               We endeavor to attain a high customer satisfaction in our field,
@@ -58,10 +56,9 @@ const Home = () => {
           <p className="cta__text">
             <span>Special requests.</span> If you have any special requirement
             like stain removal, alteration, silk & suede or leather material.
-            Just call us.
           </p>
           <Link to="/order" className="cta-btn">
-            place order
+            contact us
           </Link>
         </div>
         <div className="partners section-center">
@@ -119,8 +116,9 @@ const Wrapper = styled.section`
   .hero__heading {
     border-left: 5px solid red;
     margin: auto;
-    width: 8rem;
+    width: max-content;
     padding-left: 0.5rem;
+    text-transform: capitalize;
   }
 
   .hero__paragraph {

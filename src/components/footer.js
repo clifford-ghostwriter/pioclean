@@ -8,6 +8,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -16,6 +17,7 @@ const Footer = () => {
     <Wrapper>
       <div className="section-center footer__container">
         <address className="contact__us">
+          <p className="text">contact us</p>
           <span>
             <FaLocationDot />: <span>15 Abeokuta street, Ogba</span>
           </span>
@@ -30,21 +32,31 @@ const Footer = () => {
             <FaPhone />: 080-00-000-000
           </span>
         </address>
-        <div className="socials">
-          <a href="#learnmore">
-            <FaFacebook />
-          </a>
-          <a href="#learnmore">
-            <FaInstagramSquare />
-          </a>
-          <a href="#learnmore">
-            <FaTwitter />
-          </a>
-          <a href="#learnmore">
-            <FaWhatsapp />
-          </a>
+        <div className="socials__term">
+          <div className="socials">
+            {/* <p>channels</p> */}
+            <a href="#learnmore">
+              <FaFacebook />
+            </a>
+            <a href="#learnmore">
+              <FaInstagramSquare />
+            </a>
+            <a href="#learnmore">
+              <FaTwitter />
+            </a>
+            <a href="#learnmore">
+              <FaWhatsapp />
+            </a>
+          </div>
+          <div className="terms__conditions">
+            <Link> terms and conditions</Link>
+            <Link> privacy policies</Link>
+          </div>
         </div>
-        <p>&copy;{` ${year} pioclean dry cleaning and laundry services`}</p>
+        <p className="copyright">
+          &copy;
+          {` ${year} pioclean dry cleaning and laundry services, all rights reserved`}
+        </p>
       </div>
     </Wrapper>
   );
@@ -54,6 +66,7 @@ const Wrapper = styled.section`
   background-color: var(--clr--primary-two);
   color: var(--clr--primary-four);
   opacity: 0.9;
+  padding-block: 3rem;
 
   .footer__container {
     display: grid;
@@ -64,7 +77,7 @@ const Wrapper = styled.section`
     padding-block: 1rem;
     margin: auto;
     /* padding-inline: 1rem; */
-    justify-content: space-between;
+    justify-items: center;
   }
   .contact__us {
     display: grid;
@@ -81,11 +94,35 @@ const Wrapper = styled.section`
   .socials {
     display: flex;
     /* flex-direction: column; */
+    /* border: 1px solid red; */
+    width: 15rem;
+    gap: 1rem;
   }
 
   .socials > * {
     flex: 1;
     color: var(--clr--primary-eight);
+    align-self: center;
+  }
+
+  .terms__conditions {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .socials__term {
+    display: grid;
+    /* border: 1px solid red; */
+    gap: 1rem;
+  }
+
+  .copyright {
+    /* border: 1px solid red; */
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .text {
+    text-transform: capitalize;
   }
 `;
 

@@ -6,7 +6,10 @@ const HeroTwo = () => {
   return (
     <Wrapper>
       <div className="section-center hero__center">
-        <h2 className="hero__text">dirty has never been a problem</h2>
+        <h2 className="hero__text">
+          you wear, <br />
+          we wash
+        </h2>
         <div className="hero__img">
           <img src={dirtyclothes} alt="" />
         </div>
@@ -27,7 +30,7 @@ const Wrapper = styled.div`
     padding-block: 10rem;
     /* border: 1px solid red; */
     padding-inline: 2rem;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   > * {
@@ -41,7 +44,7 @@ const Wrapper = styled.div`
     transform: rotate(45deg);
     /* width: 60%; */
     border: 1px solid red;
-    margin-top: -2rem;
+    /* margin-top: -2rem; */
   }
 
   .hero__text {
