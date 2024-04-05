@@ -179,7 +179,7 @@ const Wrapper = styled.div`
   @media (min-width: 1200px) {
     padding: 0 10rem;
     .orderitems {
-      border: 2px solid red;
+      /* border: 2px solid red; */
     }
   }
 `;
