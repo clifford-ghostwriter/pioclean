@@ -44,6 +44,7 @@ const Checkout = () => {
 };
 
 const Wrapper = styled.div`
+  padding-block: 2rem;
   .list__btn {
     text-transform: capitalize;
     letter-spacing: 0.05rem;

@@ -53,6 +53,7 @@ const Home = () => {
               return <Steps step={step} key={index} />;
             })}
           </div>
+          {/* <div className="cta"> */}
           <p className="cta__text">
             <span>Special requests.</span> If you have any special requirement
             like stain removal, alteration, silk & suede or leather material.
@@ -60,6 +61,7 @@ const Home = () => {
           <Link to="/order" className="cta-btn">
             contact us
           </Link>
+          {/* </div> */}
         </div>
         <div className="partners section-center">
           <Partners />
@@ -152,6 +154,7 @@ const Wrapper = styled.section`
   }
   .cta__text {
     text-align: center;
+    padding-top: 2rem;
   }
   .cta__text span {
     color: red;
@@ -252,7 +255,8 @@ const Wrapper = styled.section`
   }
 
   .partners {
-    padding-top: 3rem;
+    padding-block: 5rem;
+    /* border: 1px solid red; */
   }
 
   @media (min-width: 900px) {

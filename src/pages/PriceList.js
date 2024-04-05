@@ -16,5 +16,7 @@ const PriceList = () => {
     </Wrapper>
   );
 };
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  padding-block: 2rem;
+`;
 export default PriceList;

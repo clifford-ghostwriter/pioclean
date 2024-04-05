@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   /* padding: 2rem; */
 
   .monthly__plans {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: grid;
     gap: 2rem;
     /* height: max-content; */
@@ -42,7 +42,7 @@ const Wrapper = styled.div`
 
   .monthly__plans > * {
     /* flex: 1; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .plan__container:hover {
@@ -69,15 +69,15 @@ const Wrapper = styled.div`
     text-align: center;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 500px) {
     .monthly__plans {
       width: 70%;
     }
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 800px) {
     .monthly__plans {
-      /* width: 70%; */
+      width: 60%;
     }
   }
 

@@ -15,11 +15,12 @@ const Pricelist = () => {
           {order.map((item, index) => {
             return <Itemprice item={item} key={index} index={index} />;
           })}
+
+          <Link className="list__btn" to="/checkout">
+            checkout
+          </Link>
         </div>
       </div>
-      <Link className="list__btn" to="/checkout">
-        checkout
-      </Link>
     </Wrapper>
   );
 };
@@ -27,6 +28,7 @@ const Pricelist = () => {
 const Wrapper = styled.div`
   /* padding: 2rem; */
   /* border: 1px solid red; */
+  padding-block: 2rem;
 
   .section__container {
     padding-top: 2rem;
@@ -46,6 +48,8 @@ const Wrapper = styled.div`
     gap: 0.5rem;
     /* border: 1px solid black; */
     width: 100%;
+    margin: auto;
+    gap: 2rem;
   }
 
   .list__btn {
@@ -61,7 +65,7 @@ const Wrapper = styled.div`
     padding: 0.3rem;
     display: block;
     margin-top: 0.5rem;
-    /* margin-left: 1rem; */
+    margin-left: 1.3rem;
     font-size: medium;
   }
 
@@ -78,9 +82,16 @@ const Wrapper = styled.div`
     text-align: center;
   }
 
+  @media (min-width: 500px) {
+    .itemprice__container {
+      width: 60%;
+    }
+  }
+
   @media (min-width: 980px) {
     .itemprice__container {
       grid-template-columns: 1fr 1fr;
+      width: 80%;
     }
   }
 `;

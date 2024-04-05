@@ -44,7 +44,7 @@ const Wrapper = styled.div`
   box-shadow: 2px 2px 3px black;
   overflow: hidden;
   /* border: 1px solid red; */
-  width: 80%;
+  width: 90%;
   margin-inline: auto;
 
   /* overflow: hidden; */
@@ -69,7 +69,7 @@ const Wrapper = styled.div`
   }
 
   .image__container > * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* align-self: stretch; */
     /* min-height: 100%; */
   }

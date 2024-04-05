@@ -64,6 +64,7 @@ const OrderOnline = () => {
 };
 
 const Wrapper = styled.section`
+  padding-block: 2rem;
   .btn__container {
     padding-top: 2rem;
     /* padding-left: 2rem; */
@@ -86,6 +87,15 @@ const Wrapper = styled.section`
 
   .active {
     background-color: white;
+  }
+
+  @media (min-width: 1000px) {
+    .btn__container {
+      width: 80%;
+      margin: auto;
+      /* border: 1px solid red; */
+      padding-left: 2rem;
+    }
   }
 `;
 export default OrderOnline;

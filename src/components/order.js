@@ -98,8 +98,7 @@ const Order = () => {
       <div className="iformation">
         <h3>information:</h3>
         <p>
-          Kindly note that <span> two(2)</span> piece clothing that are
-          considered as
+          Kindly note that <span> two(2)</span> piece clothing are considered
           <span> two(2)</span> items
         </p>
       </div>

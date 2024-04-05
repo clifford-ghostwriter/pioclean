@@ -22,12 +22,12 @@ function Slider() {
     }
   }, [index, slidesData]);
 
-  // useEffect(() => {
-  //   let slider = setInterval(() => {
-  //     setIndex(index + 1);
-  //   }, 3000);
-  //   return () => clearInterval(slider);
-  // }, [index]);
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 3000);
+    return () => clearInterval(slider);
+  }, [index]);
 
   const setIndexBtn = function (index) {
     setIndex(index);

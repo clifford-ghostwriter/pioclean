@@ -51,6 +51,7 @@
   --transition-two: all 0.3s ease;
   --transition-slow: all 0.5s linear;
   --transition-slower: all 1s linear;
+
 }
 
 
@@ -59,6 +60,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  /* scroll-behavior: smooth; */
   margin: 0;
   padding: 0;
 }

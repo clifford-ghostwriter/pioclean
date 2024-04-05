@@ -14,9 +14,10 @@ const Itemprice = ({ item, index }) => {
         <div className="text__container">
           <p>{orderitem}</p>
           <p>N{orderprice}</p>
-          <p>{ordertotal}</p>
+          {/* <p>N{ordertotal}</p> */}
+
           <div className="input">
-            <label htmlFor="quantity">quantity</label>
+            <label htmlFor="quantity">quantity:</label> <br />
             <input
               type="number"
               // name={`ordernumber${index}`}
@@ -31,6 +32,10 @@ const Itemprice = ({ item, index }) => {
               }}
             />
           </div>
+          <p>
+            <span>total:</span>
+            {` ${ordertotal > 0 ? "N" : ""}${ordertotal}`}
+          </p>
         </div>
       </div>
     </Wrapper>
@@ -40,8 +45,9 @@ const Itemprice = ({ item, index }) => {
 const Wrapper = styled.div`
   /* height: 100%; */
   /* border: 1px solid red; */
-  /* width: 100%; */
+  width: 90%;
   box-shadow: 2px 2px 3px black;
+  margin: auto;
 
   .container {
     display: flex;

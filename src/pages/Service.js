@@ -33,6 +33,7 @@ const Service = () => {
   );
 };
 const Wrapper = styled.section`
+  padding-block: 2rem;
   .text__center {
     text-align: center;
     padding-block: 2rem;

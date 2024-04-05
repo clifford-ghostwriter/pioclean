@@ -162,6 +162,20 @@ const Wrapper = styled.nav`
     letter-spacing: 0.1rem;
   }
 
+  @media (width < 400px) {
+    /* font-size: var(--fs-600); */
+
+    .nav__logo {
+      gap: 0;
+    }
+
+    .nav__text {
+      text-transform: uppercase;
+      /* padding-top: var(--fs-700); */
+      font-size: var(--fs-650);
+      letter-spacing: 0.2rem;
+    }
+  }
   @media (width > 1200px) {
     .nav__btn {
       display: none;
