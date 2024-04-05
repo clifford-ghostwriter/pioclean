@@ -52,7 +52,7 @@ function Payment() {
 }
 
 const Wrapper = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   min-height: 50dvh;
   position: relative;
   display: grid;

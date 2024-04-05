@@ -3,6 +3,9 @@ import styled from "styled-components";
 // import { PageHero } from "../components";
 
 const Contact = () => {
+  const submit = (e) => {
+    e.preventDefault();
+  };
   return (
     <Wrapper>
       {/* <PageHero path="/contact" text="Contact us" /> */}
@@ -39,7 +42,13 @@ const Contact = () => {
               <label htmlFor="text">your message</label>
               <textarea name="text" id="text" cols="30" rows="10"></textarea>
             </div>
-            <input type="submit" />
+            <input
+              className="submit-btn"
+              type="submit"
+              onClick={(e) => {
+                submit(e);
+              }}
+            />
           </form>
         </div>
       </div>
@@ -47,6 +56,7 @@ const Contact = () => {
   );
 };
 const Wrapper = styled.section`
+  padding-block: 2rem;
   .section__container {
     padding-top: 2rem;
     /* border: 1px solid blue; */
@@ -86,6 +96,14 @@ const Wrapper = styled.section`
     align-content: center;
     padding-top: 2rem;
     text-align: center;
+  }
+
+  .submit-btn {
+    background-color: var(--clr--primary-one);
+  }
+
+  .submit-btn:hover {
+    background-color: var(--clr--primary-six);
   }
 `;
 export default Contact;
