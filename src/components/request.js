@@ -69,7 +69,7 @@ const Request = () => {
         </form>
       </div>
       <div className="pickup__text text-center">
-        <h2>Collection and delivery:</h2>
+        <h2 className="heading">Collection and delivery:</h2>
         <p>
           Collection and delivery service is available in Ogba / Ikeja and it’s
           environs. <br />
@@ -132,6 +132,9 @@ const Wrapper = styled.div`
     margin-top: -0.5rem;
     font-size: medium;
     padding-block: 0.3rem;
+    display: block;
+    width: 50%;
+    margin: auto;
   }
 
   .pickup__text {
@@ -141,6 +144,26 @@ const Wrapper = styled.div`
 
   .pickup__text p {
     padding: 1rem;
+  }
+
+  @media (min-width: 1000px) {
+    .container {
+      /* border: 2px solid blue; */
+      padding: 2.5rem;
+      width: 50%;
+      margin: auto;
+    }
+
+    .submit-btn {
+      width: 50%;
+      margin: auto;
+    }
+
+    .pickup__text {
+      width: 80%;
+      margin: auto;
+      padding-inline: 2rem;
+    }
   }
 `;
 export default Request;

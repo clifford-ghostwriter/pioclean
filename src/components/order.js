@@ -111,7 +111,7 @@ const Wrapper = styled.div`
   /* border: 2px solid red; */
   /* min-height: 40dvh; */
   padding-top: 2rem;
-  border: 3px solid pink;
+  /* border: 3px solid pink; */
 
   h3 {
     padding-bottom: 0.5rem;
@@ -135,7 +135,7 @@ const Wrapper = styled.div`
   }
 
   .order__container {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     position: relative;
     height: max-content;
     /* padding-top: 2rem; */
