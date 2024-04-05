@@ -30,19 +30,24 @@ const Wrapper = styled.div`
     padding-block: 8rem;
     /* border: 1px solid red; */
     padding-inline: 2rem;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
-  > * {
+  .hero__center > * {
     margin: auto;
     /* border: 1px solid red; */
+    width: 90%;
+    aspect-ratio: 1;
+    display: grid;
+    align-items: center;
+    justify-items: center;
   }
 
   .hero__img {
     /* flex-basis: 1; */
     /* flex-grow: 1; */
     transform: rotate(45deg);
-    /* width: 80%; */
+
     /* border: 1px solid red; */
     /* margin-top: -2rem; */
     border-radius: 50px;
@@ -50,6 +55,8 @@ const Wrapper = styled.div`
 
   img {
     border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 1;
   }
 
   .hero__text {
@@ -62,7 +69,14 @@ const Wrapper = styled.div`
     .hero__center {
       width: 80%;
       margin: auto;
+      /* padding-block: 5rem; */
       /* border: 1px solid red; */
+    }
+  }
+
+  @media (min-width: 550px) {
+    .hero__center > * {
+      width: 60%;
     }
   }
 `;
