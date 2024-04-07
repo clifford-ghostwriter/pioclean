@@ -154,15 +154,17 @@ const Wrapper = styled.div`
       margin: auto;
     }
 
-    .submit-btn {
-      width: 50%;
-      margin: auto;
-    }
-
     .pickup__text {
       width: 80%;
       margin: auto;
       padding-inline: 2rem;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .submit-btn {
+      width: 50%;
+      margin: auto;
     }
   }
 `;

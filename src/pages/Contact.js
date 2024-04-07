@@ -105,5 +105,12 @@ const Wrapper = styled.section`
   .submit-btn:hover {
     background-color: var(--clr--primary-six);
   }
+
+  @media (min-width: 800px) {
+    .submit-btn {
+      width: 50%;
+      margin: auto;
+    }
+  }
 `;
 export default Contact;

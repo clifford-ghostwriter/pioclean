@@ -6,7 +6,7 @@ import { UseServiceContext } from "../contexts/service.Context";
 import { Link } from "react-router-dom";
 
 const Pricelist = () => {
-  const { order } = UseServiceContext();
+  const { order, totalamount } = UseServiceContext();
   return (
     <Wrapper className="section-center">
       <div className="section__container">
@@ -15,10 +15,11 @@ const Pricelist = () => {
           {order.map((item, index) => {
             return <Itemprice item={item} key={index} index={index} />;
           })}
-
-          <Link className="list__btn" to="/checkout">
-            checkout
-          </Link>
+          {totalamount ? (
+            <Link className="list__btn" to="/checkout">
+              checkout
+            </Link>
+          ) : null}
         </div>
       </div>
     </Wrapper>
