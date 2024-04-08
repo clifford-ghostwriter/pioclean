@@ -2,7 +2,7 @@ import React from "react";
 import dirtyclothes from "../assests/dirty-clothes-01.jpeg";
 import styled from "styled-components";
 
-const Hero = ({ bcg }) => {
+const Homehero = ({ bcg }) => {
   return (
     <Wrapper $bcgImage={bcg}>
       <div className="section-center hero__center">
@@ -10,49 +10,49 @@ const Hero = ({ bcg }) => {
           you wear, <br />
           we wash
         </h2>
-        {/* <div className="hero__img">
+        <div className="hero__img">
           <img src={dirtyclothes} alt="" />
-        </div> */}
+        </div>
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  /* background-color: var(--clr--primary-one); */
+  background-color: var(--clr--primary-one);
   /* margin-top: 5rem; */
   /* border: 1px solid red; */
 
-  display: grid;
+  /* display: grid; */
   /* grid-template-columns: 1fr 1fr; */
-  align-items: center;
-  justify-items: center;
+  /* align-items: center; */
+  /* justify-items: center; */
   /* padding-block: 8rem; */
-  /* border: 1px solid red; */
+  /* border: 1px solid red;
 
   background-image: url(${(p) => p.$bcgImage});
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  height: 60dvh;
+  height: 60dvh; */
   /* background-attachment: scroll; */
   /* background-position: center; */
 
-  /* .hero__center {
+  .hero__center {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
     padding-block: 8rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding-inline: 2rem;
     gap: 1rem;
-  } */
+  }
 
   .hero__center > * {
     margin: auto;
-    border: 1px solid red;
-    /* width: 90%; */
+    /* border: 1px solid red; */
+    width: 90%;
     /* aspect-ratio: 1; */
     display: grid;
     align-items: center;
@@ -62,7 +62,7 @@ const Wrapper = styled.div`
   .hero__img {
     /* flex-basis: 1; */
     /* flex-grow: 1; */
-    /* transform: rotate(45deg); */
+    transform: rotate(45deg);
 
     /* border: 1px solid red; */
     /* margin-top: -2rem; */
@@ -96,4 +96,4 @@ const Wrapper = styled.div`
     }
   }
 `;
-export default Hero;
+export default Homehero;

@@ -1,0 +1,41 @@
+useEffect(() => {
+    const hero = document.querySelector(".hero__center");
+    const nav = document.querySelector(".navbar");
+    console.log(hero, nav);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        console.log(entry);
+        const target = entry.target;
+        setIsIntersecting(entry.isIntersecting);
+        setIsIntersecting(entry.isIntersecting);
+
+        // entries.forEach((entry) => {});
+      },
+      { rootMargin: "100px", threshold: 1 }
+    );
+
+    console.log(isIntersecting);
+    observer.observe(hero);
+    return () => observer.unobserve(hero);
+  }, [isIntersecting]);
+
+  useEffect(() => {
+    const hero = document.querySelector(".hero");
+    const nav = document.querySelector(".navbar");
+    if (!isIntersecting) {
+      nav.classList.add("stickyNav");
+    } else nav.classList.remove("stickyNav");
+  }, [isIntersecting]);
+
+  // useEffect(() => {
+  //   if (isIntersecting) {
+  //     ref.current.querySelectorAll("div").forEach((el) => {
+  //       el.classList.add("slide-in");
+  //     });
+  //   } else {
+  //     ref.current.querySelectorAll("div").forEach((el) => {
+  //       el.classList.remove("slide-in");
+  //     });
+  //   }
+  // }, [isIntersecting]);

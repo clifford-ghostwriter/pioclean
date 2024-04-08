@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Order, Request, Pricelist } from "../components";
+import { Order, Request, Pricelist, Hero } from "../components";
+import dirtyclothe from "../assests/dirtyclothes.png";
 
 const OrderOnline = () => {
   const [order, setOrder] = useState("makeorder");
@@ -29,7 +30,7 @@ const OrderOnline = () => {
 
   return (
     <Wrapper>
-      {/* <PageHero path="/order" text="order online" /> */}
+      <Hero bcg={dirtyclothe} />
       <div className="section">
         <div className=" section-center">
           <div className="btn__container">
@@ -64,7 +65,7 @@ const OrderOnline = () => {
 };
 
 const Wrapper = styled.section`
-  padding-block: 2rem;
+  padding-bottom: 2rem;
   .btn__container {
     padding-top: 2rem;
     /* padding-left: 2rem; */
@@ -83,6 +84,10 @@ const Wrapper = styled.section`
     border-radius: 5px;
     cursor: pointer;
     font-size: smaller;
+  }
+
+  .request-btn:hover {
+    background-color: var(--clr--primary-six);
   }
 
   .active {

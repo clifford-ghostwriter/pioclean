@@ -81,22 +81,33 @@ const Wrapper = styled.div`
     }
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 980px) {
     .monthly__plans {
       grid-template-columns: 1fr 1fr;
-      width: 90%;
+      width: 80%;
     }
   }
 
   @media (min-width: 1000px) {
     .monthly__plans {
-      /* grid-template-columns: 1fr 1fr; */
-      width: 80%;
+      width: 70%;
     }
 
     .monthly__plans > *:nth-child(3) {
       background-position: top left;
-      /* color: yellow; */
+
+      background-size: fill;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    .monthly__plans {
+      width: 60%;
+    }
+
+    .monthly__plans > *:nth-child(3) {
+      background-position: top left;
+
       background-size: fill;
     }
   }

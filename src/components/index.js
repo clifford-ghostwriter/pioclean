@@ -21,7 +21,8 @@ import Checkoutitem from "./checkoutitem";
 import Plan from "./plan";
 import Loading from "./loading";
 import Itemprice from "./itemprice";
-import HeroTwo from "./heroTwo";
+import Hero from "./heroTwo";
+import Homehero from "./homehero";
 
 export {
   Nav,
@@ -47,5 +48,6 @@ export {
   Plan,
   Loading,
   Itemprice,
-  HeroTwo,
+  Hero,
+  Homehero,
 };

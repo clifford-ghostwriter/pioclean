@@ -176,8 +176,13 @@ const Wrapper = styled.div`
     color: red;
   }
 
+  @media (min-width: 1000px) {
+    width: 80%;
+    /* border: 1px solid red; */
+  }
+
   @media (min-width: 1200px) {
-    padding: 0 10rem;
+    padding: 0 4rem;
     .orderitems {
       /* border: 2px solid red;git */
     }

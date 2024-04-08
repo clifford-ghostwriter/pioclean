@@ -95,5 +95,18 @@ const Wrapper = styled.div`
       width: 80%;
     }
   }
+
+    @media (min-width: 1000px) {
+    .itemprice__container  {
+    
+      width: 70%;
+    }
+
+  @media (min-width: 1500px) {
+    .itemprice__container {
+     
+      width: 60%;
+    }
+  }
 `;
 export default Pricelist;

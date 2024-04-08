@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Footer, HeroTwo, Nav } from "../components";
+import { Footer, Nav } from "../components";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import SideBar from "../components/sideBar";
@@ -30,7 +30,6 @@ function SharedLayout() {
   return (
     <Wrapper>
       <Nav ref={ref} />
-      <HeroTwo />
       <SideBar />
       {/* {isSidebarOpen && <SideBar />} */}
       <Outlet />
