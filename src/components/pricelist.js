@@ -96,16 +96,15 @@ const Wrapper = styled.div`
     }
   }
 
-    @media (min-width: 1000px) {
-    .itemprice__container  {
-    
+  @media (min-width: 1000px) {
+    .itemprice__container {
       width: 70%;
     }
 
-  @media (min-width: 1500px) {
-    .itemprice__container {
-     
-      width: 60%;
+    @media (min-width: 1500px) {
+      .itemprice__container {
+        width: 60%;
+      }
     }
   }
 `;

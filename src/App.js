@@ -33,7 +33,6 @@ function App() {
           <Route path="/payment" element={<Payment />} />
           <Route path="/paymentsuccess" element={<PaymentSuccess />} />
         </Route>
-
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
