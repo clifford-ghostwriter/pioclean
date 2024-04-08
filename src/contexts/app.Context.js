@@ -1,12 +1,13 @@
 import React, { useReducer, useContext, useEffect, useState } from "react";
 import { app_reducer } from "../reducers";
-import { SIDEBAR_OPEN, SIDEBAR_CLOSE, SET_HERO_REF } from "../utils/actions";
+import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from "../utils/actions";
 
 const appContext = React.createContext();
 
 const initialAppState = {
   isSidebarOpen: false,
   heroref: "",
+  username: ["user1", "user2", "officer1", "officer2"],
 };
 
 export const AppProvider = ({ children }) => {
@@ -34,13 +35,8 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: SIDEBAR_OPEN });
   };
 
-  function setheroref(heroref) {
-    dispatch({ type: SET_HERO_REF, payload: heroref });
-  }
-
   return (
-    <appContext.Provider
-      value={{ ...state, openSidebar, closeSidebar, setheroref }}>
+    <appContext.Provider value={{ ...state, openSidebar, closeSidebar }}>
       {children}
     </appContext.Provider>
   );
