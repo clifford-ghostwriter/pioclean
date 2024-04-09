@@ -9,18 +9,31 @@ import {
   RESET_USER,
 } from "../utils/actions";
 
+import {
+  addToLocalStorage,
+  getFromLocalStorage,
+  // removeFromLocalStorage,
+} from "../utils/localstorage";
+
 const appContext = React.createContext();
 
 const initialAppState = {
   isSidebarOpen: false,
   alert_flag: false,
   alert: "",
-  username: ["user1", "user2", "officer1", "officer2"],
+  username: ["user1", "user2"],
+  user: getFromLocalStorage("user") ? getFromLocalStorage("user") : "",
 };
 
 export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(app_reducer, initialAppState);
   const [windowWidth, setWdith] = useState(0);
+
+  useEffect(() => {
+    console.log(state.user);
+    let user = state.user;
+    addToLocalStorage("user", user);
+  }, [state.user]);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -44,6 +57,13 @@ export const AppProvider = ({ children }) => {
   };
 
   // new functions
+
+  const longInlogOut = () => {
+    if (state.user) {
+      dispatch({ type: RESET_USER });
+    } else {
+    }
+  };
 
   const handleLoginSubmit = (user) => {
     // e.preventDefault();
@@ -79,6 +99,7 @@ export const AppProvider = ({ children }) => {
         closeSidebar,
         handleLoginSubmit,
         removeAlert,
+        longInlogOut,
       }}>
       {children}
     </appContext.Provider>

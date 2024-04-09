@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Alert, Formrow } from "../components";
-import logo from "../assests/logo2.png";
+// import logo from "../assests/logo2.png";
 import { UseAppContext } from "../contexts/app.Context";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [userLogin, setUser] = useState({ name: "", password: "" });
@@ -25,10 +25,11 @@ const Login = () => {
     <Wrapper>
       <div className="login-center">
         <div className="login__form-center">
-          <div className="logo">
+          {/* <div className="logo">
             <img src={logo} alt="logo" />
-          </div>
+          </div> */}
           <form action="" className="form">
+            <p className="login__text">login to proceed...</p>
             <Formrow
               type="text"
               name="name"
@@ -58,10 +59,11 @@ const Login = () => {
                 e.preventDefault();
                 handleLoginSubmit(userLogin);
                 setTimeout(removeAlert, 3000);
-                navigate("/");
+                navigate("/checkout");
               }}>
               Login
             </button>
+            <Link to="/">back to home</Link>
           </form>
         </div>
         <div className="hint">
@@ -88,6 +90,12 @@ const Wrapper = styled.section`
   /* border: 1px solid red; */
   /* background-color: white; */
   min-width: max-content;
+
+  .login__text {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+  }
 
   .login-center {
     width: 90vw;
@@ -145,6 +153,7 @@ const Wrapper = styled.section`
 
   .hint {
     color: white;
+    /* text-align: center; */
   }
 
   /* extra form styles */
@@ -192,6 +201,12 @@ const Wrapper = styled.section`
 
   .form-row {
     margin-bottom: 1rem;
+  }
+  a {
+    padding-top: 1rem;
+    text-align: center;
+    display: block;
+    color: var(--clr--primary-three);
   }
 `;
 export default Login;

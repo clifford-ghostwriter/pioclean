@@ -5,12 +5,16 @@ import { FaBars } from "react-icons/fa";
 import { UseAppContext } from "../contexts/app.Context";
 import { Link } from "react-router-dom";
 import { links } from "../utils/link";
+import { FaUserCheck } from "react-icons/fa";
+import { FaUserMinus } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 // eslint-disable-next-line
 // import { FaTimes } from "react-icons/fa";
 
 const Nav = forwardRef(function (_, ref) {
-  const { isSidebarOpen, openSidebar } = UseAppContext();
+  const { isSidebarOpen, openSidebar, user, longInlogOut } = UseAppContext();
   const [isIntersecting, setIsIntersecting] = useState();
+  const navigate = useNavigate();
   // const ref = useRef(ref);
 
   useEffect(() => {
@@ -54,6 +58,15 @@ const Nav = forwardRef(function (_, ref) {
                 </li>
               );
             })}
+            <button
+              className="login__btn"
+              onClick={() => {
+                longInlogOut();
+                navigate("/login");
+              }}>
+              <span> {user ? <FaUserMinus /> : <FaUserCheck />}</span>
+              <span>{user ? "logout" : "login"}</span>
+            </button>
           </ul>
         </div>
       </div>
@@ -86,6 +99,24 @@ const Wrapper = styled.nav`
     /* border: 1px solid pink; */
     /* width: 95%; */
     /* margin: auto; */
+  }
+
+  .login__btn {
+    background-color: transparent;
+    border: none;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    /* border: 1px solid red; */
+    gap: 0.2rem;
+    text-transform: capitalize;
+    color: var(--clr--primary-four);
+    cursor: pointer;
+  }
+
+  .login__btn > * {
+    display: grid;
+    align-items: center;
   }
 
   .nav__center {

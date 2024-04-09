@@ -6,6 +6,10 @@ import {
   ALERT_FLAG,
   RESET_USER,
 } from "../utils/actions";
+import {
+  addToLocalStorage,
+  removeFromLocalStorage,
+} from "../utils/localstorage";
 
 export const app_reducer = (state, action) => {
   if (action.type === SIDEBAR_OPEN) {
@@ -16,22 +20,13 @@ export const app_reducer = (state, action) => {
     return { ...state, isSidebarOpen: false };
   }
 
-  // if (action.type === SET_HERO_REF) {
-  //   console.log(state.heroref);
-  //   return { ...state, heroref: action.payload };
-  // }
-
   if (action.type === SET_USER) {
-    // const { name, value } = action.payload;
-    // console.log(`${name}:${value}`);
-    // console.log(action.payload);
-    // addUserToLocalStorage("user", action.payload);
+    addToLocalStorage("user", action.payload);
     return { ...state, user: action.payload };
-    // console.log(state.user);
   }
 
   if (action.type === RESET_USER) {
-    // removeUserFromLocalStorage("localData");
+    removeFromLocalStorage("user");
     return {
       ...state,
       user: "",

@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 import { links } from "../utils/link";
 import { UseAppContext } from "../contexts/app.Context";
 import { FaTimes } from "react-icons/fa";
+import { FaUserCheck } from "react-icons/fa";
+import { FaUserMinus } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const SideBar = () => {
-  const { isSidebarOpen, closeSidebar } = UseAppContext();
+  const { isSidebarOpen, closeSidebar, user, longInlogOut } = UseAppContext();
+  const navigate = useNavigate();
   return (
     <Wrapper>
       <div
@@ -28,6 +32,15 @@ const SideBar = () => {
               </li>
             );
           })}
+          <button
+            className="login__btn"
+            onClick={() => {
+              longInlogOut();
+              navigate("/login");
+            }}>
+            <span> {user ? <FaUserMinus /> : <FaUserCheck />}</span>
+            <span>{user ? "logout" : "login"}</span>
+          </button>
         </ul>
       </div>
     </Wrapper>
@@ -40,6 +53,27 @@ const Wrapper = styled.div`
   align-content: center;
   position: relative;
   /* padding-top: 2rem; */
+
+  .login__btn {
+    background-color: transparent;
+    border: none;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    border: 1px solid red;
+    gap: 0.4rem;
+    color: red;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+
+  .login__btn > * {
+    display: grid;
+    align-items: center;
+  }
+  .login__btn > *:nth-child(1) {
+    color: white;
+  }
 
   .side-bar__center {
     /* display: none; */
@@ -67,6 +101,7 @@ const Wrapper = styled.div`
     height: 100%;
     padding: 0 1rem;
     padding-top: 3.4rem;
+    border: 1px solid red;
   }
 
   .link {

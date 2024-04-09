@@ -16,7 +16,6 @@ import {
   Payment,
   PaymentSuccess,
   Login,
-  PaymentLayout,
 } from "./pages";
 import { ProtectedRoute } from "./components";
 import { UseAppContext } from "./contexts/app.Context";
@@ -39,16 +38,27 @@ function App() {
             path="/checkout"
             element={
               <ProtectedRoute user={user}>
-                <PaymentLayout />
+                <Checkout />
               </ProtectedRoute>
-            }>
-            <Route index element={<Checkout />} />
-            <Route path="/checkout/payment" element={<Payment />} />
-            <Route
-              path="/checkout/paymentsuccess"
-              element={<PaymentSuccess />}
-            />
-          </Route>
+            }
+          />
+
+          <Route
+            path="/payment"
+            element={
+              <ProtectedRoute user={user}>
+                <Payment />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/paymentsuccess"
+            element={
+              <ProtectedRoute user={user}>
+                <PaymentSuccess />
+              </ProtectedRoute>
+            }
+          />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<Error />} />
