@@ -15,9 +15,14 @@ import {
   Checkout,
   Payment,
   PaymentSuccess,
+  Login,
+  PaymentLayout,
 } from "./pages";
+import { ProtectedRoute } from "./components";
+import { UseAppContext } from "./contexts/app.Context";
 
 function App() {
+  const { user } = UseAppContext();
   return (
     <BrowserRouter>
       <Routes>
@@ -29,10 +34,23 @@ function App() {
           <Route path="/pricelist" element={<PriceList />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Service />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/payment" element={<Payment />} />
-          <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+
+          <Route
+            path="/checkout"
+            element={
+              <ProtectedRoute user={user}>
+                <PaymentLayout />
+              </ProtectedRoute>
+            }>
+            <Route index element={<Checkout />} />
+            <Route path="/checkout/payment" element={<Payment />} />
+            <Route
+              path="/checkout/paymentsuccess"
+              element={<PaymentSuccess />}
+            />
+          </Route>
         </Route>
+        <Route path="/login" element={<Login />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

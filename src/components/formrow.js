@@ -11,8 +11,12 @@ const Formrow = ({
   required,
 }) => {
   return (
-    <div>
-      {label ? <label htmlFor={name}>{name}</label> : null}
+    <div className="form-row">
+      {label ? (
+        <label htmlFor={name} className="form-label">
+          {name}
+        </label>
+      ) : null}
       <input
         id={name}
         type={type}

@@ -18,8 +18,11 @@ const Error = () => {
 };
 
 const Wrapper = styled.div`
+  background-color: var(--clr--primary-two);
+  color: var(--clr--primary-four);
   .icon {
     font-size: var(--fs-900);
+    color: var(--clr--primary-three);
   }
 
   .error-center {
@@ -34,7 +37,7 @@ const Wrapper = styled.div`
   }
 
   a {
-    /* color: white; */
+    color: var(--clr--primary-three);
   }
 `;
 

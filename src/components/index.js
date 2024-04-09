@@ -23,6 +23,8 @@ import Loading from "./loading";
 import Itemprice from "./itemprice";
 import Hero from "./heroTwo";
 import Homehero from "./homehero";
+import Alert from "./alert";
+import ProtectedRoute from "./protectedRoute";
 
 export {
   Nav,
@@ -50,4 +52,6 @@ export {
   Itemprice,
   Hero,
   Homehero,
+  Alert,
+  ProtectedRoute,
 };

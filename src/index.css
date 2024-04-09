@@ -12,6 +12,7 @@
   /* --clr--primary-six: rgba(119, 144, 233, 0.8); */
   --clr--primary-six: rgba(95, 158, 160, 0.8);
   --clr--primary-eight: #c83fc8;
+  --clr--primary-nine: hsl(210, 36%, 95%);
   /* sizes */
 
 
@@ -51,6 +52,12 @@
   --transition-two: all 0.3s ease;
   --transition-slow: all 0.5s linear;
   --transition-slower: all 1s linear;
+
+
+
+  /* extra style */
+  --max-width: 1170px;
+  --fixed-width: 620px;
 
 }
 

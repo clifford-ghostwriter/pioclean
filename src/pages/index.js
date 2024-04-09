@@ -10,6 +10,8 @@ import Contact from "./Contact";
 import Checkout from "./Checkout";
 import Payment from "./Payment";
 import PaymentSuccess from "./PaymentSuccess";
+import Login from "./Login";
+import PaymentLayout from "./paymentLayout";
 
 export {
   About,
@@ -24,4 +26,6 @@ export {
   Checkout,
   Payment,
   PaymentSuccess,
+  Login,
+  PaymentLayout,
 };

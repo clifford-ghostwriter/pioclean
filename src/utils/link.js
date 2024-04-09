@@ -1,5 +1,6 @@
 import { FaHome } from "react-icons/fa";
 import { BiSolidNotepad } from "react-icons/bi";
+import { FaUserCheck } from "react-icons/fa";
 // import { MdLocalLaundryService } from "react-icons/md";
 // import { RiLockPasswordFill } from "react-icons/ri";
 import { MdOutlineLocalLaundryService } from "react-icons/md";
@@ -97,6 +98,13 @@ export const links = [
     text: "contact us",
     url: "/contact",
     icon: <IoMdContacts />,
+  },
+
+  {
+    id: 7,
+    text: "login",
+    url: "/login",
+    icon: <FaUserCheck />,
   },
 ];
 

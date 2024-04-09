@@ -6,7 +6,7 @@ import { UseAppContext } from "../contexts/app.Context";
 import { Link } from "react-router-dom";
 import { links } from "../utils/link";
 // eslint-disable-next-line
-import { FaTimes } from "react-icons/fa";
+// import { FaTimes } from "react-icons/fa";
 
 const Nav = forwardRef(function (_, ref) {
   const { isSidebarOpen, openSidebar } = UseAppContext();
@@ -62,6 +62,8 @@ const Nav = forwardRef(function (_, ref) {
 });
 
 const Wrapper = styled.nav`
+  /* width: 95%; */
+  /* margin: auto; */
   background-color: var(--clr--primary-one);
   /* border: 1px solid red; */
   /* min-width: 400px; */
@@ -82,6 +84,8 @@ const Wrapper = styled.nav`
     /* align-items: center; */
     /* min-width: min-content; */
     /* border: 1px solid pink; */
+    /* width: 95%; */
+    /* margin: auto; */
   }
 
   .nav__center {
@@ -143,8 +147,8 @@ const Wrapper = styled.nav`
 
   .side-bar__links {
     display: flex;
-    gap: 1rem;
-    /* margin-right: -1rem; */
+    gap: 0.5rem;
+    margin-right: -1rem;
     /* border: 1px solid red; */
     flex-grow: 0.3;
     display: none;
