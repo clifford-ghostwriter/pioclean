@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Steps, Slider, Testimonies, Hero, Homehero } from "../components";
+import { Steps, Slider, Testimonies, Homehero } from "../components";
 // import Slider from "../components/slider";
 import { FaLongArrowAltDown } from "react-icons/fa";
 import { orderSteps, testimonies } from "../utils/link";
 import { Link } from "react-router-dom";
 // import { UseAppContext } from "../contexts/app.Context";
 import Partners from "../components/partners";
-import dirtyclothes from "../assests/dirty-clothes-01.jpeg";
+// import dirtyclothes from "../assests/dirty-clothes-01.jpeg";
 
 const Home = () => {
   // const { setheroref, heroref } = UseAppContext();

@@ -1,5 +1,5 @@
 import React from "react";
-import dirtyclothes from "../assests/dirty-clothes-01.jpeg";
+// import dirtyclothes from "../assests/dirty-clothes-01.jpeg";
 import styled from "styled-components";
 
 const Hero = ({ bcg }) => {
