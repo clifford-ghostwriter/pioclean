@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Alert, Formrow } from "../components";
 // import logo from "../assests/logo2.png";
-import { UseAppContext } from "../contexts/app.Context";
+// import { UseAppContext } from "../contexts/app.Context";
 import { Link, useNavigate } from "react-router-dom";
 import { UseServiceContext } from "../contexts/service.Context";
+import { UseAppContext } from "../contexts/app.Context";
 
 const Login = () => {
   const [userLogin, setUser] = useState({ name: "", password: "" });
+
   const { handleLoginSubmit, removeAlert } = UseAppContext();
+
   const { totalamount } = UseServiceContext();
   const navigate = useNavigate();
 
@@ -76,7 +79,7 @@ const Login = () => {
         <div className="hint">
           <h3>hint</h3>
           <p>
-            <span>usernames: </span> user1, officer1, user2, offiicer2
+            <span>usernames: </span> user1, user2
           </p>
           <p>
             <span>password: </span>xy1234

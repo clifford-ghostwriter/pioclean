@@ -7,9 +7,11 @@ import { FaTimes } from "react-icons/fa";
 import { FaUserCheck } from "react-icons/fa";
 import { FaUserMinus } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+// import { UseServiceContext } from "../contexts/service.Context";
 
 const SideBar = () => {
-  const { isSidebarOpen, closeSidebar, user, longInlogOut } = UseAppContext();
+  const { isSidebarOpen, closeSidebar, user, resetUser } = UseAppContext();
+
   const navigate = useNavigate();
   return (
     <Wrapper>
@@ -35,11 +37,11 @@ const SideBar = () => {
           <button
             className="login__btn"
             onClick={() => {
-              longInlogOut();
               if (!user) {
                 navigate("/login");
               } else {
                 navigate("/");
+                resetUser();
               }
               closeSidebar();
             }}>

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { UseAppContext } from "../contexts/app.Context";
+// import { UseServiceContext } from "../contexts/service.Context";
 
 const Alert = () => {
   const { alert, alert_flag } = UseAppContext();

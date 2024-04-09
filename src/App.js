@@ -19,6 +19,7 @@ import {
 } from "./pages";
 import { ProtectedRoute } from "./components";
 import { UseAppContext } from "./contexts/app.Context";
+// import { UseServiceContext } from "./contexts/service.Context";
 
 function App() {
   const { user } = UseAppContext();

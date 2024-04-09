@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 // import { FaTimes } from "react-icons/fa";
 
 const Nav = forwardRef(function (_, ref) {
-  const { isSidebarOpen, openSidebar, user, longInlogOut } = UseAppContext();
+  const { isSidebarOpen, openSidebar, user, resetUser } = UseAppContext();
   const [isIntersecting, setIsIntersecting] = useState();
   const navigate = useNavigate();
   // const ref = useRef(ref);
@@ -61,11 +61,11 @@ const Nav = forwardRef(function (_, ref) {
             <button
               className="login__btn"
               onClick={() => {
-                longInlogOut();
                 if (!user) {
                   navigate("/login");
                 } else {
                   navigate("/");
+                  resetUser();
                 }
               }}>
               <span> {user ? <FaUserCheck /> : <FaUserMinus />}</span>

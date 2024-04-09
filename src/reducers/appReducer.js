@@ -6,6 +6,7 @@ import {
   ALERT_FLAG,
   RESET_USER,
 } from "../utils/actions";
+
 import {
   addToLocalStorage,
   removeFromLocalStorage,
@@ -19,6 +20,7 @@ export const app_reducer = (state, action) => {
   if (action.type === SIDEBAR_CLOSE) {
     return { ...state, isSidebarOpen: false };
   }
+  // new
 
   if (action.type === SET_USER) {
     addToLocalStorage("user", action.payload);

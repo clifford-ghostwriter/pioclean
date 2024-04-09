@@ -58,17 +58,15 @@ export const AppProvider = ({ children }) => {
 
   // new functions
 
-  const longInlogOut = () => {
-    if (state.user) {
-      dispatch({ type: RESET_USER });
-    }
+  const resetUser = () => {
+    dispatch({ type: RESET_USER });
   };
 
   const handleLoginSubmit = (user) => {
     // e.preventDefault();
     // console.log(user.password);
 
-    closeSidebar();
+    // closeSidebar();
     if (user.name === "" || user.password === "") {
       dispatch({ type: ALERT_FLAG, payload: "Fill the required space!" });
       // setTimeout(dispatch({ type: REMOVE_ALERT_FLAG }), 3000);
@@ -100,7 +98,7 @@ export const AppProvider = ({ children }) => {
         closeSidebar,
         handleLoginSubmit,
         removeAlert,
-        longInlogOut,
+        resetUser,
       }}>
       {children}
     </appContext.Provider>

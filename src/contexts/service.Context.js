@@ -187,6 +187,7 @@ export const ServiceProvider = ({ children }) => {
     Data[0] = state.order;
     Data[1] = state.totalitems;
     Data[2] = state.totalamount;
+    // Data[3] = state.user;
     addToLocalStorage("Data", Data);
     // eslint-disable-next-line
   }, [state.totalamount, state.totalitems, ...state.order, state.order]);
@@ -226,10 +227,18 @@ export const ServiceProvider = ({ children }) => {
     sumItem();
   };
 
+  // new functions
+
   // console.log(state);
   return (
     <serviceContext.Provider
-      value={{ ...state, handleChange, updateTotal, clearList, subscribe }}>
+      value={{
+        ...state,
+        handleChange,
+        updateTotal,
+        clearList,
+        subscribe,
+      }}>
       {children}
     </serviceContext.Provider>
   );
