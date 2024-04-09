@@ -36,9 +36,14 @@ const SideBar = () => {
             className="login__btn"
             onClick={() => {
               longInlogOut();
-              navigate("/login");
+              if (!user) {
+                navigate("/login");
+              } else {
+                navigate("/");
+              }
+              closeSidebar();
             }}>
-            <span> {user ? <FaUserMinus /> : <FaUserCheck />}</span>
+            <span> {user ? <FaUserCheck /> : <FaUserMinus />}</span>
             <span>{user ? "logout" : "login"}</span>
           </button>
         </ul>
@@ -60,7 +65,7 @@ const Wrapper = styled.div`
     display: grid;
     align-items: center;
     grid-template-columns: auto auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     gap: 0.4rem;
     color: red;
     text-transform: capitalize;
@@ -101,7 +106,7 @@ const Wrapper = styled.div`
     height: 100%;
     padding: 0 1rem;
     padding-top: 3.4rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .link {

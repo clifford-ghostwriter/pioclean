@@ -6,6 +6,8 @@ import {
   SUBSCRIBE,
 } from "../utils/actions";
 
+import { removeFromLocalStorage } from "../utils/localstorage";
+
 export const service_reducer = (state, action) => {
   if (action.type === HANDLE_CHANGE) {
     const { name, value, index } = action.payload;
@@ -51,6 +53,7 @@ export const service_reducer = (state, action) => {
   if (action.type === CLEAR_LIST) {
     const { order } = state;
 
+    removeFromLocalStorage("Data");
     const resetOrder = order.map((item) => {
       // const { ordernumber } = item;
 

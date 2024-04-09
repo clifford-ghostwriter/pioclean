@@ -61,13 +61,14 @@ export const AppProvider = ({ children }) => {
   const longInlogOut = () => {
     if (state.user) {
       dispatch({ type: RESET_USER });
-    } else {
     }
   };
 
   const handleLoginSubmit = (user) => {
     // e.preventDefault();
     // console.log(user.password);
+
+    closeSidebar();
     if (user.name === "" || user.password === "") {
       dispatch({ type: ALERT_FLAG, payload: "Fill the required space!" });
       // setTimeout(dispatch({ type: REMOVE_ALERT_FLAG }), 3000);

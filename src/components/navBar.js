@@ -62,9 +62,13 @@ const Nav = forwardRef(function (_, ref) {
               className="login__btn"
               onClick={() => {
                 longInlogOut();
-                navigate("/login");
+                if (!user) {
+                  navigate("/login");
+                } else {
+                  navigate("/");
+                }
               }}>
-              <span> {user ? <FaUserMinus /> : <FaUserCheck />}</span>
+              <span> {user ? <FaUserCheck /> : <FaUserMinus />}</span>
               <span>{user ? "logout" : "login"}</span>
             </button>
           </ul>

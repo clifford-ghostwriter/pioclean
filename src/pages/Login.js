@@ -4,10 +4,12 @@ import { Alert, Formrow } from "../components";
 // import logo from "../assests/logo2.png";
 import { UseAppContext } from "../contexts/app.Context";
 import { Link, useNavigate } from "react-router-dom";
+import { UseServiceContext } from "../contexts/service.Context";
 
 const Login = () => {
   const [userLogin, setUser] = useState({ name: "", password: "" });
   const { handleLoginSubmit, removeAlert } = UseAppContext();
+  const { totalamount } = UseServiceContext();
   const navigate = useNavigate();
 
   console.log(userLogin);
@@ -59,7 +61,12 @@ const Login = () => {
                 e.preventDefault();
                 handleLoginSubmit(userLogin);
                 setTimeout(removeAlert, 3000);
-                navigate("/checkout");
+
+                if (totalamount) {
+                  navigate("/checkout");
+                } else {
+                  navigate("/");
+                }
               }}>
               Login
             </button>
