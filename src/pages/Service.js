@@ -2,10 +2,14 @@ import React from "react";
 import styled from "styled-components";
 // import { PageHero } from "../components";
 import { services } from "../utils/link";
+import { Hero } from "../components";
+import servicesimage from "../assests/heroimages/laundryservices.jpg";
+// import callcenteragent from "../assests/heroimages/call-centre-agent.jpg";
 
 const Service = () => {
   return (
     <Wrapper>
+      <Hero bcg={servicesimage} />
       {/* <PageHero path="/service" text="Services" /> */}
       <div className="section-center text__center">
         <h3>our services</h3>
@@ -33,7 +37,7 @@ const Service = () => {
   );
 };
 const Wrapper = styled.section`
-  padding-block: 2rem;
+  padding-bottom: 2rem;
   .text__center {
     text-align: center;
     padding-block: 2rem;

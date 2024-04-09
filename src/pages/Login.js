@@ -10,7 +10,8 @@ import { UseAppContext } from "../contexts/app.Context";
 const Login = () => {
   const [userLogin, setUser] = useState({ name: "", password: "" });
 
-  const { handleLoginSubmit, removeAlert } = UseAppContext();
+  const { handleLoginSubmit, removeAlert, loginAlert, username } =
+    UseAppContext();
 
   const { totalamount } = UseServiceContext();
   const navigate = useNavigate();
@@ -25,6 +26,18 @@ const Login = () => {
     //  dispatch({ type: HANDLE_CHANGE, payload: { name, value } });
     // console.log(name, value);
   };
+
+  // const log = async (e) => {
+  //   e.preventDefault();
+  //   await handleLoginSubmit(userLogin);
+  //   setTimeout(removeAlert, 3000);
+  //   if (totalamount) {
+  //     navigate("/checkout");
+  //   } else {
+  //     navigate("/");
+  //     return;
+  //   }
+  // };
 
   return (
     <Wrapper>
@@ -62,13 +75,30 @@ const Login = () => {
               className="btn btn-block"
               onClick={(e) => {
                 e.preventDefault();
+
+                if (userLogin.name === "" || userLogin.password === "") {
+                  loginAlert("fill up the required spaces");
+                  setTimeout(removeAlert, 3000);
+                  return;
+                }
+
+                if (!username.includes(userLogin.name)) {
+                  loginAlert("wrong credential");
+                  setTimeout(removeAlert, 3000);
+                  return;
+                }
+                if (userLogin.password !== "xy1234") {
+                  loginAlert("wrong credential");
+                  setTimeout(removeAlert, 3000);
+                  return;
+                }
                 handleLoginSubmit(userLogin);
                 setTimeout(removeAlert, 3000);
-
                 if (totalamount) {
                   navigate("/checkout");
                 } else {
                   navigate("/");
+                  return;
                 }
               }}>
               Login

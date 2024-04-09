@@ -74,7 +74,7 @@ export const AppProvider = ({ children }) => {
     }
 
     if (!state.username.includes(user.name)) {
-      dispatch({ type: ALERT_FLAG, payload: "incorrect credential!" });
+      dispatch({ type: ALERT_FLAG, payload: "incorrect credentials!" });
       // setTimeout(dispatch({ type: REMOVE_ALERT_FLAG }), 3000);
       return;
     }
@@ -90,6 +90,10 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: REMOVE_ALERT_FLAG });
   };
 
+  const loginAlert = (alert) => {
+    dispatch({ type: ALERT_FLAG, payload: alert });
+  };
+
   return (
     <appContext.Provider
       value={{
@@ -99,6 +103,7 @@ export const AppProvider = ({ children }) => {
         handleLoginSubmit,
         removeAlert,
         resetUser,
+        loginAlert,
       }}>
       {children}
     </appContext.Provider>

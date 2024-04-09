@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { Hero } from "../components";
 // import { PageHero } from "../components";
+import callcenteragent from "../assests/heroimages/call-centre-agent.jpg";
 
 const Contact = () => {
   const submit = (e) => {
@@ -8,11 +10,11 @@ const Contact = () => {
   };
   return (
     <Wrapper>
+      <Hero bcg={callcenteragent} />
       {/* <PageHero path="/contact" text="Contact us" /> */}
       <div className="section-center section__container">
         <div>
-          <h3>need help?</h3>
-
+          <h3 className="heading">need help?</h3>
           <address className="address">
             <h4>reach us:</h4>
             <p>pioclean laundry services</p>
@@ -56,10 +58,15 @@ const Contact = () => {
   );
 };
 const Wrapper = styled.section`
-  padding-block: 2rem;
+  padding-bottom: 2rem;
   .section__container {
     padding-top: 2rem;
     /* border: 1px solid blue; */
+    margin: auto;
+  }
+
+  .heading {
+    text-align: center;
   }
 
   .form__input {
@@ -107,9 +114,25 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 800px) {
+    .section__container {
+      width: 70%;
+    }
+
     .submit-btn {
       width: 50%;
       margin: auto;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .section__container {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 1500px) {
+    .section__container {
+      width: 40%;
     }
   }
 `;

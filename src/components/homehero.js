@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   background-color: var(--clr--primary-one);
   /* margin-top: 5rem; */
   /* border: 1px solid red; */
+  height: 60dvh;
 
   /* display: grid; */
   /* grid-template-columns: 1fr 1fr; */
@@ -34,7 +35,7 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  height: 60dvh; */
+
   /* background-attachment: scroll; */
   /* background-position: center; */
 
@@ -43,10 +44,11 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
-    padding-block: 8rem;
+    /* padding-block: 8rem; */
     /* border: 1px solid red; */
     padding-inline: 2rem;
     gap: 1rem;
+    height: 100%;
   }
 
   .hero__center > * {
@@ -72,7 +74,8 @@ const Wrapper = styled.div`
   img {
     border-radius: 10px;
     width: 100%;
-    aspect-ratio: 1;
+    /* aspect-ratio: 1; */
+    height: 80%;
   }
 
   .hero__text {

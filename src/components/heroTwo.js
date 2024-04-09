@@ -2,14 +2,11 @@ import React from "react";
 // import dirtyclothes from "../assests/dirty-clothes-01.jpeg";
 import styled from "styled-components";
 
-const Hero = ({ bcg }) => {
+const Hero = ({ bcg, text }) => {
   return (
     <Wrapper $bcgImage={bcg}>
       <div className="section-center hero__center">
-        <h2 className="hero__text">
-          you wear, <br />
-          we wash
-        </h2>
+        <h2 className="hero__text">{text ? text : null}</h2>
         {/* <div className="hero__img">
           <img src={dirtyclothes} alt="" />
         </div> */}
@@ -33,7 +30,7 @@ const Wrapper = styled.div`
   background-image: url(${(p) => p.$bcgImage});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
   height: 60dvh;
   /* background-attachment: scroll; */
   /* background-position: center; */
@@ -51,7 +48,7 @@ const Wrapper = styled.div`
 
   .hero__center > * {
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* width: 90%; */
     /* aspect-ratio: 1; */
     display: grid;
@@ -79,6 +76,7 @@ const Wrapper = styled.div`
     text-transform: capitalize;
     /* font-size: var(--fs-650); */
     font-size: 1.4rem;
+    color: var(--clr--primary-three);
   }
 
   @media (min-width: 1000px) {
