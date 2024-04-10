@@ -12,7 +12,7 @@ const Service = () => {
       <Hero bcg={servicesimage} />
       {/* <PageHero path="/service" text="Services" /> */}
       <div className="section-center text__center">
-        <h3>our services</h3>
+        <h3 className="heading">our services</h3>
         <p className="services__text">
           A list of our well tailored services aimed at providing the best
           experience for every of our customers. These services include
@@ -49,6 +49,10 @@ const Wrapper = styled.section`
     justify-items: center;
     align-content: center;
     /* border: 1px solid red; */
+  }
+
+  .heading {
+    text-transform: uppercase;
   }
 
   .service__item {

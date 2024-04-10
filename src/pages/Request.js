@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Order, Request, Pricelist, Hero } from "../components";
-import dirtyclothe from "../assests/dirtyclothes.png";
+import dirtyclothe from "../assests/heroimages/washedclothes.jpg";
 
 const OrderOnline = () => {
   const [order, setOrder] = useState("makeorder");
@@ -66,8 +66,8 @@ const OrderOnline = () => {
 
 const Wrapper = styled.section`
   padding-bottom: 2rem;
+  /* padding-top: 2rem; */
   .btn__container {
-    padding-top: 2rem;
     /* padding-left: 2rem; */
     display: flex;
     gap: 0.3rem;
@@ -76,6 +76,9 @@ const Wrapper = styled.section`
     /* border: 1px solid red; */
   }
 
+  .section {
+    padding-top: 2rem;
+  }
   .request-btn {
     text-transform: capitalize;
     background-color: var(--clr--primary-one);
@@ -99,7 +102,7 @@ const Wrapper = styled.section`
       width: 80%;
       margin: auto;
       /* border: 1px solid red; */
-      padding-left: 2rem;
+      /* padding-left: 2rem; */
     }
   }
 `;

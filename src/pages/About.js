@@ -1,14 +1,17 @@
 import React from "react";
-// import { PageHero } from "../components";
+import { Hero } from "../components";
 import styled from "styled-components";
 import calender from "../assests/aboutus images/calendar.png";
 import smiley from "../assests/aboutus images/smiley.png";
 import { whyUs } from "../utils/link";
 import { TbPoint } from "react-icons/tb";
+import boardroom from "../assests/heroimages/boardmeeting.jpg";
+
 const About = () => {
   return (
     <Wrapper>
       {/* <PageHero path="/about" text="About" /> */}
+      <Hero bcg={boardroom} />
       <div className="section-center">
         {/* <div className="section-center"> */}
         <div className="about-us__container ">
@@ -83,7 +86,7 @@ const About = () => {
 };
 
 const Wrapper = styled.section`
-  padding-block: 2rem;
+  padding-bottom: 2rem;
   .about-us__container {
     padding-block: 1rem;
     text-align: center;

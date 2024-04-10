@@ -26,6 +26,8 @@ const Monthlyplan = () => {
 const Wrapper = styled.div`
   /* border: 1px solid red; */
   /* padding: 2rem; */
+  /* margin-top: -1; */
+  padding-top: 2rem;
 
   .monthly__plans {
     /* border: 1px solid red; */
@@ -33,7 +35,7 @@ const Wrapper = styled.div`
     gap: 2rem;
     /* height: max-content; */
     /* flex-wrap: wrap; */
-    padding-block: 1rem;
+    padding-bottom: 1rem;
     /* flex-direction: column; */
     /* background-color: black; */
     /* width: 90%; */
@@ -59,13 +61,12 @@ const Wrapper = styled.div`
     /* margin: auto; */
     width: 10rem;
     padding-left: 0.5rem;
-
     margin: auto;
     margin-bottom: 1rem;
   }
 
   .text {
-    padding: 1rem;
+    padding: 0 1rem 1rem;
     text-align: center;
   }
 

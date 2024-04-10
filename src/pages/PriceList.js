@@ -6,17 +6,20 @@ import {
   Pricelist,
   // Singleitemprice,
 } from "../components";
+import { Hero } from "../components";
+import cleanclothes from "../assests/heroimages/cleanclothes.jpg";
 
 const PriceList = () => {
   return (
     <Wrapper>
       {/* <PageHero path="pricelist" text="Price List" /> */}
+      <Hero bcg={cleanclothes} />
       <Monthlyplan />
       <Pricelist />
     </Wrapper>
   );
 };
 const Wrapper = styled.section`
-  padding-block: 2rem;
+  padding-bottom: 2rem;
 `;
 export default PriceList;
