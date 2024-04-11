@@ -51,6 +51,9 @@ const Wrapper = styled.section`
     /* border: 1px solid red; */
   }
 
+  .services__text {
+    padding-block: 2rem;
+  }
   .heading {
     text-transform: uppercase;
   }
@@ -58,7 +61,6 @@ const Wrapper = styled.section`
   .service__item {
     width: 12rem;
     margin: auto;
-    /* border: 1px solid red; */
     padding: 1rem;
   }
   .service__item p {

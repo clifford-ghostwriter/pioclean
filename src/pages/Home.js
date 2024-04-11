@@ -89,6 +89,7 @@ const Home = () => {
 const Wrapper = styled.section`
   /* background-color: yellow; */
   /* height: 500px; */
+  overflow-x: hidden;
 
   counter-reset: count;
 

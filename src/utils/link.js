@@ -5,9 +5,9 @@ import { BiSolidNotepad } from "react-icons/bi";
 import { MdOutlineLocalLaundryService } from "react-icons/md";
 import { MdOutlinePriceChange } from "react-icons/md";
 import { IoMdContacts } from "react-icons/io";
-import dirtyClothes from "../assests/dirtyclothes.png";
-import cleanClothes from "../assests/cleanclothes.png";
-import washingMachine from "../assests/washingmachine.png";
+// import dirtyClothes from "../assests/dirtyclothes.png";
+// import cleanClothes from "../assests/cleanclothes.png";
+// import washingMachine from "../assests/washingmachine.png";
 import { GiClothes } from "react-icons/gi";
 import dirtyclothesone from "../assests/dirty-clothes-02.avif";
 import washingmachineone from "../assests/washing-machine-two.jpg";
@@ -51,6 +51,12 @@ import { BsFillHousesFill } from "react-icons/bs";
 import { GiSewingNeedle } from "react-icons/gi";
 import { GiFactory } from "react-icons/gi";
 import { HiBuildingOffice2 } from "react-icons/hi2";
+
+// slides
+import servicesimage from "../assests/heroimages/laundryservices.jpg";
+import cleanclothes from "../assests/heroimages/cleanclothes.jpg";
+// import dirtyclothes from "../assests/dirty-clothes-01.jpeg";
+import dirtyclothes from "../assests/heroimages/laundrybasket.jpg";
 
 export const links = [
   {
@@ -104,15 +110,18 @@ export const links = [
 export const slides = [
   {
     text: "clean clothes",
-    image: cleanClothes,
+    // image: cleanClothes,
+    image: dirtyclothes,
   },
   {
     text: "dirty clothes",
-    image: dirtyClothes,
+    // image: dirtyClothes,
+    image: servicesimage,
   },
   {
     text: "washing machine",
-    image: washingMachine,
+    // image: washingMachine,
+    image: cleanclothes,
   },
 ];
 

@@ -77,7 +77,8 @@ const Nav = forwardRef(function (_, ref) {
 const Wrapper = styled.nav`
   background-color: var(--clr--primary-one);
   height: 10rem;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-x: hidden;
   /* min-width: 200px; */
   transition: var(--transition-slower);
   position: relative;

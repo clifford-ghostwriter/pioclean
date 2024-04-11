@@ -64,6 +64,9 @@ const Wrapper = styled.section`
     /* border: 1px solid blue; */
     margin: auto;
   }
+  label {
+    text-transform: capitalize;
+  }
 
   .heading {
     text-align: center;
@@ -84,7 +87,6 @@ const Wrapper = styled.section`
 
   .contact__form {
     padding-top: 2rem;
-    /* border: 1px solid red; */
   }
   form {
     padding-top: 1rem;
@@ -92,14 +94,7 @@ const Wrapper = styled.section`
     display: grid;
   }
 
-  .address > * {
-    /* width: max-content; */
-    /* border: 1px solid red; */
-  }
-
   .address {
-    /* display: grid; */
-    /* justify-content: center; */
     align-content: center;
     padding-top: 2rem;
     text-align: center;
