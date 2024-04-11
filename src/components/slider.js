@@ -123,7 +123,7 @@ const Wrapper = styled.div`
     /* display: flex; */
     /* height: 100%; */
     /* border: 1px solid blue; */
-    height: 80vh;
+    height: 60vh;
     overflow-x: hidden;
     /* padding: 1rem; */
     position: relative;
@@ -212,6 +212,12 @@ const Wrapper = styled.div`
 
   .active-btn {
     background-color: var(--clr--primary-six);
+  }
+
+  @media (min-width: 1000px) {
+    .slider__center {
+      height: 80vh;
+    }
   }
 `;
 export default Slider;

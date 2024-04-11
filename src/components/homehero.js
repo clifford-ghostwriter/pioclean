@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Homehero = ({ bcg }) => {
   return (
     <Wrapper $bcgImage={bcg}>
-      <div className="section-center hero__center">
+      <div className=" hero__center">
         <h2 className="hero__text">
           you wear, <br />
           we wash
@@ -20,55 +20,42 @@ const Homehero = ({ bcg }) => {
 
 const Wrapper = styled.div`
   background-color: var(--clr--primary-one);
-  /* margin-top: 5rem; */
-  /* border: 1px solid red; */
-  height: 60dvh;
 
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr; */
-  /* align-items: center; */
-  /* justify-items: center; */
-  /* padding-block: 8rem; */
-  /* border: 1px solid red;
-
-  background-image: url(${(p) => p.$bcgImage});
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-
-  /* background-attachment: scroll; */
-  /* background-position: center; */
+  height: 50dvh;
+  border: 1px solid red;
 
   .hero__center {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     align-items: center;
     justify-items: center;
     /* padding-block: 8rem; */
     /* border: 1px solid red; */
-    padding-inline: 2rem;
-    gap: 1rem;
+    /* padding-inline: 2rem; */
+    gap: 1.5rem;
     height: 100%;
+    width: 95%;
+    margin: auto;
   }
 
   .hero__center > * {
-    margin: auto;
+    /* margin: auto; */
     /* border: 1px solid red; */
-    width: 90%;
+    /* width: 90%; */
     /* aspect-ratio: 1; */
-    display: grid;
+    /* display: grid; */
     align-items: center;
-    justify-items: center;
+    /* justify-items: center; */
   }
 
   .hero__img {
     /* flex-basis: 1; */
     /* flex-grow: 1; */
     transform: rotate(45deg);
-
+    width: 11rem;
     /* border: 1px solid red; */
     /* margin-top: -2rem; */
-    border-radius: 50px;
+    border-radius: 10px;
   }
 
   img {
@@ -85,6 +72,7 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 1000px) {
+    height: 60vh;
     .hero__center {
       width: 80%;
       margin: auto;
@@ -95,7 +83,7 @@ const Wrapper = styled.div`
 
   @media (min-width: 550px) {
     .hero__center > * {
-      width: 60%;
+      /* width: 60%; */
     }
   }
 `;

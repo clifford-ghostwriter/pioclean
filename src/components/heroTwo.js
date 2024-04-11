@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Hero = ({ bcg, text, white }) => {
   return (
     <Wrapper $bcgImage={bcg}>
-      <div className=" hero__center">
+      <div className="hero__center">
         <p className={white ? "hero__text white__font " : "hero__text"}>
           {text ? text : null}
         </p>
@@ -18,49 +18,19 @@ const Hero = ({ bcg, text, white }) => {
 };
 
 const Wrapper = styled.div`
-  /* background-color: var(--clr--primary-one); */
-  /* margin-top: 5rem; */
-  /* border: 1px solid red; */
+  display: grid;
 
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr; */
-  align-content: center;
-  /* justify-items: center; */
-  /* padding-block: 8rem; */
-  /* border: 1px solid red; */
+  align-items: center;
 
   background-image: url(${(p) => p.$bcgImage});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 20%;
-  height: 60dvh;
-  /* background-attachment: scroll; */
-  /* background-position: center; */
-
-  /* .hero__center {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    padding-block: 8rem;
-    border: 1px solid red;
-    padding-inline: 2rem;
-    gap: 1rem;
-  } */
+  height: 50vh;
 
   .hero__center {
-    /* border: 1px solid red; */
     padding-left: 1rem;
-  }
-
-  .hero__img {
-    /* flex-basis: 1; */
-    /* flex-grow: 1; */
-    /* transform: rotate(45deg); */
-
     /* border: 1px solid red; */
-    /* margin-top: -2rem; */
-    border-radius: 50px;
   }
 
   img {
@@ -71,11 +41,7 @@ const Wrapper = styled.div`
 
   .hero__text {
     text-transform: capitalize;
-
-    font-size: 3rem;
-    /* color: var(--clr--primary-three); */
-    /* border: 1px solid red; */
-    /* color: white; */
+    font-size: 2.5rem;
   }
 
   .white__font {
@@ -83,17 +49,13 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 1000px) {
+    height: 60vh;
     .hero__center {
-      /* width: 80%; */
-      margin: auto;
       padding-left: 5rem;
-      /* border: 1px solid red; */
     }
-  }
 
-  @media (min-width: 550px) {
-    .hero__center > * {
-      /* width: 60%; */
+    .hero__text {
+      font-size: 3rem;
     }
   }
 `;

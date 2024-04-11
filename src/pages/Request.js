@@ -30,7 +30,7 @@ const OrderOnline = () => {
 
   return (
     <Wrapper>
-      <Hero bcg={dirtyclothe} text="easy to use services" />
+      <Hero bcg={dirtyclothe} text="easy to use services" white={true} />
       <div className="section">
         <div className=" section-center">
           <div className="btn__container">

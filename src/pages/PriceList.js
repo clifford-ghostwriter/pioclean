@@ -16,6 +16,7 @@ const PriceList = () => {
       <Hero
         bcg={cleanclothes}
         text={`we make laundry accesible and affordable`}
+        white={true}
       />
       <Monthlyplan />
       <Pricelist />

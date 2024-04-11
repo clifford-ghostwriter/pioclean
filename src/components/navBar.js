@@ -32,10 +32,6 @@ const Nav = forwardRef(function (_, ref) {
             </Link>
             <p className="nav__text">Pioclean</p>
           </div>
-
-          {/* <div className="nav__text">
-            <p>Pioclean</p>
-          </div> */}
           <button
             className="btn nav__btn"
             onClick={() => {
@@ -79,30 +75,16 @@ const Nav = forwardRef(function (_, ref) {
 });
 
 const Wrapper = styled.nav`
-  /* width: 95%; */
-  /* margin: auto; */
   background-color: var(--clr--primary-one);
-  /* border: 1px solid red; */
-  /* min-width: 400px; */
   height: 10rem;
   overflow: hidden;
-  min-width: 200px;
-  /* position: relative !important; */
-  /* position: sticky; */
-  /* top: 0; */
-  /* left: 0; */
-  /* z-index: 990; */
+  /* min-width: 200px; */
   transition: var(--transition-slower);
   position: relative;
   border-bottom: 1px solid white;
 
   .nav__wrapper {
     padding-block: var(--fs-300);
-    /* align-items: center; */
-    /* min-width: min-content; */
-    /* border: 1px solid pink; */
-    /* width: 95%; */
-    /* margin: auto; */
   }
 
   .login__btn {
@@ -128,56 +110,33 @@ const Wrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
-    align-content: stretch;
-    /* border: 1px solid red; */
-  }
-
-  .nav__center > * {
-    flex-shrink: 0;
   }
 
   .nav__logo {
     display: flex;
     gap: var(--size--50);
     /* border: 1px solid red; */
-    width: 8rem;
-    /* align-self: center; */
-    /* height: 5rem; */
-    /* background-color: white; */
   }
   .nav__logo > * {
     /* flex: 1; */
     flex-shrink: 0;
-    /* flex-basis: 0; */
-    height: 100%;
-    width: 100%;
-    align-items: center;
-  }
-
-  .logo__link {
-    /* width: ; */
   }
 
   .nav__text {
     text-transform: uppercase;
-    /* padding-top: var(--fs-700); */
+
     font-size: var(--fs-650);
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     align-self: center;
+    /* border: 1px solid red; */
   }
 
   .nav__btn {
     background-color: transparent;
     /* border: 1px solid red; */
-    /* size: 4rem; */
     height: 100%;
     font-size: var(--fs-700);
     color: var(--clr--primary-three);
-    /* color: red; */
-    /* padding-right: 0; */
-    /* margin-right: -1rem; */
-    /* margin-top: -0.5rem; */
   }
 
   .side-bar__links {
@@ -203,10 +162,6 @@ const Wrapper = styled.nav`
 
   @media (width < 400px) {
     /* font-size: var(--fs-600); */
-
-    .nav__logo {
-      gap: 0;
-    }
 
     .nav__text {
       text-transform: uppercase;
