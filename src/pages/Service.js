@@ -9,7 +9,7 @@ import servicesimage from "../assests/heroimages/laundryservices.jpg";
 const Service = () => {
   return (
     <Wrapper>
-      <Hero bcg={servicesimage} />
+      <Hero bcg={servicesimage} text="what we do" white={true} />
       {/* <PageHero path="/service" text="Services" /> */}
       <div className="section-center text__center">
         <h3 className="heading">our services</h3>

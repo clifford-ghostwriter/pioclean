@@ -72,7 +72,7 @@ const Wrapper = styled.div`
     border-radius: 100vw;
 
     background-color: var(--clr--primary-one);
-    box-shadow: 1px 1px 2px black;
+    box-shadow: 1px 2px 2px black;
     /* width: 70%; */
   }
 

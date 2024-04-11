@@ -17,6 +17,7 @@ import ben from "../assests/customer/ben.jpg";
 import dave from "../assests/customer/dave.jpg";
 import hannah from "../assests/customer/hannah.jpg";
 import josh from "../assests/customer/customer-5.jpg";
+// import basicPlan from "../assests/planimages/basicplanImage2.png";
 import basicPlan from "../assests/planimages/basicplanImage.jpg";
 import elitePlan from "../assests/planimages/eliteplanImage.jpg";
 import unlimitedPlan from "../assests/planimages/unlimitedImage.jpg";

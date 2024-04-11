@@ -10,7 +10,7 @@ const Contact = () => {
   };
   return (
     <Wrapper>
-      <Hero bcg={callcenteragent} />
+      <Hero bcg={callcenteragent} text="contact us" />
       {/* <PageHero path="/contact" text="Contact us" /> */}
       <div className="section-center section__container">
         <div>

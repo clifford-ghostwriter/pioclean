@@ -12,7 +12,7 @@ function SharedLayout() {
   // console.log(ref);
 
   useEffect(() => {
-    window.addEventListener("scroll", (e) => {
+    window.addEventListener("scroll", () => {
       console.log(window.scrollY);
 
       setscroll(window.scrollY);
@@ -20,7 +20,7 @@ function SharedLayout() {
   }, [scroll]);
 
   useEffect(() => {
-    if (scroll >= 100) {
+    if (scroll >= 150) {
       ref.current.classList.add("stickyNav");
     } else {
       ref.current.classList.remove("stickyNav");

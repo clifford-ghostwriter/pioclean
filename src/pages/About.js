@@ -11,7 +11,7 @@ const About = () => {
   return (
     <Wrapper>
       {/* <PageHero path="/about" text="About" /> */}
-      <Hero bcg={boardroom} />
+      <Hero bcg={boardroom} text="who we are" />
       <div className="section-center">
         {/* <div className="section-center"> */}
         <div className="about-us__container ">

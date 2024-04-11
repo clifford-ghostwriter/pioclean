@@ -2,11 +2,13 @@ import React from "react";
 // import dirtyclothes from "../assests/dirty-clothes-01.jpeg";
 import styled from "styled-components";
 
-const Hero = ({ bcg, text }) => {
+const Hero = ({ bcg, text, white }) => {
   return (
     <Wrapper $bcgImage={bcg}>
-      <div className="section-center hero__center">
-        <h2 className="hero__text">{text ? text : null}</h2>
+      <div className=" hero__center">
+        <p className={white ? "hero__text white__font " : "hero__text"}>
+          {text ? text : null}
+        </p>
         {/* <div className="hero__img">
           <img src={dirtyclothes} alt="" />
         </div> */}
@@ -20,10 +22,10 @@ const Wrapper = styled.div`
   /* margin-top: 5rem; */
   /* border: 1px solid red; */
 
-  display: grid;
+  /* display: grid; */
   /* grid-template-columns: 1fr 1fr; */
-  align-items: center;
-  justify-items: center;
+  align-content: center;
+  /* justify-items: center; */
   /* padding-block: 8rem; */
   /* border: 1px solid red; */
 
@@ -46,14 +48,9 @@ const Wrapper = styled.div`
     gap: 1rem;
   } */
 
-  .hero__center > * {
-    margin: auto;
+  .hero__center {
     /* border: 1px solid red; */
-    /* width: 90%; */
-    /* aspect-ratio: 1; */
-    display: grid;
-    align-items: center;
-    justify-items: center;
+    padding-left: 1rem;
   }
 
   .hero__img {
@@ -74,23 +71,29 @@ const Wrapper = styled.div`
 
   .hero__text {
     text-transform: capitalize;
-    /* font-size: var(--fs-650); */
-    font-size: 1.4rem;
-    color: var(--clr--primary-three);
+
+    font-size: 3rem;
+    /* color: var(--clr--primary-three); */
+    /* border: 1px solid red; */
+    /* color: white; */
+  }
+
+  .white__font {
+    color: white;
   }
 
   @media (min-width: 1000px) {
     .hero__center {
-      width: 80%;
+      /* width: 80%; */
       margin: auto;
-      /* padding-block: 5rem; */
+      padding-left: 5rem;
       /* border: 1px solid red; */
     }
   }
 
   @media (min-width: 550px) {
     .hero__center > * {
-      width: 60%;
+      /* width: 60%; */
     }
   }
 `;

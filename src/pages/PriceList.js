@@ -13,7 +13,10 @@ const PriceList = () => {
   return (
     <Wrapper>
       {/* <PageHero path="pricelist" text="Price List" /> */}
-      <Hero bcg={cleanclothes} />
+      <Hero
+        bcg={cleanclothes}
+        text={`we make laundry accesible and affordable`}
+      />
       <Monthlyplan />
       <Pricelist />
     </Wrapper>
