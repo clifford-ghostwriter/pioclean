@@ -37,7 +37,7 @@ function Slider() {
     setIndex((initialvalue) => {
       let newvalue;
       newvalue = initialvalue + 1;
-      if (newvalue > slides.length - 1) {
+      if (newvalue > slidesData.length - 1) {
         newvalue = 0;
       }
       return newvalue;
@@ -49,7 +49,7 @@ function Slider() {
       let newvalue;
       newvalue = initialvalue - 1;
       if (newvalue < 0) {
-        newvalue = slides.length - 1;
+        newvalue = slidesData.length - 1;
       }
       return newvalue;
     });
@@ -79,7 +79,7 @@ function Slider() {
               key={slideIndex}
               index={slideIndex}
               type={position}
-              className="hello"
+              // className="hello"
             />
           );
         })}
@@ -114,26 +114,15 @@ function Slider() {
   );
 }
 const Wrapper = styled.div`
-  /* border: 1px solid red; */
   position: relative;
-  /* padding-block: 2rem; */
-  /* margin: 1rem; */
 
   .slider__center {
-    /* display: flex; */
-    /* height: 100%; */
-    /* border: 1px solid blue; */
     height: 60vh;
     overflow-x: hidden;
-    /* padding: 1rem; */
     position: relative;
   }
 
   .btn__container {
-    /* display: inline-flex; */
-    /* justify-content: space-between; */
-    /* border: 1px solid red; */
-    /* padding-inline: var(--size--100); */
     position: absolute;
     top: 50%;
     /* left: 5%; */
@@ -144,11 +133,7 @@ const Wrapper = styled.div`
   .btn__center {
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid red; */
-    /* padding-inline: var(--size--100); */
-    /* position: absolute; */
-    /* top: 50%; */
-    /* left: 5%; */
+
     width: 90%;
 
     margin: auto;
@@ -172,20 +157,15 @@ const Wrapper = styled.div`
 
   .previous {
     transform: translateX(-100%);
-    /* border: 20px solid pink; */
-    /* transition: var(--transition); */
   }
 
   .active {
     transform: translateX(0);
     opacity: 1;
-    /* transition: var(--transition); */
-    /* border: 20px solid pink; */
   }
 
   .next {
     transform: translateX(100%);
-    /* transition: var(--transition); */
   }
   .hello {
     display: none;
@@ -216,7 +196,7 @@ const Wrapper = styled.div`
 
   @media (min-width: 1000px) {
     .slider__center {
-      height: 80vh;
+      height: 68vh;
     }
   }
 `;

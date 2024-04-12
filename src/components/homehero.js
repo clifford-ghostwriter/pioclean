@@ -30,7 +30,6 @@ const Wrapper = styled.div`
     height: 100%;
     width: 95%;
     margin: auto;
-    /* border: 1px solid red; */
   }
 
   .hero__center > *:nth-child(1) {
@@ -43,7 +42,6 @@ const Wrapper = styled.div`
     width: 11rem;
 
     border-radius: 10px;
-    /* border: 1px solid red; */
     justify-self: center;
   }
 
@@ -67,7 +65,6 @@ const Wrapper = styled.div`
     .hero__img {
       transform: rotate(45deg);
       width: 14rem;
-      /* border: 1px solid red; */
       justify-self: center;
     }
 
@@ -80,16 +77,16 @@ const Wrapper = styled.div`
   @media (min-width: 1000px) {
     height: 60vh;
     .hero__center {
-      width: 75%;
+      width: 79%;
       margin: auto;
-      gap: 1.2rem;
+      gap: 1rem;
       grid-template-columns: 1fr 1fr;
     }
 
-    .hero__img {
-      transform: rotate(45deg);
-      width: 20rem;
+    img {
+      width: 22rem;
     }
+
     .hero__center > *:nth-child(1) {
       justify-self: center;
       width: max-content;
@@ -106,8 +103,7 @@ const Wrapper = styled.div`
       grid-template-columns: 1fr 1fr;
     }
 
-    .hero__img {
-      transform: rotate(45deg);
+    img {
       width: 22rem;
     }
 
@@ -118,7 +114,7 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 1600px) {
-    height: 60vh;
+    height: 65vh;
     .hero__center {
       width: 60%;
       margin: auto;
@@ -127,9 +123,28 @@ const Wrapper = styled.div`
       grid-template-columns: 1fr 1fr;
     }
 
-    .hero__img {
-      transform: rotate(45deg);
-      width: 30rem;
+    img {
+      width: 22rem;
+    }
+
+    .hero__center > *:nth-child(1) {
+      justify-self: center;
+      width: max-content;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    height: 65vh;
+    .hero__center {
+      width: 60%;
+      margin: auto;
+      gap: 1.5rem;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    img {
+      width: 26rem;
     }
 
     .hero__center > *:nth-child(1) {

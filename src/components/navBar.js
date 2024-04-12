@@ -42,7 +42,7 @@ const Nav = forwardRef(function (_, ref) {
             {/* <FaBars /> */}
           </button>
 
-          <ul className="side-bar__links ">
+          <ul className="nav-bar__links ">
             {links.map((link) => {
               const { id, text, url, icon } = link;
               return (
@@ -77,9 +77,7 @@ const Nav = forwardRef(function (_, ref) {
 const Wrapper = styled.nav`
   background-color: var(--clr--primary-one);
   height: 10rem;
-  /* overflow: hidden; */
   overflow-x: hidden;
-  /* min-width: 200px; */
   transition: var(--transition-slower);
   position: relative;
   border-bottom: 1px solid white;
@@ -94,7 +92,6 @@ const Wrapper = styled.nav`
     display: grid;
     align-items: center;
     grid-template-columns: auto auto;
-    /* border: 1px solid red; */
     gap: 0.2rem;
     text-transform: capitalize;
     color: var(--clr--primary-four);
@@ -116,10 +113,8 @@ const Wrapper = styled.nav`
   .nav__logo {
     display: flex;
     gap: var(--size--50);
-    /* border: 1px solid red; */
   }
   .nav__logo > * {
-    /* flex: 1; */
     flex-shrink: 0;
   }
 
@@ -129,25 +124,27 @@ const Wrapper = styled.nav`
     font-size: var(--fs-650);
     letter-spacing: 0.2rem;
     align-self: center;
-    /* border: 1px solid red; */
   }
 
   .nav__btn {
     background-color: transparent;
-    /* border: 1px solid red; */
     height: 100%;
     font-size: var(--fs-700);
     color: var(--clr--primary-three);
   }
 
-  .side-bar__links {
+  .nav-bar__links {
     display: flex;
     gap: 0.5rem;
     margin-right: -1rem;
-    /* border: 1px solid red; */
     flex-grow: 0.3;
     display: none;
   }
+
+  .url:hover {
+    color: white;
+  }
+
   .link {
     display: flex;
     gap: 0.2rem;
@@ -162,11 +159,8 @@ const Wrapper = styled.nav`
   }
 
   @media (width < 400px) {
-    /* font-size: var(--fs-600); */
-
     .nav__text {
       text-transform: uppercase;
-      /* padding-top: var(--fs-700); */
       font-size: var(--fs-650);
       letter-spacing: 0.2rem;
     }
@@ -175,15 +169,14 @@ const Wrapper = styled.nav`
     .nav__btn {
       display: none;
     }
-    .side-bar__links {
+    .nav-bar__links {
       display: flex;
     }
   }
 
   @media (width < 1300px) {
-    .side-bar__links {
+    .nav-bar__links {
       margin-left: 5rem;
-      /* border: 1px solid red; */
     }
   }
 `;

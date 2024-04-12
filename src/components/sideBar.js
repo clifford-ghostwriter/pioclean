@@ -59,7 +59,6 @@ const Wrapper = styled.div`
   justify-content: center;
   align-content: center;
   position: relative;
-  /* padding-top: 2rem; */
 
   .login__btn {
     background-color: transparent;
@@ -67,7 +66,6 @@ const Wrapper = styled.div`
     display: grid;
     align-items: center;
     grid-template-columns: auto auto;
-    /* border: 1px solid red; */
     gap: 0.4rem;
     color: red;
     text-transform: capitalize;
@@ -83,19 +81,16 @@ const Wrapper = styled.div`
   }
 
   .side-bar__center {
-    /* display: none; */
     position: fixed;
     top: 0;
     left: 0;
     background-color: var(--clr--primary-two);
-    /* height: calc(100vh - 10rem); */
     height: 100dvh;
     width: 100%;
     opacity: 0.7;
     transform: translateX(-100%);
     transition: var(--transition);
     z-index: 999;
-    /* padding-top: 1rem; */
   }
 
   .side-bar__links {
@@ -103,19 +98,17 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: var(--size--50);
-    /* background-color: yellow; */
     align-items: flex-start;
     height: 100%;
     padding: 0 1rem;
     padding-top: 3.4rem;
-    /* border: 1px solid red; */
   }
 
+  .url:hover {
+    color: white;
+  }
   .link {
     display: flex;
-    /* flex: 1; */
-    /* border: 1px solid red; */
-    /* padding-left: 40%; */
     align-items: center;
     flex-shrink: 0;
     gap: 0.25rem;
@@ -133,7 +126,6 @@ const Wrapper = styled.div`
   }
 
   .show-sidebar {
-    /* display: block; */
     opacity: 0.7;
     transform: translate(0);
     z-index: 999;
@@ -147,7 +139,6 @@ const Wrapper = styled.div`
     background-color: transparent;
     color: var(--clr--primary-three);
     font-size: var(--fs-700);
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
   }
