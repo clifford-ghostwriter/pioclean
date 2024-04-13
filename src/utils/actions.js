@@ -12,3 +12,5 @@ export const SET_USER = "HANDLE_USER";
 export const RESET_USER = "RESET_USER";
 export const ALERT_FLAG = "ALERT_FLAG";
 export const REMOVE_ALERT_FLAG = "REMOVE_ALERT_FLAG";
+export const TOGGLE_CUSTOMER = "TOGGLE_CUSTOMER";
+export const SIGNUP_CUSTOMER = "SIGNUP_CUSTOMER";

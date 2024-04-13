@@ -75,7 +75,7 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 1000px) {
-    height: 60vh;
+    height: 63vh;
     .hero__center {
       width: 79%;
       margin: auto;
@@ -84,7 +84,7 @@ const Wrapper = styled.div`
     }
 
     img {
-      width: 22rem;
+      width: 18rem;
     }
 
     .hero__center > *:nth-child(1) {
@@ -144,7 +144,8 @@ const Wrapper = styled.div`
     }
 
     img {
-      width: 26rem;
+      width: 23rem;
+      border: 1px solid red;
     }
 
     .hero__center > *:nth-child(1) {

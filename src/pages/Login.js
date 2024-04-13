@@ -9,35 +9,41 @@ import { UseAppContext } from "../contexts/app.Context";
 
 const Login = () => {
   const [userLogin, setUser] = useState({ name: "", password: "" });
+  const [usersignup, setusrSignUp] = useState({
+    email: "",
+    password: "",
+    confirmpassword: "",
+  });
 
-  const { handleLoginSubmit, removeAlert, loginAlert, username } =
-    UseAppContext();
+  const {
+    handleLoginSubmit,
+    removeAlert,
+    loginAlert,
+    username,
+    toggleMember,
+    iscustomer,
+    handleSignupSubmit,
+  } = UseAppContext();
 
   const { totalamount } = UseServiceContext();
   const navigate = useNavigate();
 
-  console.log(userLogin);
-  const handleFormChange = (e) => {
+  // console.log(userLogin);
+  const handleLogin = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setUser((userLogin) => {
       return { ...userLogin, [name]: value };
     });
-    //  dispatch({ type: HANDLE_CHANGE, payload: { name, value } });
-    // console.log(name, value);
   };
-
-  // const log = async (e) => {
-  //   e.preventDefault();
-  //   await handleLoginSubmit(userLogin);
-  //   setTimeout(removeAlert, 3000);
-  //   if (totalamount) {
-  //     navigate("/checkout");
-  //   } else {
-  //     navigate("/");
-  //     return;
-  //   }
-  // };
+  // console.log(usersignup);
+  const handleSignUp = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setusrSignUp((usersignup) => {
+      return { ...usersignup, [name]: value };
+    });
+  };
 
   return (
     <Wrapper>
@@ -46,65 +52,147 @@ const Login = () => {
           {/* <div className="logo">
             <img src={logo} alt="logo" />
           </div> */}
-          <form action="" className="form">
-            <p className="login__text">login to proceed...</p>
-            <Formrow
-              type="text"
-              name="name"
-              className="form-input"
-              value={userLogin.name}
-              handleFormChange={handleFormChange}
-              label="LoginID"
-              placeholder="Your Name"
-              required
-            />
-            <Formrow
-              type="password"
-              name="password"
-              className="form-input"
-              value={userLogin.password}
-              handleFormChange={handleFormChange}
-              label="password"
-              placeholder={`Password is xy1234`}
-              required
-            />
-            {/* {alert_flag && <Alert />} */}
-            <Alert />
-            <button
-              type="submit"
-              className="btn btn-block"
-              onClick={(e) => {
-                e.preventDefault();
-
-                if (userLogin.name === "" || userLogin.password === "") {
-                  loginAlert("fill up the required spaces");
-                  setTimeout(removeAlert, 3000);
-                  return;
-                }
-
-                if (!username.includes(userLogin.name)) {
-                  loginAlert("wrong credential");
-                  setTimeout(removeAlert, 3000);
-                  return;
-                }
-                if (userLogin.password !== "xy1234") {
-                  loginAlert("wrong credential");
-                  setTimeout(removeAlert, 3000);
-                  return;
-                }
-                handleLoginSubmit(userLogin);
-                setTimeout(removeAlert, 3000);
-                if (totalamount) {
-                  navigate("/checkout");
-                } else {
-                  navigate("/");
-                  return;
-                }
-              }}>
-              Login
+          {/* <p className="login__text">login to proceed...</p> */}
+          <p className="customer__status">
+            {iscustomer ? "Not a customer ?" : "Already a customer ?"}{" "}
+            <button className="status__btn" onClick={toggleMember}>
+              {iscustomer ? " register" : "login"}
             </button>
-            <Link to="/">back to home</Link>
-          </form>
+          </p>
+
+          {iscustomer ? (
+            <form action="" className="form">
+              <Formrow
+                type="text"
+                name="name"
+                className="form-input"
+                value={userLogin.name}
+                handleFormChange={handleLogin}
+                label="LoginID"
+                placeholder="Your Name"
+                required
+              />
+              <Formrow
+                type="password"
+                name="password"
+                className="form-input"
+                value={userLogin.password}
+                handleFormChange={handleLogin}
+                label="password"
+                placeholder={`Password is xy1234`}
+                required
+              />
+              {/* {alert_flag && <Alert />} */}
+              <Alert />
+              <button
+                type="submit"
+                className="btn btn-block"
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  if (username.name === "" || username.password === "") {
+                    loginAlert("fill up the required spaces");
+                    setTimeout(removeAlert, 3000);
+                    return;
+                  }
+
+                  if (!username.includes(userLogin.name)) {
+                    loginAlert("wrong credential");
+                    setTimeout(removeAlert, 3000);
+                    return;
+                  }
+                  if (userLogin.password !== "xy1234") {
+                    loginAlert("wrong credential");
+                    setTimeout(removeAlert, 3000);
+                    return;
+                  }
+                  handleLoginSubmit(userLogin);
+                  setTimeout(removeAlert, 3000);
+                  if (totalamount) {
+                    navigate("/checkout");
+                  } else {
+                    navigate("/");
+                    return;
+                  }
+                }}>
+                Login
+              </button>
+              <Link to="/">back to home</Link>
+            </form>
+          ) : (
+            <form action="" className="form">
+              <Formrow
+                type="email"
+                name="email"
+                className="form-input"
+                value={usersignup.email}
+                handleFormChange={handleSignUp}
+                label="email"
+                // placeholder="Your Email"
+                required
+              />
+              <Formrow
+                type="password"
+                name="password"
+                className="form-input"
+                value={usersignup.password}
+                handleFormChange={handleSignUp}
+                label="password"
+                // placeholder={`Password`}
+                required
+              />
+              <Formrow
+                type="password"
+                name="confirmpassword"
+                className="form-input"
+                value={usersignup.confirmpassword}
+                handleFormChange={handleSignUp}
+                label="confirm password"
+                // placeholder={`confirm Password `}
+                required
+              />
+              {/* {alert_flag && <Alert />} */}
+              <Alert />
+              <button
+                type="submit"
+                className="btn btn-block"
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  if (
+                    usersignup.name === "" ||
+                    usersignup.password === "" ||
+                    usersignup.confirmpassword === ""
+                  ) {
+                    loginAlert("fill up the required spaces");
+                    setTimeout(removeAlert, 3000);
+                    return;
+                  }
+
+                  if (usersignup.password !== usersignup.confirmpassword) {
+                    loginAlert("confirm password");
+                    setTimeout(removeAlert, 3000);
+                    return;
+                  }
+                  // if (userLogin.password !== "xy1234") {
+                  //   loginAlert("wrong credential");
+                  //   setTimeout(removeAlert, 3000);
+                  //   return;
+                  // }
+                  handleSignupSubmit(usersignup);
+                  setTimeout(removeAlert, 3000);
+                  if (totalamount) {
+                    navigate("/checkout");
+                  } else {
+                    navigate("/");
+                    return;
+                  }
+                }}>
+                sign up
+              </button>
+              <Link to="/">back to home</Link>
+            </form>
+          )}
         </div>
         <div className="hint">
           <h3>hint</h3>
@@ -127,8 +215,7 @@ const Wrapper = styled.section`
   display: grid;
   align-content: center;
   justify-content: center;
-  /* border: 1px solid red; */
-  /* background-color: white; */
+
   min-width: max-content;
 
   .login__text {
@@ -137,26 +224,45 @@ const Wrapper = styled.section`
     text-align: center;
   }
 
+  .status__btn {
+    background: transparent;
+    border: none;
+    color: red;
+    text-transform: capitalize;
+  }
+
+  .customer__status {
+    text-align: center;
+  }
+
   .login-center {
     width: 90vw;
     min-width: max-content;
     /* border: 2px solid blue; */
-    /* margin-top: -17rem; */
+
     display: grid;
     align-content: center;
     justify-content: center;
     padding-inline: 1rem;
-    /* height: 100px; */
-    /* width: 300px; */
   }
 
   .form {
     min-width: 300px;
-    /* border: 1px solid red; */
-    /* height: 600px; */
+
     background-color: var(--clr-white);
-    /* border: 0.01rem solid red; */
-    margin-top: -0.5rem;
+  }
+
+  .login__form-center {
+    /* border: 1px solid red; */
+    background-color: var(--clr-white);
+    /* width: 25vw; */
+    max-width: var(--fixed-width);
+    background: var(--clr--primary-four);
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px black;
+    padding: 2rem 2.5rem;
+    margin: 0.1rem auto 3rem;
+    transition: var(--transition);
   }
 
   h3 {
@@ -164,11 +270,8 @@ const Wrapper = styled.section`
   }
   p {
     margin: 0;
-    /* margin-top: 1rem; */
-    /* text-align: center; */
   }
   .btn {
-    /* margin-top: 1rem; */
   }
   .btn-block {
     width: 100%;
@@ -193,7 +296,6 @@ const Wrapper = styled.section`
 
   .hint {
     color: white;
-    /* text-align: center; */
   }
 
   /* extra form styles */
@@ -202,9 +304,9 @@ const Wrapper = styled.section`
     max-width: var(--fixed-width);
     background: var(--clr--primary-four);
     border-radius: 5px;
-    box-shadow: 2px 2px 3px black;
+    /* box-shadow: 2px 2px 3px black; */
     padding: 2rem 2.5rem;
-    margin: 0.1rem auto 3rem;
+    /* margin: 0.1rem auto 3rem; */
     transition: var(--transition);
     /* border: 1px solid red; */
   }
@@ -249,4 +351,5 @@ const Wrapper = styled.section`
     color: var(--clr--primary-three);
   }
 `;
+
 export default Login;

@@ -13,7 +13,7 @@ function SharedLayout() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      console.log(window.scrollY);
+      // console.log(window.scrollY);
 
       setscroll(window.scrollY);
     });

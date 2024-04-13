@@ -5,6 +5,8 @@ import {
   SET_USER,
   ALERT_FLAG,
   RESET_USER,
+  TOGGLE_CUSTOMER,
+  SIGNUP_CUSTOMER,
 } from "../utils/actions";
 
 import {
@@ -40,6 +42,16 @@ export const app_reducer = (state, action) => {
   }
   if (action.type === REMOVE_ALERT_FLAG) {
     return { ...state, alert_flag: false };
+  }
+
+  if (action.type === TOGGLE_CUSTOMER) {
+    const { iscustomer } = state;
+    return { ...state, iscustomer: !iscustomer };
+  }
+
+  if (action.type === SIGNUP_CUSTOMER) {
+    console.log(action.payload);
+    return { ...state, newcustomer: action.payload };
   }
   // throw new Error(`No matching "${action.type}" - action type`);
 };

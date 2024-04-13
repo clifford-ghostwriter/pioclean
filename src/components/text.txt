@@ -39,3 +39,92 @@ useEffect(() => {
   //     });
   //   }
   // }, [isIntersecting]);
+
+
+
+
+    <Wrapper>
+      <div className="login-center">
+        <div className="login__form-center">
+          {/* <div className="logo">
+            <img src={logo} alt="logo" />
+          </div> */}
+          {/* <p className="login__text">login to proceed...</p> */}
+          <p className="customer__status">
+            {iscustomer ? "Not a customer ?" : "Already a customer ?"}{" "}
+            <button className="status__btn" onClick={toggleMember}>
+              {iscustomer ? " register" : "login"}
+            </button>
+          </p>
+
+          {iscustomer ? <p>yes</p> : <p>no</p>}
+          <form action="" className="form">
+            <Formrow
+              type="text"
+              name="name"
+              className="form-input"
+              value={userLogin.name}
+              handleFormChange={handleFormChange}
+              label="LoginID"
+              placeholder="Your Name"
+              required
+            />
+            <Formrow
+              type="password"
+              name="password"
+              className="form-input"
+              value={userLogin.password}
+              handleFormChange={handleFormChange}
+              label="password"
+              placeholder={`Password is xy1234`}
+              required
+            />
+            {/* {alert_flag && <Alert />} */}
+            <Alert />
+            <button
+              type="submit"
+              className="btn btn-block"
+              onClick={(e) => {
+                e.preventDefault();
+
+                if (userLogin.name === "" || userLogin.password === "") {
+                  loginAlert("fill up the required spaces");
+                  setTimeout(removeAlert, 3000);
+                  return;
+                }
+
+                if (!username.includes(userLogin.name)) {
+                  loginAlert("wrong credential");
+                  setTimeout(removeAlert, 3000);
+                  return;
+                }
+                if (userLogin.password !== "xy1234") {
+                  loginAlert("wrong credential");
+                  setTimeout(removeAlert, 3000);
+                  return;
+                }
+                handleLoginSubmit(userLogin);
+                setTimeout(removeAlert, 3000);
+                if (totalamount) {
+                  navigate("/checkout");
+                } else {
+                  navigate("/");
+                  return;
+                }
+              }}>
+              Login
+            </button>
+            <Link to="/">back to home</Link>
+          </form>
+        </div>
+        <div className="hint">
+          <h3>hint</h3>
+          <p>
+            <span>usernames: </span> user1, user2
+          </p>
+          <p>
+            <span>password: </span>xy1234
+          </p>
+        </div>
+      </div>
+    </Wrapper>

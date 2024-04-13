@@ -7,6 +7,8 @@ import {
   SET_USER,
   ALERT_FLAG,
   RESET_USER,
+  TOGGLE_CUSTOMER,
+  SIGNUP_CUSTOMER,
 } from "../utils/actions";
 
 import {
@@ -23,11 +25,15 @@ const initialAppState = {
   alert: "",
   username: ["user1", "user2"],
   user: getFromLocalStorage("user") ? getFromLocalStorage("user") : "",
+  iscustomer: true,
+  newcustomer: "",
 };
 
 export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(app_reducer, initialAppState);
   const [windowWidth, setWdith] = useState(0);
+
+  // console.log(state.newcustomer);
 
   useEffect(() => {
     console.log(state.user);
@@ -94,6 +100,14 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: ALERT_FLAG, payload: alert });
   };
 
+  const toggleMember = () => {
+    dispatch({ type: TOGGLE_CUSTOMER });
+  };
+
+  const handleSignupSubmit = (user) => {
+    dispatch({ type: SIGNUP_CUSTOMER, payload: user });
+  };
+
   return (
     <appContext.Provider
       value={{
@@ -104,6 +118,8 @@ export const AppProvider = ({ children }) => {
         removeAlert,
         resetUser,
         loginAlert,
+        toggleMember,
+        handleSignupSubmit,
       }}>
       {children}
     </appContext.Provider>
