@@ -58,7 +58,7 @@ export const service_reducer = (state, action) => {
       // const { ordernumber } = item;
 
       const { orderitem, orderprice, image } = item;
-      return { image, orderitem, orderprice, ordernumber: 0, ordertotal: 0 };
+      return { image, orderitem, orderprice, ordernumber: "", ordertotal: "" };
     });
 
     // console.log(resetOrder);

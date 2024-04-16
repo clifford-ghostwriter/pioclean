@@ -11,32 +11,15 @@ const Orderitem = ({ index }) => {
 
   const { orderitem, orderprice, ordernumber, ordertotal } = orderitemm;
 
-  // console.log(orderitem, orderprice, ordernumber, ordertotal);
-  // const item = orderitem[properties[0]];
-  // const price = orderitem[properties[1]];
-  // const number = orderitem[properties[2]];
-  // const total = orderitem[properties[4]];
-  // const item = properties[0];
-  // console.log(orderitem[item]);
-  // const tot = number * price;
   useEffect(() => {
     // setTotalAmount(tot);
   });
-  // console.log(tot, totalAmount);
+
   return (
     <Wrapper>
       {/* <p>{index + 1}</p> */}
       <p>{orderitem}</p>
-      {/* <select
-        name="orderitem"
-        value={orderitem}
-        id=""
-        onChange={(e) => {
-          handleChange(e, index);
-          updateTotal(index);
-        }}>
-        <option value={orderitem}>{orderitem}</option>
-      </select> */}
+
       <p>{orderprice}</p>
       <input
         type="number"
